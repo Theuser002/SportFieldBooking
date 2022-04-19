@@ -1,0 +1,9 @@
+﻿[1]: Building an ASP.NET Web API with ASP.NET Core (https://www.toptal.com/asp-dot-net/asp-net-web-api-tutorial)
+[2]: What do the mysql workbench column icons mean (https://stackoverflow.com/questions/10778561/what-do-the-mysql-workbench-column-icons-mean)
+[3]: Những Điều Cần Biết Về Index Trong Database (https://codelearn.io/sharing/index-trong-database)
+[4 - Cách lấy connection string]: Kết nối cơ sở dữ liệu SQL Server trong C# (https://openplanning.net/10511/ket-noi-co-so-du-lieu-sql-server-trong-csharp)
+[5 - Chú ý đây là version 5 nên một số cú pháp đã lỗi thời]: AutoMapper in C# (https://dotnettutorials.net/lesson/automapper-in-c-sharp/)
+[6]: Automapper Configuration (https://docs.automapper.org/en/stable/Configuration.html)
+
+
+
