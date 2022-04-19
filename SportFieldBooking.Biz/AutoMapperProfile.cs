@@ -10,7 +10,8 @@ namespace SportFieldBooking.Biz
         {
             // Create mappings from business model to data model and vice versa
             CreateMap<Data.Model.User, Biz.Model.User.New>().ReverseMap();
-            CreateMap<Data.Model.User, Biz.Model.User.View>().ReverseMap();  
+            CreateMap<Data.Model.User, Biz.Model.User.View>().ReverseMap();
+            CreateMap<Data.Model.User, Biz.Model.User.List>().ReverseMap();
         }
     }
 }

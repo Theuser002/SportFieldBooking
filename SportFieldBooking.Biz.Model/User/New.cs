@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿// Biz model for creating new User entity
+using System.ComponentModel.DataAnnotations;
 
 namespace SportFieldBooking.Biz.Model.User
 {

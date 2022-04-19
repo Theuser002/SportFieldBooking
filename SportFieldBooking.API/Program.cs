@@ -1,6 +1,7 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Serilog;
 using SportFieldBooking.Data;
+using SportFieldBooking.Helper.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,8 +13,6 @@ var logger = new LoggerConfiguration()
     .CreateLogger();
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
-
-
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -37,7 +36,6 @@ switch (dbProvider)
     default:
         throw new Exception($"Wrong provider's name or unsupported provider: {dbProvider}");
 }
-
 
 var app = builder.Build();
 
@@ -63,12 +61,17 @@ try
             context.Database.Migrate();
         }
     }
-
+}
+catch (DatabaseNotFoundExceptions dbe)
+{
+    Console.WriteLine("No Database");
+    logger.Error($"[MyLog]: Database not found", dbe);
+    throw;
 }
 catch (Exception e)
 {
-    logger.Fatal($"[MyLog]: Error in migrating process", e);
-    throw new Exception();
+    logger.Error($"[MyLog]: Error in migrating process", e);
+    throw;
 }
 
 app.Run();

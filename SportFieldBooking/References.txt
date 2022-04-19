@@ -4,6 +4,13 @@
 [4 - Cách lấy connection string]: Kết nối cơ sở dữ liệu SQL Server trong C# (https://openplanning.net/10511/ket-noi-co-so-du-lieu-sql-server-trong-csharp)
 [5 - Chú ý đây là version 5 nên một số cú pháp đã lỗi thời]: AutoMapper in C# (https://dotnettutorials.net/lesson/automapper-in-c-sharp/)
 [6]: Automapper Configuration (https://docs.automapper.org/en/stable/Configuration.html)
+[7 - Querying hoạt động như thế nào trong mô hình repository] Repository (https://martinfowler.com/eaaCatalog/repository.html)
+[8 - Information about DbSet] DbSet<TEntity> Class (https://docs.microsoft.com/en-us/dotnet/api/system.data.entity.dbset-1?view=entity-framework-6.2.0)
+[9 - Paging with EF6] Add paging to Students Index (https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/sort-filter-page?view=aspnetcore-6.0#add-paging-to-students-index)
+[10 - Project mẫu, nhiều cái đáng xem] Tutorial: Get started with EF Core in an ASP.NET MVC web app (và các trang tiếp theo)(https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-6.0)
+
+
+
 
 
 

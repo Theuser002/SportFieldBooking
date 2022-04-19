@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿// Biz model for viewing User entity
 
 namespace SportFieldBooking.Biz.Model.User
 {

@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BikesForRent", "..\..\..\..
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportFieldBooking", "SportFieldBooking\SportFieldBooking.csproj", "{13C4389B-0282-427F-915B-4D4D3EEC0E50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportFieldBooking.Helper", "Helper\SportFieldBooking.Helper.csproj", "{8AAA3D08-8EC9-4268-9F7C-DD91F7BF8F06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAPI", "..\TestAPI\TestAPI\TestAPI.csproj", "{7DD67EBE-D04E-4EF2-BD09-52098A11EA9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{13C4389B-0282-427F-915B-4D4D3EEC0E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13C4389B-0282-427F-915B-4D4D3EEC0E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13C4389B-0282-427F-915B-4D4D3EEC0E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AAA3D08-8EC9-4268-9F7C-DD91F7BF8F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AAA3D08-8EC9-4268-9F7C-DD91F7BF8F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AAA3D08-8EC9-4268-9F7C-DD91F7BF8F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AAA3D08-8EC9-4268-9F7C-DD91F7BF8F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD67EBE-D04E-4EF2-BD09-52098A11EA9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD67EBE-D04E-4EF2-BD09-52098A11EA9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD67EBE-D04E-4EF2-BD09-52098A11EA9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD67EBE-D04E-4EF2-BD09-52098A11EA9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

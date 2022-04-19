@@ -1,7 +1,10 @@
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\bin\Debug\net6.0\SportFieldBooking.Data.deps.json
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\bin\Debug\net6.0\SportFieldBooking.Data.runtimeconfig.json
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\bin\Debug\net6.0\SportFieldBooking.Data.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\bin\Debug\net6.0\SportFieldBooking.Data.pdb
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\bin\Debug\net6.0\SportFieldBooking.Data.Model.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\bin\Debug\net6.0\SportFieldBooking.Helper.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\bin\Debug\net6.0\SportFieldBooking.Helper.pdb
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\bin\Debug\net6.0\SportFieldBooking.Data.Model.pdb
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\obj\Debug\net6.0\SportFieldBooking.Data.csproj.AssemblyReference.cache
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\obj\Debug\net6.0\SportFieldBooking.Data.GeneratedMSBuildEditorConfig.editorconfig
@@ -12,4 +15,5 @@ D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.A
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\obj\Debug\net6.0\SportFieldBooking.Data.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\obj\Debug\net6.0\refint\SportFieldBooking.Data.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\obj\Debug\net6.0\SportFieldBooking.Data.pdb
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\obj\Debug\net6.0\SportFieldBooking.Data.genruntimeconfig.cache
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Acess\obj\Debug\net6.0\ref\SportFieldBooking.Data.dll

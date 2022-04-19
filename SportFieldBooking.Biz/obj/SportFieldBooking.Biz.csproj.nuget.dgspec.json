@@ -4,14 +4,14 @@
     "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Biz\\SportFieldBooking.Biz.csproj": {}
   },
   "projects": {
-    "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Biz.Model\\SportFieldBooking.Biz.Model.csproj": {
+    "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Biz.Model\\SportFieldBooking.Biz.Model.csproj",
-        "projectName": "SportFieldBooking.Biz.Model",
-        "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Biz.Model\\SportFieldBooking.Biz.Model.csproj",
+        "projectUniqueName": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj",
+        "projectName": "SportFieldBooking.Helper",
+        "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj",
         "packagesPath": "C:\\Users\\OA\\.nuget\\packages\\",
-        "outputPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Biz.Model\\obj\\",
+        "outputPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\OA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,82 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Biz.Model\\SportFieldBooking.Biz.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Biz.Model\\SportFieldBooking.Biz.Model.csproj",
+        "projectName": "SportFieldBooking.Biz.Model",
+        "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Biz.Model\\SportFieldBooking.Biz.Model.csproj",
+        "packagesPath": "C:\\Users\\OA\\.nuget\\packages\\",
+        "outputPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Biz.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\OA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj": {
+                "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -88,6 +164,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj": {
+                "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj"
+              },
               "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Biz.Model\\SportFieldBooking.Biz.Model.csproj": {
                 "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Biz.Model\\SportFieldBooking.Biz.Model.csproj"
               },
@@ -113,6 +192,14 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[11.0.1, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
@@ -162,6 +249,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj": {
+                "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj"
+              },
               "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Data.Model\\SportFieldBooking.Data.Model.csproj": {
                 "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Data.Model\\SportFieldBooking.Data.Model.csproj"
               }
@@ -178,6 +268,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.4, )"
@@ -237,7 +331,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj": {
+                "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -250,6 +348,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[5.0.0, )"
