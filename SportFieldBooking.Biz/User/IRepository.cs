@@ -8,5 +8,6 @@ namespace SportFieldBooking.Biz.User
         Task<View> CreateAsync(New model);
         Task<View> GetAsync(long id);
         Task<List<List>> GetAllAsync();
+        Task<List<List>> GetListAsync(long pageNumber, int pageSize, long total);
     }
 }

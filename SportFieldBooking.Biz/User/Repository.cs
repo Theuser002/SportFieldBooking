@@ -4,6 +4,8 @@ using Microsoft.Extensions.Logging;
 using AutoMapper;
 using SportFieldBooking.Biz.Model.User;
 using Microsoft.EntityFrameworkCore;
+using SportFieldBooking.Helper;
+using SportFieldBooking.Helper.Pagination;
 
 
 namespace SportFieldBooking.Biz.User
@@ -83,16 +85,32 @@ namespace SportFieldBooking.Biz.User
         //    return _mapper.Map<List<List>>(dataItems);
         //}
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 19/04/2022
+        /// Method lay thong tin tat ca nguoi dung trong database
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<List>> GetAllAsync()
         {
             var dataItems = await _dbContext.Users.ToListAsync();
             return _mapper.Map<List<List>>(dataItems);
         }
 
-        public async Task<List<List>> GetListAsync(long pageNumber, long pageSize, long total)
-        {
 
-            var dataItems = await _dbContext.Users.Where(x => x.Id == 1).Take(10).Skip(0).ToListAsync();
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 20/04/2022
+        /// Method lay thong tin cua cac user trong database co phan trang
+        /// </summary>
+        /// <param name="pageNumber"> So thu tu trang </param>
+        /// <param name="pageSize"> So record trong mot trang </param>
+        /// <param name="total"> Tong so record trong database </param>
+        /// <returns>Mot list thong tin cua cac user trong mot trang </returns>
+        public async Task<List<List>> GetListAsync(long pageNumber, int pageSize, long total)
+        {
+            var dataItems = await _dbContext.Users.OrderByDescending(u => u.Id).GetPagedResult(pageNumber, pageSize, total).ToListAsync();
+            return _mapper.Map<List<List>>(dataItems);
         }
     }
 }

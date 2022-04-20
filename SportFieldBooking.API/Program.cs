@@ -62,12 +62,6 @@ try
         }
     }
 }
-catch (DatabaseNotFoundExceptions dbe)
-{
-    Console.WriteLine("No Database");
-    logger.Error($"[MyLog]: Database not found", dbe);
-    throw;
-}
 catch (Exception e)
 {
     logger.Error($"[MyLog]: Error in migrating process", e);

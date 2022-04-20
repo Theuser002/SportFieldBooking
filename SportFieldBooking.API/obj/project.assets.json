@@ -3544,6 +3544,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "AutoMapper": "11.0.1",
           "EntityFramework": "6.4.4",
           "Microsoft.EntityFrameworkCore": "6.0.4"
         },

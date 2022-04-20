@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bD+A1Tq3DBWWafsLpGDKxOLAXWvwXB9ZJyZ/FvilmfoZNyT3Jl+OHpizi8ZG+10qJ7uK8A4RNi3P09U1jaBH+A==",
+  "dgSpecHash": "J2Eg3T5gxith0XDFheK+CRbmkoP7EX3fY9Av6Kt9ZjEnfsM4+svz45JJ5TaCtMbNbAZuOl1OYoSqe9c0MzjSVQ==",
   "success": true,
   "projectFilePath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Biz.Model\\SportFieldBooking.Biz.Model.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\OA\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.4\\microsoft.entityframeworkcore.6.0.4.nupkg.sha512",

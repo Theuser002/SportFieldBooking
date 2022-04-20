@@ -7,8 +7,11 @@
 [7 - Querying hoạt động như thế nào trong mô hình repository] Repository (https://martinfowler.com/eaaCatalog/repository.html)
 [8 - Information about DbSet] DbSet<TEntity> Class (https://docs.microsoft.com/en-us/dotnet/api/system.data.entity.dbset-1?view=entity-framework-6.2.0)
 [9 - Paging with EF6] Add paging to Students Index (https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/sort-filter-page?view=aspnetcore-6.0#add-paging-to-students-index)
-[10 - Project mẫu, nhiều cái đáng xem] Tutorial: Get started with EF Core in an ASP.NET MVC web app (và các trang tiếp theo)(https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-6.0)
-
+[10 - Project mẫu, nhiều cái đáng xem] Tutorial: Get started with EF Core in an ASP.NET MVC web app (và các trang tiếp theo) (https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-6.0)
+[11 - Về LINQ và tự viết LINQ] SERIES C# HAY HO: LINQ – LỘT MẶT NẠ SỰ “BÁ ĐẠO” CỦA LINQ (https://toidicodedao.com/2015/03/26/series-c-hay-ho-linq/)
+[12 - Tự viết hàm LINQ cho Pagination] LINQ and pagination [duplicate] (https://stackoverflow.com/questions/6185159/linq-and-pagination)
+[13 - Hai kiểu LINQ (LINQ to SQL với LINQ to Entity là một)] linq to entities vs linq to objects - are they the same? (https://stackoverflow.com/questions/7192040/linq-to-entities-vs-linq-to-objects-are-they-the-same)
+[14] What is the difference between "LINQ to Entities", "LINQ to SQL" and "LINQ to Dataset" (https://stackoverflow.com/questions/2443836/what-is-the-difference-between-linq-to-entities-linq-to-sql-and-linq-to-da)
 
 
 

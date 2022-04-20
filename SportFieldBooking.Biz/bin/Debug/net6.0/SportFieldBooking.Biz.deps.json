@@ -712,6 +712,7 @@
       },
       "SportFieldBooking.Helper/1.0.0": {
         "dependencies": {
+          "AutoMapper": "11.0.1",
           "EntityFramework": "6.4.4",
           "Microsoft.EntityFrameworkCore": "6.0.4"
         },
