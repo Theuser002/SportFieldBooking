@@ -35,17 +35,17 @@ namespace SportFieldBooking.Biz.User
         public async Task<View> CreateAsync(New model)
         {
             // Do data tu biz model New vao data model User thong qua AutoMapper
-            var itemData = _mapper.Map<Data.Model.User>(model);
+            var newUser = _mapper.Map<Data.Model.User>(model);
 
             // Add data model user entity itemData vao database roi save changes
-            _dbContext.Users.Add(itemData);
+            _dbContext.Users?.Add(newUser);
             await _dbContext.SaveChangesAsync();
 
             // Tra ve view
                 // Do data tu biz model New vao biz model View thong qua AutoMapper 
-            var item = _mapper.Map<View>(itemData);
+            var userView = _mapper.Map<View>(newUser);
                 // return view
-            return item;
+            return userView;
         }
 
         /// <summary>
@@ -58,11 +58,11 @@ namespace SportFieldBooking.Biz.User
         /// <exception cref="Exception">Khi user voi id da nhap khong ton tai, xu ly o controller</exception>
         public async Task<View> GetAsync(long id)
         {
-            var dataItem = await _dbContext.Users.FindAsync(id);    
-            if (dataItem != null)
+            var user = await _dbContext.Users.FindAsync(id);    
+            if (user != null)
             {
-                var item = _mapper.Map<View>(dataItem);
-                return item;
+                var userView = _mapper.Map<View>(user);
+                return userView;
             }
             else
             {
@@ -71,46 +71,124 @@ namespace SportFieldBooking.Biz.User
             }
         }
 
-        //public async Task<List<List>> GetListAsync()
-        //{
-        //    var dataItems = await _dbContext.Users.ToListAsync();
-        //    var query = _dbContext.Set<User>();
-        //    query.Where(x => x.Id == 1).Take(10).Skip(0);
-        //    {
-        //        PageNumber: 1,
-        //        PageSize: 10,
-        //        Total: 55,
-        //        Results: []
-        //    }
-        //    return _mapper.Map<List<List>>(dataItems);
-        //}
-
         /// <summary>
         /// Auth: Hung
-        /// Created: 19/04/2022
-        /// Method lay thong tin tat ca nguoi dung trong database
+        /// Created: 25/04/2022
+        /// Method lay thong tin cua nguoi dung ve theo trang
         /// </summary>
-        /// <returns></returns>
-        public async Task<List<List>> GetAllAsync()
+        /// <param name="pageIndex"> So thu tu trang </param>
+        /// <param name="pageSize"> So record trong mot trang </param>
+        /// <returns> Page object - mot trang chua cac thong tin cua nguoi dung kem voi mot so thong tin khac</returns>
+        public async Task<Page<List>> GetListAsync(long pageIndex, int pageSize)
         {
-            var dataItems = await _dbContext.Users.ToListAsync();
-            return _mapper.Map<List<List>>(dataItems);
+            var userPage = await _dbContext.Users?.OrderBy(u => u.Id).GetPagedResult<Data.Model.User, List>(_mapper, pageIndex, pageSize);
+            return userPage;
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 25/04/2022
+        /// Method xoa mot nguoi dung
+        /// </summary>
+        /// <param name="id"> id cua nguoi dung </param>
+        /// <returns></returns>
+        /// <exception cref="Exception"> Khi user co id da nhap khong ton tai, xu ly o controller </exception>
+        public async Task DeleteAsync(long id)
+        {
+            var user = await _dbContext.Users.FindAsync(id);
+            if (user != null)
+            {
+                _dbContext.Users.Remove(user);
+                await _dbContext.SaveChangesAsync();
+            }
+            else
+            {
+                // Throw exception cho controller xu ly
+                throw new Exception($"There's no user with the id {id}");
+            }
+            
+        }
 
         /// <summary>
         /// Auth: Hung
-        /// Created: 20/04/2022
-        /// Method lay thong tin cua cac user trong database co phan trang
+        /// Created: 25/02/2022
+        /// Method cap nhat thong tin mot nguoi dung
         /// </summary>
-        /// <param name="pageNumber"> So thu tu trang </param>
-        /// <param name="pageSize"> So record trong mot trang </param>
-        /// <param name="total"> Tong so record trong database </param>
-        /// <returns>Mot list thong tin cua cac user trong mot trang </returns>
-        public async Task<List<List>> GetListAsync(long pageNumber, int pageSize, long total)
+        /// <param name="model"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"> Khi user co id da nhap khong ton tai, xu ly o controller </exception>
+        public async Task<View> UpdateAsync(Edit model)
         {
-            var dataItems = await _dbContext.Users.OrderByDescending(u => u.Id).GetPagedResult(pageNumber, pageSize, total).ToListAsync();
-            return _mapper.Map<List<List>>(dataItems);
+            var oldUser = await _dbContext.Users.FindAsync(model.Id);
+            if(oldUser != null)
+            {
+                var updatedUser = _mapper.Map(model, oldUser);
+                _dbContext.Users.Update(updatedUser);
+                await _dbContext.SaveChangesAsync();
+                var updatedUserView = _mapper.Map<View>(updatedUser);
+                return updatedUserView;
+            }
+            else
+            {
+                throw new Exception($"There's no user with the id {model.Id}");
+            }
+        }
+        
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 25/04/2022
+        /// Method tim kiem nhung nguoi dung co username chua mot string nhat dinh
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <returns> Nhung nguoi dung co username thoa man dieu kien </returns>
+        public async Task<Page<List>> SearchUsernameAsync(string username, long pageIndex, int pageSize)
+        {
+            var matchedUsers = await _dbContext.Users.Where(u => u.Username.Contains(username)).OrderBy(u => u.Id).GetPagedResult<Data.Model.User, List>(_mapper, pageIndex, pageSize);
+            return matchedUsers;
+        }
+
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 25/04/2022
+        /// Method loc ra cac nguoi dung duoc tao truoc/sau/vao mot ngay nhat dinh
+        /// </summary>
+        /// <param name="dateStr"> ngay duoc chon lam moc, co format: yyyy-mm-dd </param>
+        /// <param name="condition"> dieu kien loc after: sau, before: truoc, equal: bang voi ngay lam moc</param>
+        /// <param name="pageIndex"> so thu tu trang </param>
+        /// <param name="pageSize"> so ban ghi trong mot trang </param>
+        /// <returns> Cac nguoi dung duoc loc ra </returns>
+        /// <exception cref="Exception"> Dieu kien loc khong hop le hoac thoi gian nhap sai format </exception>
+        public async Task<Page<List>> FilterCreatedDateAsync(string dateStr, string condition, long pageIndex, int pageSize)
+        {
+            // dateStr format: yyyy-mm-dd
+            DateTime date;
+            var isValidDate = DateTime.TryParse(dateStr, out date);
+            if (isValidDate)
+            {
+                switch (condition.ToLower())
+                {
+                    
+                    case "before":
+                        var matchedUsers = await _dbContext.Users.Where(u => DateTime.Compare(u.Created.Date, date.Date) < 0).OrderByDescending(u => u.Created).GetPagedResult<Data.Model.User, List>(_mapper, pageIndex, pageSize);
+                        return matchedUsers;
+                    case "after":
+                        matchedUsers = await _dbContext.Users.Where(u => DateTime.Compare(u.Created.Date, date.Date) > 0).GetPagedResult<Data.Model.User, List>(_mapper, pageIndex, pageSize);
+                        return matchedUsers;
+                    case "equal":
+                        Console.WriteLine("Equal");
+                        matchedUsers = await _dbContext.Users.Where(u => DateTime.Compare(u.Created.Date, date.Date) == 0).GetPagedResult<Data.Model.User, List>(_mapper, pageIndex, pageSize);
+                        return matchedUsers;
+                    default:
+                        throw new Exception($"Filtering condition not recognized!");
+                }
+            }
+            else
+            {
+                throw new Exception($"Invalid DateTime data");
+            }
+            
         }
     }
 }

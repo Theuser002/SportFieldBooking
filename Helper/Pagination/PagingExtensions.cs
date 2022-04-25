@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using SportFieldBooking.Helper.Exceptions;
+using AutoMapper;
 
 namespace SportFieldBooking.Helper.Pagination
 {
@@ -20,16 +21,25 @@ namespace SportFieldBooking.Helper.Pagination
         /// <param name="source"> Query object dau vao </param>
         /// <param name="pageIndex"> So thu tu trang </param>
         /// <param name="pageSize"> So instance trong mot trang </param>
-        /// <param name="total"> Tong so instance trong database </param>
+        /// <param name="total"> Tong so record trong database </param>
         /// <returns> Query object cua cac user trong mot trang cu the </returns>
         /// <exception cref="InvalidPageException"> So trang nhap vao khong ton tai </exception>
-        public static IQueryable<TSource> GetPagedResult<TSource>(this IQueryable<TSource> source, long pageIndex, int pageSize, long total)
+        //public static IQueryable<TSource> GetPagedResult<TSource>(this IQueryable<TSource> source, long pageIndex, int pageSize, long total)
+        //{
+        //    if (((pageIndex - 1) * pageSize + pageSize) > total || pageIndex < 0)
+        //    {
+        //        throw new InvalidPageException();
+        //    }
+        //    var result = source.Skip((int)((pageIndex - 1) * pageSize)).Take(pageSize);
+        //    return result;
+        //}
+
+        public static async Task<Page<TDest>> GetPagedResult<TSource, TDest>(this IQueryable<TSource> source, IMapper mapper, long pageIndex, int pageSize)
         {
-            if (((pageIndex - 1) * pageSize + pageSize) > total || pageIndex < 0){
-                throw new InvalidPageException();
-            } 
-            var result = source.Skip((int)((pageIndex - 1) * pageSize)).Take(pageSize);
-            return result;
+            var total = await source.CountAsync();
+            var items = await source.Skip(((int)pageIndex - 1) * pageSize).Take(pageSize).ToListAsync();
+            var page = await Page<TDest>.CreateAsync<TSource, TDest>(mapper, source, pageIndex, pageSize);
+            return page;
         }
     }
 }

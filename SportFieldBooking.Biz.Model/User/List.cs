@@ -1,5 +1,4 @@
 ﻿// Biz model for listing User entities
-
 namespace SportFieldBooking.Biz.Model.User
 {
     public class List

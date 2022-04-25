@@ -28,9 +28,9 @@ IConfiguration configuration = builder.Configuration;
 // DB Config
 string dbProvider = configuration["DatabaseOptions:Provider"];
 
-switch (dbProvider)
+switch (dbProvider.ToLower())
 {
-    case "SQLServer":
+    case "sqlserver":
         builder.Services.AddDbContext<DomainDbContext, SQLServerDbContext>();
         break;
     default:

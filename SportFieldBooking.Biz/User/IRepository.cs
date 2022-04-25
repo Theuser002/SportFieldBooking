@@ -1,5 +1,6 @@
 ﻿using SportFieldBooking.Data.Model;
 using SportFieldBooking.Biz.Model.User;
+using SportFieldBooking.Helper.Pagination;
 
 namespace SportFieldBooking.Biz.User
 {
@@ -7,7 +8,10 @@ namespace SportFieldBooking.Biz.User
     {
         Task<View> CreateAsync(New model);
         Task<View> GetAsync(long id);
-        Task<List<List>> GetAllAsync();
-        Task<List<List>> GetListAsync(long pageNumber, int pageSize, long total);
+        Task<Page<List>> GetListAsync(long pageNumber, int pageSize);
+        Task DeleteAsync(long id);
+        Task<View> UpdateAsync(Edit model);
+        Task<Page<List>> SearchUsernameAsync(string username, long pageIndex, int pageSize);
+        Task<Page<List>> FilterCreatedDateAsync(string date, string condition, long pageIndex, int pageSize);
     }
 }
