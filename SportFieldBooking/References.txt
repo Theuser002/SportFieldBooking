@@ -12,6 +12,10 @@
 [12 - Tự viết hàm LINQ cho Pagination] LINQ and pagination [duplicate] (https://stackoverflow.com/questions/6185159/linq-and-pagination)
 [13 - Hai kiểu LINQ (LINQ to SQL với LINQ to Entity là một)] linq to entities vs linq to objects - are they the same? (https://stackoverflow.com/questions/7192040/linq-to-entities-vs-linq-to-objects-are-they-the-same)
 [14] What is the difference between "LINQ to Entities", "LINQ to SQL" and "LINQ to Dataset" (https://stackoverflow.com/questions/2443836/what-is-the-difference-between-linq-to-entities-linq-to-sql-and-linq-to-da)
+[15] Reset Entity-Framework Migrations (https://stackoverflow.com/questions/8439650/how-to-drop-all-tables-in-a-sql-server-database)
+
+
+
 
 
 

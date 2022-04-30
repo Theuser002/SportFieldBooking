@@ -30,8 +30,9 @@ namespace SportFieldBooking.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
-                    b.Property<int>("BookDate")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("BookDate")
+                        .HasPrecision(0)
+                        .HasColumnType("datetime2(0)");
 
                     b.Property<long>("BookingStatusId")
                         .HasColumnType("bigint");
@@ -40,14 +41,14 @@ namespace SportFieldBooking.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("EndHour")
-                        .HasColumnType("int");
+                    b.Property<TimeSpan>("EndHour")
+                        .HasColumnType("time");
 
                     b.Property<long>("SportFieldId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("StartHour")
-                        .HasColumnType("int");
+                    b.Property<TimeSpan>("StartHour")
+                        .HasColumnType("time");
 
                     b.Property<long>("UserId")
                         .HasColumnType("bigint");
@@ -56,7 +57,8 @@ namespace SportFieldBooking.Data.Migrations
 
                     b.HasIndex("BookingStatusId");
 
-                    b.HasIndex("Code");
+                    b.HasIndex("Code")
+                        .IsUnique();
 
                     b.HasIndex("SportFieldId");
 
@@ -75,11 +77,9 @@ namespace SportFieldBooking.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Name");
 
                     b.ToTable("BookingStatuses");
                 });
@@ -92,33 +92,32 @@ namespace SportFieldBooking.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
-                    b.Property<int>("ClosingHour")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("ClosingHour")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
-                    b.Property<int>("OpeningHour")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("OpeningHour")
+                        .HasColumnType("datetime2");
 
-                    b.Property<double>("PriceHourly")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime>("RequestOn")
-                        .HasPrecision(0)
-                        .HasColumnType("datetime2(0)");
+                    b.Property<long>("PriceHourly")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PriceHourly");
+                    b.HasIndex("Code")
+                        .IsUnique();
 
                     b.ToTable("SportFields");
                 });
@@ -159,7 +158,8 @@ namespace SportFieldBooking.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IsActive");
+                    b.HasIndex("Code")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });

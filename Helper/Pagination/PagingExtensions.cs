@@ -24,15 +24,6 @@ namespace SportFieldBooking.Helper.Pagination
         /// <param name="total"> Tong so record trong database </param>
         /// <returns> Query object cua cac user trong mot trang cu the </returns>
         /// <exception cref="InvalidPageException"> So trang nhap vao khong ton tai </exception>
-        //public static IQueryable<TSource> GetPagedResult<TSource>(this IQueryable<TSource> source, long pageIndex, int pageSize, long total)
-        //{
-        //    if (((pageIndex - 1) * pageSize + pageSize) > total || pageIndex < 0)
-        //    {
-        //        throw new InvalidPageException();
-        //    }
-        //    var result = source.Skip((int)((pageIndex - 1) * pageSize)).Take(pageSize);
-        //    return result;
-        //}
 
         public static async Task<Page<TDest>> GetPagedResult<TSource, TDest>(this IQueryable<TSource> source, IMapper mapper, long pageIndex, int pageSize)
         {

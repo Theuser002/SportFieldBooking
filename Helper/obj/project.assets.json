@@ -481,6 +481,27 @@
             "rid": "win"
           }
         }
+      },
+      "ValueConverters/2.2.10": {
+        "type": "package",
+        "dependencies": {
+          "ValueConverters.Annotations": "2.2.10"
+        },
+        "compile": {
+          "lib/net45/ValueConverters.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ValueConverters.dll": {}
+        }
+      },
+      "ValueConverters.Annotations/2.2.10": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ValueConverters.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ValueConverters.Annotations.dll": {}
+        }
       }
     }
   },
@@ -1556,13 +1577,59 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "ValueConverters/2.2.10": {
+      "sha512": "zgE27JQXUw+ntsQ636yy+ma2khtp+cpFMJmbH+2ehpDLwIyENEizjCsVbddOWTS+XYc5HshZMGExz/wkLEzoSQ==",
+      "type": "package",
+      "path": "valueconverters/2.2.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/ValueConverters.dll",
+        "lib/net45/ValueConverters.pdb",
+        "lib/net45/ValueConverters.xml",
+        "lib/net5.0-windows7/ValueConverters.dll",
+        "lib/net5.0-windows7/ValueConverters.pdb",
+        "lib/net5.0-windows7/ValueConverters.xml",
+        "lib/uap10.0/ValueConverters.dll",
+        "lib/uap10.0/ValueConverters.pdb",
+        "lib/uap10.0/ValueConverters.xml",
+        "valueconverters.2.2.10.nupkg.sha512",
+        "valueconverters.nuspec"
+      ]
+    },
+    "ValueConverters.Annotations/2.2.10": {
+      "sha512": "QZMekjG4O9NINmb8EOBxYJdVa1bwuLm1RN3x39R9YyhT9VjgjlIQsdA4YzdixxF/jbxkwT2/Ck+wbf2N+zMFkA==",
+      "type": "package",
+      "path": "valueconverters.annotations/2.2.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/ValueConverters.Annotations.dll",
+        "lib/net45/ValueConverters.Annotations.pdb",
+        "lib/netstandard1.0/ValueConverters.Annotations.deps.json",
+        "lib/netstandard1.0/ValueConverters.Annotations.dll",
+        "lib/netstandard1.0/ValueConverters.Annotations.pdb",
+        "lib/netstandard1.4/ValueConverters.Annotations.deps.json",
+        "lib/netstandard1.4/ValueConverters.Annotations.dll",
+        "lib/netstandard1.4/ValueConverters.Annotations.pdb",
+        "lib/netstandard1.6/ValueConverters.Annotations.deps.json",
+        "lib/netstandard1.6/ValueConverters.Annotations.dll",
+        "lib/netstandard1.6/ValueConverters.Annotations.pdb",
+        "lib/netstandard2.0/ValueConverters.Annotations.deps.json",
+        "lib/netstandard2.0/ValueConverters.Annotations.dll",
+        "lib/netstandard2.0/ValueConverters.Annotations.pdb",
+        "valueconverters.annotations.2.2.10.nupkg.sha512",
+        "valueconverters.annotations.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "AutoMapper >= 11.0.1",
       "EntityFramework >= 6.4.4",
-      "Microsoft.EntityFrameworkCore >= 6.0.4"
+      "Microsoft.EntityFrameworkCore >= 6.0.4",
+      "ValueConverters >= 2.2.10"
     ]
   },
   "packageFolders": {
@@ -1615,6 +1682,10 @@
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.4, )"
+          },
+          "ValueConverters": {
+            "target": "Package",
+            "version": "[2.2.10, )"
           }
         },
         "imports": [
@@ -1635,5 +1706,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ValueConverters 2.2.10' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "ValueConverters",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

@@ -10,16 +10,23 @@ namespace SportFieldBooking.Data.Model
         {
             Bookings = new HashSet<Booking>();
         }
+
         [Key]
         public long Id { get; set; }
+        [StringLength(50)]
         public string Code { get; set; } = "";
+        [StringLength(30)]
         public string Name { get; set; } = "";
         public string? Description { get; set; } = "";
-        public double PriceHourly { get; set; } = 0.0;
-        public int OpeningHour { get; set; }
-        public int ClosingHour { get; set; }
-        public DateTime RequestOn { get; set; }
-
+        public long PriceHourly { get; set; } = 0;
+        [Column(TypeName = "datetime2")]
+        public DateTime OpeningHour { get; set; }
+        [Column(TypeName = "datetime2")]
+        public DateTime ClosingHour { get; set; }
         public virtual ICollection<Booking>? Bookings { get; set; }
     }
 }
+
+
+
+

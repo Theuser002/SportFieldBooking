@@ -12,6 +12,7 @@ namespace SportFieldBooking.Data.Model
             // Lay thoi gian hien tai khoi tao cho Created
             Created = DateTime.Now;
         }
+
         [Key]
         public long Id { get; set; }
         [StringLength(50)] // Datatype constraining
@@ -23,7 +24,7 @@ namespace SportFieldBooking.Data.Model
         [StringLength(30)]
         public string Password { get; set; } = "";
         public bool IsActive { get; set; } = true;
-        public DateTime Created { get; set; }
+        public DateTime Created { get; set; } 
         public virtual ICollection<Booking>? Bookings { get; set; }
     }
 }

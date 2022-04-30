@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rQgsJE5fHV94oA7J4CbC949/JBMWFmElCdnFYxWK+NotG3Y1zpilcua+E8w32iDfTQqZwBRbEEBlFHeAH7md4w==",
+  "dgSpecHash": "j29c4ijZRV5oIuQ+Od7VqtJF52yKhcjfC+h4Kd1TkKvXeQinV06wHcRb0yVUOzFQ+I9VaTadNSMO+LmC3Jwikw==",
   "success": true,
   "projectFilePath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.API\\SportFieldBooking.API.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,9 @@
     "C:\\Users\\OA\\.nuget\\packages\\confluent.kafka\\1.5.3\\confluent.kafka.1.5.3.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\core.api\\0.4.0\\core.api.0.4.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
-    "C:\\Users\\OA\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\OA\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
+    "C:\\Users\\OA\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.4.0\\fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",
+    "C:\\Users\\OA\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.4.0\\fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\jetbrains.annotations\\2019.1.3\\jetbrains.annotations.2019.1.3.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\languageext.core\\3.4.15\\languageext.core.3.4.15.nupkg.sha512",
@@ -235,7 +237,20 @@
     "C:\\Users\\OA\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
-    "C:\\Users\\OA\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\OA\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\OA\\.nuget\\packages\\valueconverters\\2.2.10\\valueconverters.2.2.10.nupkg.sha512",
+    "C:\\Users\\OA\\.nuget\\packages\\valueconverters.annotations\\2.2.10\\valueconverters.annotations.2.2.10.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ValueConverters 2.2.10' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "ValueConverters",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

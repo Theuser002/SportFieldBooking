@@ -12,6 +12,8 @@ D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bi
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\EntityFramework.SqlServer.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\EntityFramework.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\FluentValidation.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Humanizer.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\JetBrains.Annotations.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\LanguageExt.Core.dll
@@ -66,6 +68,8 @@ D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bi
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\System.Security.Permissions.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\ValueConverters.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\ValueConverters.Annotations.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\runtimes\linux-x64\native\alpine-librdkafka.so
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\runtimes\linux-x64\native\centos7-librdkafka.so
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\runtimes\linux-x64\native\debian9-librdkafka.so

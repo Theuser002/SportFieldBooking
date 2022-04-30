@@ -97,7 +97,7 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="id"> id cua user </param>
         /// <returns>Response, thanh cong hoac loi</returns>
-        [HttpDelete("DeleteUser")]
+        [HttpDelete("Delete")]
         public async Task<IActionResult> Delete(long id)
         {
             try
@@ -157,7 +157,17 @@ namespace SportFieldBooking.API.Controllers
                 return NotFound(e);
             }
         }
-        
+
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 25/04/2022
+        /// Endpoint loc user dua vao ngay khoi tao
+        /// </summary>
+        /// <param name="date"> ngay duoc chon lam moc, co format: yyyy-mm-dd </param>
+        /// <param name="condition"> dieu kien loc after: sau, before: truoc, equal: bang voi ngay lam moc </param>
+        /// <param name="pageIndex"> so thu tu trang </param>
+        /// <param name="pageSize"> so ban ghi trong mot trang </param>
+        /// <returns> Cac nguoi dung duoc loc ra  </returns>
         [HttpGet("FilterByCreatedDate")]
         public async Task<IActionResult> FilterByCreatedDate(string date, string condition, long pageIndex, int pageSize)
         {

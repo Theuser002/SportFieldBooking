@@ -15,9 +15,11 @@ namespace SportFieldBooking.Biz
         private readonly IMapper _mapper;
 
         private User.Repository? _user = null;
+        private SportField.Repository _sportField = null;
 
-        // Neu đang là null thì tạo mới
+        // Nếu Repository object đang là null thì khởi tạo Repository object và inject các dependencies cần thiết
         public User.IRepository User => _user?? (_user = new User.Repository(_dbContext, _configuration, _logger, _mapper));
+        public SportField.IRepository SportField => _sportField ?? (_sportField = new SportField.Repository(_dbContext, _configuration, _logger, _mapper));
 
         // Dependencies injection, dùng để đổ dependnecies khi tạo mới các Repository Entity
         public RepositoryWrapper (DomainDbContext context, IConfiguration configuration, ILogger<RepositoryWrapper> logger)

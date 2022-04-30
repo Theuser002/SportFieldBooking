@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Configuration;
 using SportFieldBooking.Data.Model;
+using SportFieldBooking.Helper.DateTimeUtils;
 
 namespace SportFieldBooking.Data
 {
@@ -21,24 +23,31 @@ namespace SportFieldBooking.Data
         protected override void OnModelCreating (ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
-                .HasIndex(e => e.IsActive);
-            modelBuilder.Entity<BookingStatus>()
-                .HasIndex(e => e.Name);
+                .HasIndex(e => e.Code)
+                .IsUnique();
             modelBuilder.Entity<Booking>()
-                .HasIndex(e => e.Code);
+                .HasIndex(e => e.Code)
+                .IsUnique();
             modelBuilder.Entity<SportField>()
-                .HasIndex(e => e.PriceHourly);
+                .HasIndex(e => e.Code)
+                .IsUnique();
 
             modelBuilder.Entity<User>()
                 .Property(f => f.Created)
                 .HasColumnType("datetime2")
                 .HasPrecision(0); // No precision for the fractional second of datetime2 type
-
+            modelBuilder.Entity<Booking>()
+                .Property(f => f.BookDate)
+                .HasColumnType("datetime2")
+                .HasPrecision(0);
             modelBuilder.Entity<SportField>()
-                .Property(f => f.RequestOn)
+                .Property(f => f.OpeningHour)
+                .HasColumnType("datetime2")
+                .HasPrecision(0);
+            modelBuilder.Entity<SportField>()
+                .Property(f => f.ClosingHour)
                 .HasColumnType("datetime2")
                 .HasPrecision(0);
         }
-
     }
 }

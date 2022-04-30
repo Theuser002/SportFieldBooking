@@ -9,9 +9,11 @@ namespace SportFieldBooking.Data.Model
         [Key]
         public long Id { get; set; }
         public string Code { get; set; } = "";
-        public int StartHour { get; set; } 
-        public int EndHour { get; set; }
-        public int BookDate { get; set; }
+        [Column(TypeName = "time")]
+        public TimeSpan StartHour { get; set; } 
+        [Column(TypeName = "time")]
+        public TimeSpan EndHour { get; set; }
+        public DateTime BookDate { get; set; }
         public virtual User User { get; set; }  
         public virtual SportField SportField { get; set; }  
         public virtual BookingStatus BookingStatus { get; set; }

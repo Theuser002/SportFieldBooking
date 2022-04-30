@@ -9,6 +9,6 @@ namespace SportFieldBooking.Biz
     public interface IRepositoryWrapper
     {
         public User.IRepository User { get; }
-
+        public SportField.IRepository SportField { get; }
     }
 }

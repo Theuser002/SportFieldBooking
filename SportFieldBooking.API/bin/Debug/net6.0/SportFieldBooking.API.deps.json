@@ -90,11 +90,35 @@
           }
         }
       },
-      "FluentValidation/9.3.0": {
+      "FluentValidation/10.4.0": {
         "runtime": {
-          "lib/net5.0/FluentValidation.dll": {
+          "lib/net6.0/FluentValidation.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.3.0.0"
+            "fileVersion": "10.4.0.0"
+          }
+        }
+      },
+      "FluentValidation.AspNetCore/10.4.0": {
+        "dependencies": {
+          "FluentValidation": "10.4.0",
+          "FluentValidation.DependencyInjectionExtensions": "10.4.0"
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.AspNetCore.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "10.4.0.0"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/10.4.0": {
+        "dependencies": {
+          "FluentValidation": "10.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "10.4.0.0"
           }
         }
       },
@@ -1112,7 +1136,7 @@
       "Other-EShop.Core.Infrastructure/0.4.0": {
         "dependencies": {
           "Confluent.Kafka": "1.5.3",
-          "FluentValidation": "9.3.0",
+          "FluentValidation": "10.4.0",
           "Microsoft.AspNetCore.Hosting": "2.2.7",
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.1",
@@ -2199,6 +2223,25 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
+      "ValueConverters/2.2.10": {
+        "dependencies": {
+          "ValueConverters.Annotations": "2.2.10"
+        },
+        "runtime": {
+          "lib/net45/ValueConverters.dll": {
+            "assemblyVersion": "2.2.10.0",
+            "fileVersion": "2.2.10.0"
+          }
+        }
+      },
+      "ValueConverters.Annotations/2.2.10": {
+        "runtime": {
+          "lib/netstandard2.0/ValueConverters.Annotations.dll": {
+            "assemblyVersion": "2.2.10.0",
+            "fileVersion": "2.2.10.0"
+          }
+        }
+      },
       "SportFieldBooking.Biz/1.0.0": {
         "dependencies": {
           "AutoMapper": "11.0.1",
@@ -2242,6 +2285,7 @@
       "SportFieldBooking.Data.Model/1.0.0": {
         "dependencies": {
           "EntityFramework": "6.4.4",
+          "FluentValidation.AspNetCore": "10.4.0",
           "Microsoft.EntityFrameworkCore": "6.0.4",
           "Serilog.AspNetCore": "5.0.0",
           "SportFieldBooking.Helper": "1.0.0"
@@ -2254,7 +2298,8 @@
         "dependencies": {
           "AutoMapper": "11.0.1",
           "EntityFramework": "6.4.4",
-          "Microsoft.EntityFrameworkCore": "6.0.4"
+          "Microsoft.EntityFrameworkCore": "6.0.4",
+          "ValueConverters": "2.2.10"
         },
         "runtime": {
           "SportFieldBooking.Helper.dll": {}
@@ -2303,12 +2348,26 @@
       "path": "entityframework/6.4.4",
       "hashPath": "entityframework.6.4.4.nupkg.sha512"
     },
-    "FluentValidation/9.3.0": {
+    "FluentValidation/10.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-C44l6Ih+YwpED/TsXfl6LIq6Z4wLXahstnr6T70uUg1Hs7/bLBKKAo9Nl0sLhVjDE8TA+fF+O3IM4nDrwabcSQ==",
-      "path": "fluentvalidation/9.3.0",
-      "hashPath": "fluentvalidation.9.3.0.nupkg.sha512"
+      "sha512": "sha512-rVI1b5L3pq3layrRKIo3N7AT3PWey8ocPZhf6zeHYf6LBBvnP1KzW3bm7KmeazOWW8m1KXMD+shfviIcKSgQ0g==",
+      "path": "fluentvalidation/10.4.0",
+      "hashPath": "fluentvalidation.10.4.0.nupkg.sha512"
+    },
+    "FluentValidation.AspNetCore/10.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CF/YkJ+ls/Y76ZTZtQ6Ye9rfRM4TcAL6R8c4q8dDRQzS0/6hL+PG/Vssht3ha/wFMoBd0kiosC7JFxbtWBTccg==",
+      "path": "fluentvalidation.aspnetcore/10.4.0",
+      "hashPath": "fluentvalidation.aspnetcore.10.4.0.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/10.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-25LzRDm9Chfyw4aPMsoE+3qkz1x2evb2/537hUcnqkhA9zpREfQYm8y1JF1LCMdcH57q5QAZ27X7dqVOcN6TOA==",
+      "path": "fluentvalidation.dependencyinjectionextensions/10.4.0",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",
@@ -3891,6 +3950,20 @@
       "sha512": "sha512-jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
+    },
+    "ValueConverters/2.2.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zgE27JQXUw+ntsQ636yy+ma2khtp+cpFMJmbH+2ehpDLwIyENEizjCsVbddOWTS+XYc5HshZMGExz/wkLEzoSQ==",
+      "path": "valueconverters/2.2.10",
+      "hashPath": "valueconverters.2.2.10.nupkg.sha512"
+    },
+    "ValueConverters.Annotations/2.2.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QZMekjG4O9NINmb8EOBxYJdVa1bwuLm1RN3x39R9YyhT9VjgjlIQsdA4YzdixxF/jbxkwT2/Ck+wbf2N+zMFkA==",
+      "path": "valueconverters.annotations/2.2.10",
+      "hashPath": "valueconverters.annotations.2.2.10.nupkg.sha512"
     },
     "SportFieldBooking.Biz/1.0.0": {
       "type": "project",
