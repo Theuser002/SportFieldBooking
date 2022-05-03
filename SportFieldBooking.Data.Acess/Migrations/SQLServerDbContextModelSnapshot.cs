@@ -34,21 +34,25 @@ namespace SportFieldBooking.Data.Migrations
                         .HasPrecision(0)
                         .HasColumnType("datetime2(0)");
 
-                    b.Property<long>("BookingStatusId")
+                    b.Property<long?>("BookingStatusId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<TimeSpan>("EndHour")
-                        .HasColumnType("time");
+                    b.Property<DateTime>("EndHour")
+                        .HasColumnType("datetime2");
 
                     b.Property<long>("SportFieldId")
                         .HasColumnType("bigint");
 
-                    b.Property<TimeSpan>("StartHour")
-                        .HasColumnType("time");
+                    b.Property<DateTime>("StartHour")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("TotalPrice")
+                        .HasColumnType("bigint");
 
                     b.Property<long>("UserId")
                         .HasColumnType("bigint");
@@ -75,7 +79,7 @@ namespace SportFieldBooking.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -93,7 +97,8 @@ namespace SportFieldBooking.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
                     b.Property<DateTime>("ClosingHour")
-                        .HasColumnType("datetime2");
+                        .HasPrecision(0)
+                        .HasColumnType("datetime2(0)");
 
                     b.Property<string>("Code")
                         .IsRequired()
@@ -109,7 +114,8 @@ namespace SportFieldBooking.Data.Migrations
                         .HasColumnType("nvarchar(30)");
 
                     b.Property<DateTime>("OpeningHour")
-                        .HasColumnType("datetime2");
+                        .HasPrecision(0)
+                        .HasColumnType("datetime2(0)");
 
                     b.Property<long>("PriceHourly")
                         .HasColumnType("bigint");
@@ -129,6 +135,9 @@ namespace SportFieldBooking.Data.Migrations
                         .HasColumnType("bigint");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("Balance")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Code")
                         .IsRequired()
@@ -168,9 +177,7 @@ namespace SportFieldBooking.Data.Migrations
                 {
                     b.HasOne("SportFieldBooking.Data.Model.BookingStatus", "BookingStatus")
                         .WithMany("Bookings")
-                        .HasForeignKey("BookingStatusId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BookingStatusId");
 
                     b.HasOne("SportFieldBooking.Data.Model.SportField", "SportField")
                         .WithMany("Bookings")

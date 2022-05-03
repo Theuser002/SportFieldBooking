@@ -13,5 +13,6 @@ namespace SportFieldBooking.Biz.User
         Task<View> UpdateAsync(Edit model);
         Task<Page<List>> SearchUsernameAsync(string username, long pageIndex, int pageSize);
         Task<Page<List>> FilterCreatedDateAsync(string date, string condition, long pageIndex, int pageSize);
+        Task<View> UpdateBalanceAsync(long id, long amount);
     }
 }

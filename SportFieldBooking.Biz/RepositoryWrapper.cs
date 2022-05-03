@@ -16,10 +16,14 @@ namespace SportFieldBooking.Biz
 
         private User.Repository? _user = null;
         private SportField.Repository _sportField = null;
+        private Booking.Repository _booking = null;
+        private BookingStatus.Repository _bookingStatus = null;
 
         // Nếu Repository object đang là null thì khởi tạo Repository object và inject các dependencies cần thiết
         public User.IRepository User => _user?? (_user = new User.Repository(_dbContext, _configuration, _logger, _mapper));
         public SportField.IRepository SportField => _sportField ?? (_sportField = new SportField.Repository(_dbContext, _configuration, _logger, _mapper));
+        public Booking.IRepository Booking => _booking ?? (_booking = new Booking.Repository(_dbContext, _configuration, _logger, _mapper));
+        public BookingStatus.IRepository BookingStatus => _bookingStatus ?? (_bookingStatus = new BookingStatus.Repository(_dbContext, _configuration, _logger, _mapper));
 
         // Dependencies injection, dùng để đổ dependnecies khi tạo mới các Repository Entity
         public RepositoryWrapper (DomainDbContext context, IConfiguration configuration, ILogger<RepositoryWrapper> logger)

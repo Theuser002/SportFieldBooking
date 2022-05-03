@@ -13,11 +13,19 @@ namespace SportFieldBooking.Biz
             CreateMap<Data.Model.User, Biz.Model.User.View>().ReverseMap();
             CreateMap<Data.Model.User, Biz.Model.User.List>().ReverseMap();
             CreateMap<Data.Model.User, Biz.Model.User.Edit>().ReverseMap();
+            CreateMap<Data.Model.User, Biz.Model.User.Login>().ReverseMap();
+            CreateMap<Data.Model.User, Biz.Model.User.Register>().ReverseMap();
 
             CreateMap<Data.Model.SportField, Biz.Model.SportField.New>().ReverseMap();
             CreateMap<Data.Model.SportField, Biz.Model.SportField.View>().ReverseMap();
             CreateMap<Data.Model.SportField, Biz.Model.SportField.List>().ReverseMap();
             CreateMap<Data.Model.SportField, Biz.Model.SportField.Edit>().ReverseMap();
+
+            CreateMap<Data.Model.Booking, Biz.Model.Booking.New>().ReverseMap();
+            CreateMap<Data.Model.Booking, Biz.Model.Booking.View>().ReverseMap();
+
+            CreateMap<Data.Model.BookingStatus, Biz.Model.BookingStatus.New>().ReverseMap();
+            CreateMap<Data.Model.BookingStatus, Biz.Model.BookingStatus.View>().ReverseMap();
         }
     }
 }

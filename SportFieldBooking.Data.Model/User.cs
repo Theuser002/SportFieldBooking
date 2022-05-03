@@ -24,7 +24,8 @@ namespace SportFieldBooking.Data.Model
         [StringLength(30)]
         public string Password { get; set; } = "";
         public bool IsActive { get; set; } = true;
-        public DateTime Created { get; set; } 
+        public DateTime Created { get; set; }
+        public long Balance { get; set; } = 0;
         public virtual ICollection<Booking>? Bookings { get; set; }
     }
 }

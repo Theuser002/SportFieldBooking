@@ -10,5 +10,7 @@ namespace SportFieldBooking.Biz
     {
         public User.IRepository User { get; }
         public SportField.IRepository SportField { get; }
+        public Booking.IRepository Booking { get; }
+        public BookingStatus.IRepository BookingStatus { get; }
     }
 }

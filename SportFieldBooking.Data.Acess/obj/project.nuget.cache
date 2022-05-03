@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yCklPts670HI6/c7JpJ4LCvi1arHmGv9rPpAUP2GQdCLJF6aewL38zLE1zuN+SwPZ0W1RuoYQJdzNWIDbxEjoQ==",
+  "dgSpecHash": "f7MIhs2YTit+Vl43sKMMB8WS2punF0lK7++khbJ+huTFqZ48X54Q6UnZGJ+DBfto9w35hDIiQHk58X6cje2VJQ==",
   "success": true,
   "projectFilePath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.Data.Acess\\SportFieldBooking.Data.csproj",
   "expectedPackageFiles": [
@@ -71,20 +71,7 @@
     "C:\\Users\\OA\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\system.text.json\\4.6.0\\system.text.json.4.6.0.nupkg.sha512",
-    "C:\\Users\\OA\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
-    "C:\\Users\\OA\\.nuget\\packages\\valueconverters\\2.2.10\\valueconverters.2.2.10.nupkg.sha512",
-    "C:\\Users\\OA\\.nuget\\packages\\valueconverters.annotations\\2.2.10\\valueconverters.annotations.2.2.10.nupkg.sha512"
+    "C:\\Users\\OA\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'ValueConverters 2.2.10' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
-      "libraryId": "ValueConverters",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

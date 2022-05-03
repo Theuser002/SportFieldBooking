@@ -183,5 +183,28 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 30/04/2022
+        /// Endpoint cap nhat so du cua nguoi dung
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        [HttpPut("UpdateBalance")]
+        public async Task<IActionResult> UpdateBalance (long id, long amount)
+        {
+            try
+            {
+                var item = await _repository.User.UpdateBalanceAsync(id, amount);
+                return Ok(item);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"[MyLog]: Error updating the balance of user with the id {id}");
+                return NotFound(e);
+            }
+        }
+
     }
 }

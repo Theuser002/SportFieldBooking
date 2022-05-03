@@ -190,5 +190,37 @@ namespace SportFieldBooking.Biz.User
             }
             
         }
+
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 30/04/2022
+        /// method update so du trong tai khoan nguoi dung
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        public async Task<View> UpdateBalanceAsync(long id, long amount)
+        {
+            var user = await _dbContext.Users.FindAsync(id);
+            if (user != null)
+            {
+                if(user.Balance + amount > 0){
+                    user.Balance += amount;
+                    await _dbContext.SaveChangesAsync();
+                    var userView = _mapper.Map<View>(user);
+                    return userView;
+                }
+                else
+                {
+                    throw new Exception("Not enough money!");
+                }
+                
+            }
+            else
+            {
+                throw new Exception($"There is no user with the id {id}");
+            }
+        }
     }
 }

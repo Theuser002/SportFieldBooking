@@ -13,6 +13,15 @@
 [13 - Hai kiểu LINQ (LINQ to SQL với LINQ to Entity là một)] linq to entities vs linq to objects - are they the same? (https://stackoverflow.com/questions/7192040/linq-to-entities-vs-linq-to-objects-are-they-the-same)
 [14] What is the difference between "LINQ to Entities", "LINQ to SQL" and "LINQ to Dataset" (https://stackoverflow.com/questions/2443836/what-is-the-difference-between-linq-to-entities-linq-to-sql-and-linq-to-da)
 [15] Reset Entity-Framework Migrations (https://stackoverflow.com/questions/8439650/how-to-drop-all-tables-in-a-sql-server-database)
+[16 - EF6 tutorial]: Entity-Framework Core code first toàn tập (https://comdy.vn/entity-framework/code-first-toan-tap/)
+[17 - Chaỵ nhiều asynchronous task song song]: Running multiple async tasks and waiting for them all to complete (https://stackoverflow.com/questions/25009437/running-multiple-async-tasks-and-waiting-for-them-all-to-complete)
+[18]: ValueTask<TResult>.AsTask Method (https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.valuetask-1.astask?view=net-6.0)
+[19]: How to compare two DateTimes on Time only ignoring the date? (https://stackoverflow.com/questions/6069710/how-to-compare-two-datetimes-on-time-only-ignoring-the-date)
+[20]: How to compare only Date without Time in DateTime types in Linq to SQL with Entity Framework? (https://stackoverflow.com/questions/683037/how-to-compare-only-date-without-time-in-datetime-types-in-linq-to-sql-with-enti)
+
+
+
+
 
 
 

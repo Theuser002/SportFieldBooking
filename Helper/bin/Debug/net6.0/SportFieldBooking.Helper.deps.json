@@ -10,8 +10,7 @@
         "dependencies": {
           "AutoMapper": "11.0.1",
           "EntityFramework": "6.4.4",
-          "Microsoft.EntityFrameworkCore": "6.0.4",
-          "ValueConverters": "2.2.10"
+          "Microsoft.EntityFrameworkCore": "6.0.4"
         },
         "runtime": {
           "SportFieldBooking.Helper.dll": {}
@@ -364,25 +363,6 @@
             "fileVersion": "4.700.19.56404"
           }
         }
-      },
-      "ValueConverters/2.2.10": {
-        "dependencies": {
-          "ValueConverters.Annotations": "2.2.10"
-        },
-        "runtime": {
-          "lib/net45/ValueConverters.dll": {
-            "assemblyVersion": "2.2.10.0",
-            "fileVersion": "2.2.10.0"
-          }
-        }
-      },
-      "ValueConverters.Annotations/2.2.10": {
-        "runtime": {
-          "lib/netstandard2.0/ValueConverters.Annotations.dll": {
-            "assemblyVersion": "2.2.10.0",
-            "fileVersion": "2.2.10.0"
-          }
-        }
       }
     }
   },
@@ -629,20 +609,6 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
-    },
-    "ValueConverters/2.2.10": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-zgE27JQXUw+ntsQ636yy+ma2khtp+cpFMJmbH+2ehpDLwIyENEizjCsVbddOWTS+XYc5HshZMGExz/wkLEzoSQ==",
-      "path": "valueconverters/2.2.10",
-      "hashPath": "valueconverters.2.2.10.nupkg.sha512"
-    },
-    "ValueConverters.Annotations/2.2.10": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-QZMekjG4O9NINmb8EOBxYJdVa1bwuLm1RN3x39R9YyhT9VjgjlIQsdA4YzdixxF/jbxkwT2/Ck+wbf2N+zMFkA==",
-      "path": "valueconverters.annotations/2.2.10",
-      "hashPath": "valueconverters.annotations.2.2.10.nupkg.sha512"
     }
   }
 }
