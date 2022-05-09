@@ -1594,3 +1594,94 @@ System.NotSupportedException: Serialization and deserialization of 'System.IntPt
 [2022-05-09 16:57:32.056 +07:00  DBG]  Connection id "0HMHHK8169RKC" disconnecting.
 [2022-05-09 16:57:32.057 +07:00  DBG]  Connection id "0HMHHK8169RKC" stopped.
 [2022-05-09 16:57:32.057 +07:00  DBG]  Connection id "0HMHHK8169RKC" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-09 17:00:55.718 +07:00  DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+[2022-05-09 17:00:55.806 +07:00  INF]  [MyLog]: Migrating process
+[2022-05-09 17:00:57.519 +07:00  DBG]  Hosting starting
+[2022-05-09 17:00:57.591 +07:00  INF]  Now listening on: http://localhost:5290
+[2022-05-09 17:00:57.591 +07:00  DBG]  Loaded hosting startup assembly SportFieldBooking.API
+[2022-05-09 17:00:57.591 +07:00  DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-05-09 17:00:57.591 +07:00  DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-05-09 17:00:57.592 +07:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-05-09 17:00:57.592 +07:00  INF]  Hosting environment: Development
+[2022-05-09 17:00:57.593 +07:00  INF]  Content root path: D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\
+[2022-05-09 17:00:57.593 +07:00  DBG]  Hosting started
+[2022-05-09 17:00:57.765 +07:00  DBG]  Connection id "0HMHHKB86Q051" accepted.
+[2022-05-09 17:00:57.765 +07:00  DBG]  Connection id "0HMHHKB86Q050" accepted.
+[2022-05-09 17:00:57.765 +07:00  DBG]  Connection id "0HMHHKB86Q051" started.
+[2022-05-09 17:00:57.765 +07:00  DBG]  Connection id "0HMHHKB86Q050" started.
+[2022-05-09 17:00:57.783 +07:00  DBG]  Connection id "0HMHHKB86Q052" accepted.
+[2022-05-09 17:00:57.784 +07:00  DBG]  Connection id "0HMHHKB86Q051" received FIN.
+[2022-05-09 17:00:57.784 +07:00  DBG]  Connection id "0HMHHKB86Q050" received FIN.
+[2022-05-09 17:00:57.784 +07:00  DBG]  Connection id "0HMHHKB86Q052" started.
+[2022-05-09 17:00:57.785 +07:00  DBG]  Connection id "0HMHHKB86Q052" received FIN.
+[2022-05-09 17:00:57.793 +07:00  DBG]  Connection id "0HMHHKB86Q051" sending FIN because: "The client closed the connection."
+[2022-05-09 17:00:57.797 +07:00  DBG]  Connection id "0HMHHKB86Q051" disconnecting.
+[2022-05-09 17:00:57.797 +07:00  DBG]  Connection id "0HMHHKB86Q052" disconnecting.
+[2022-05-09 17:00:57.793 +07:00  DBG]  Connection id "0HMHHKB86Q050" sending FIN because: "The client closed the connection."
+[2022-05-09 17:00:57.800 +07:00  DBG]  Connection id "0HMHHKB86Q050" disconnecting.
+[2022-05-09 17:00:57.800 +07:00  DBG]  Connection id "0HMHHKB86Q051" stopped.
+[2022-05-09 17:00:57.800 +07:00  DBG]  Connection id "0HMHHKB86Q052" stopped.
+[2022-05-09 17:00:57.803 +07:00  DBG]  Connection id "0HMHHKB86Q052" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-09 17:00:57.805 +07:00  DBG]  Connection id "0HMHHKB86Q050" stopped.
+[2022-05-09 17:00:57.836 +07:00  DBG]  Connection id "0HMHHKB86Q053" accepted.
+[2022-05-09 17:00:57.837 +07:00  DBG]  Connection id "0HMHHKB86Q054" accepted.
+[2022-05-09 17:00:57.838 +07:00  DBG]  Connection id "0HMHHKB86Q053" started.
+[2022-05-09 17:00:57.839 +07:00  DBG]  Connection id "0HMHHKB86Q054" started.
+[2022-05-09 17:00:57.945 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/index.html - -
+[2022-05-09 17:00:57.997 +07:00  DBG]  Wildcard detected, all requests with hosts will be allowed.
+[2022-05-09 17:00:58.041 +07:00  DBG]  No candidates found for the request path '/swagger/index.html'
+[2022-05-09 17:00:58.042 +07:00  DBG]  Request did not match any endpoints
+[2022-05-09 17:00:58.176 +07:00  DBG]  Response markup is scheduled to include browser refresh script injection.
+[2022-05-09 17:00:58.307 +07:00  DBG]  Response markup was updated to include browser refresh script injection.
+[2022-05-09 17:00:58.308 +07:00  DBG]  Connection id "0HMHHKB86Q054" completed keep alive response.
+[2022-05-09 17:00:58.310 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/index.html - - - 200 - text/html;charset=utf-8 370.8030ms
+[2022-05-09 17:00:58.402 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - -
+[2022-05-09 17:00:58.405 +07:00  DBG]  Connection id "0HMHHKB86Q054" completed keep alive response.
+[2022-05-09 17:00:58.406 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - - - 200 12000 application/javascript;+charset=utf-8 3.3458ms
+[2022-05-09 17:00:58.779 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - -
+[2022-05-09 17:00:58.779 +07:00  DBG]  No candidates found for the request path '/swagger/v1/swagger.json'
+[2022-05-09 17:00:58.779 +07:00  DBG]  Request did not match any endpoints
+[2022-05-09 17:00:58.929 +07:00  DBG]  Connection id "0HMHHKB86Q054" completed keep alive response.
+[2022-05-09 17:00:58.929 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 150.2456ms
+[2022-05-09 17:01:17.244 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/Booking/GetList?pageNumber=1&pageSize=12 - -
+[2022-05-09 17:01:17.257 +07:00  DBG]  1 candidate(s) found for the request path '/api/Booking/GetList'
+[2022-05-09 17:01:17.264 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API)' with route pattern 'api/Booking/GetList' is valid for the request path '/api/Booking/GetList'
+[2022-05-09 17:01:17.264 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API)'
+[2022-05-09 17:01:17.266 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-09 17:01:17.267 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API)'
+[2022-05-09 17:01:17.296 +07:00  INF]  Route matched with {action = "GetList", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetList(Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API).
+[2022-05-09 17:01:17.297 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-09 17:01:17.297 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-09 17:01:17.297 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-09 17:01:17.298 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-09 17:01:17.298 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-09 17:01:17.298 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-09 17:01:17.420 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-09 17:01:17.431 +07:00  DBG]  Attempting to bind parameter 'pageNumber' of type 'System.Int64' ...
+[2022-05-09 17:01:17.434 +07:00  DBG]  Attempting to bind parameter 'pageNumber' of type 'System.Int64' using the name 'pageNumber' in request data ...
+[2022-05-09 17:01:17.434 +07:00  DBG]  Done attempting to bind parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-09 17:01:17.434 +07:00  DBG]  Done attempting to bind parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-09 17:01:17.434 +07:00  DBG]  Attempting to validate the bound parameter 'pageNumber' of type 'System.Int64' ...
+[2022-05-09 17:01:17.435 +07:00  DBG]  Done attempting to validate the bound parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-09 17:01:17.437 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-09 17:01:17.437 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-09 17:01:17.437 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-09 17:01:17.437 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-09 17:01:17.437 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-09 17:01:17.438 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-09 17:01:18.051 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-09 17:01:18.052 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-09 17:01:18.052 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-09 17:01:18.052 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-09 17:01:18.052 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-09 17:01:18.053 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.Booking.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-09 17:01:18.066 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API) in 761.3975ms
+[2022-05-09 17:01:18.067 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API)'
+[2022-05-09 17:01:18.067 +07:00  DBG]  Connection id "0HMHHKB86Q054" completed keep alive response.
+[2022-05-09 17:01:18.070 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/Booking/GetList?pageNumber=1&pageSize=12 - - - 200 - application/json;+charset=utf-8 826.2906ms
+[2022-05-09 17:03:08.714 +07:00  DBG]  Connection id "0HMHHKB86Q053" disconnecting.
+[2022-05-09 17:03:08.715 +07:00  DBG]  Connection id "0HMHHKB86Q053" stopped.
+[2022-05-09 17:03:08.716 +07:00  DBG]  Connection id "0HMHHKB86Q053" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-09 17:03:28.855 +07:00  DBG]  Connection id "0HMHHKB86Q054" disconnecting.
+[2022-05-09 17:03:28.855 +07:00  DBG]  Connection id "0HMHHKB86Q054" stopped.
+[2022-05-09 17:03:28.856 +07:00  DBG]  Connection id "0HMHHKB86Q054" sending FIN because: "The Socket transport's send loop completed gracefully."
