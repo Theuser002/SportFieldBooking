@@ -23,9 +23,12 @@ namespace SportFieldBooking.Biz
 
             CreateMap<Data.Model.Booking, Biz.Model.Booking.New>().ReverseMap();
             CreateMap<Data.Model.Booking, Biz.Model.Booking.View>().ReverseMap();
+            CreateMap<Data.Model.Booking, Biz.Model.Booking.List>().ReverseMap();
 
             CreateMap<Data.Model.BookingStatus, Biz.Model.BookingStatus.New>().ReverseMap();
             CreateMap<Data.Model.BookingStatus, Biz.Model.BookingStatus.View>().ReverseMap();
+            CreateMap<Data.Model.BookingStatus, Biz.Model.BookingStatus.List>().ReverseMap();
+            CreateMap<Data.Model.BookingStatus, Biz.Model.BookingStatus.Edit>().ReverseMap();
         }
     }
 }

@@ -1,0 +1,80 @@
+[2022-05-08 14:23:32.464 +07:00  DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+[2022-05-08 14:23:33.045 +07:00  INF]  [MyLog]: Migrating process
+[2022-05-08 14:23:35.795 +07:00  DBG]  Hosting starting
+[2022-05-08 14:23:35.923 +07:00  INF]  Now listening on: http://localhost:5290
+[2022-05-08 14:23:35.923 +07:00  DBG]  Loaded hosting startup assembly SportFieldBooking.API
+[2022-05-08 14:23:35.923 +07:00  DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-05-08 14:23:35.923 +07:00  DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-05-08 14:23:35.923 +07:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-05-08 14:23:35.923 +07:00  INF]  Hosting environment: Development
+[2022-05-08 14:23:35.923 +07:00  INF]  Content root path: D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\
+[2022-05-08 14:23:35.923 +07:00  DBG]  Hosting started
+[2022-05-08 14:23:36.242 +07:00  DBG]  Connection id "0HMHGOEL6R5Q2" accepted.
+[2022-05-08 14:23:36.243 +07:00  DBG]  Connection id "0HMHGOEL6R5Q2" started.
+[2022-05-08 14:23:36.249 +07:00  DBG]  Connection id "0HMHGOEL6R5Q3" accepted.
+[2022-05-08 14:23:36.249 +07:00  DBG]  Connection id "0HMHGOEL6R5Q3" started.
+[2022-05-08 14:23:36.268 +07:00  DBG]  Connection id "0HMHGOEL6R5Q3" received FIN.
+[2022-05-08 14:23:36.268 +07:00  DBG]  Connection id "0HMHGOEL6R5Q2" received FIN.
+[2022-05-08 14:23:36.274 +07:00  DBG]  Connection id "0HMHGOEL6R5Q3" sending FIN because: "The client closed the connection."
+[2022-05-08 14:23:36.274 +07:00  DBG]  Connection id "0HMHGOEL6R5Q2" sending FIN because: "The client closed the connection."
+[2022-05-08 14:23:36.275 +07:00  DBG]  Connection id "0HMHGOEL6R5Q3" disconnecting.
+[2022-05-08 14:23:36.275 +07:00  DBG]  Connection id "0HMHGOEL6R5Q2" disconnecting.
+[2022-05-08 14:23:36.277 +07:00  DBG]  Connection id "0HMHGOEL6R5Q2" stopped.
+[2022-05-08 14:23:36.277 +07:00  DBG]  Connection id "0HMHGOEL6R5Q3" stopped.
+[2022-05-08 14:23:36.632 +07:00  DBG]  Connection id "0HMHGOEL6R5Q4" accepted.
+[2022-05-08 14:23:36.632 +07:00  DBG]  Connection id "0HMHGOEL6R5Q5" accepted.
+[2022-05-08 14:23:36.637 +07:00  DBG]  Connection id "0HMHGOEL6R5Q4" started.
+[2022-05-08 14:23:36.637 +07:00  DBG]  Connection id "0HMHGOEL6R5Q5" started.
+[2022-05-08 14:23:36.755 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger - -
+[2022-05-08 14:23:36.863 +07:00  DBG]  Wildcard detected, all requests with hosts will be allowed.
+[2022-05-08 14:23:36.896 +07:00  DBG]  No candidates found for the request path '/swagger'
+[2022-05-08 14:23:36.897 +07:00  DBG]  Request did not match any endpoints
+[2022-05-08 14:23:36.933 +07:00  DBG]  Connection id "0HMHGOEL6R5Q4" completed keep alive response.
+[2022-05-08 14:23:36.934 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger - - - 301 0 - 186.0181ms
+[2022-05-08 14:23:36.953 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/index.html - -
+[2022-05-08 14:23:36.953 +07:00  DBG]  No candidates found for the request path '/swagger/index.html'
+[2022-05-08 14:23:36.954 +07:00  DBG]  Request did not match any endpoints
+[2022-05-08 14:23:37.030 +07:00  DBG]  Response markup is scheduled to include browser refresh script injection.
+[2022-05-08 14:23:37.780 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/swagger-ui.css - -
+[2022-05-08 14:23:37.781 +07:00  DBG]  No candidates found for the request path '/swagger/swagger-ui.css'
+[2022-05-08 14:23:37.781 +07:00  DBG]  Request did not match any endpoints
+[2022-05-08 14:23:37.794 +07:00  DBG]  Response markup was updated to include browser refresh script injection.
+[2022-05-08 14:23:37.794 +07:00  DBG]  Connection id "0HMHGOEL6R5Q4" completed keep alive response.
+[2022-05-08 14:23:37.794 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/index.html - - - 200 - text/html;charset=utf-8 841.6016ms
+[2022-05-08 14:23:37.819 +07:00  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-05-08 14:23:37.819 +07:00  DBG]  Connection id "0HMHGOEL6R5Q5" completed keep alive response.
+[2022-05-08 14:23:37.819 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/swagger-ui.css - - - 200 143632 text/css 38.6608ms
+[2022-05-08 14:23:37.915 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/swagger-ui-bundle.js - -
+[2022-05-08 14:23:37.916 +07:00  DBG]  No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+[2022-05-08 14:23:37.916 +07:00  DBG]  Request did not match any endpoints
+[2022-05-08 14:23:37.916 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/swagger-ui-standalone-preset.js - -
+[2022-05-08 14:23:37.916 +07:00  DBG]  No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+[2022-05-08 14:23:37.916 +07:00  DBG]  Request did not match any endpoints
+[2022-05-08 14:23:37.917 +07:00  DBG]  Connection id "0HMHGOEL6R5Q6" accepted.
+[2022-05-08 14:23:37.917 +07:00  DBG]  Connection id "0HMHGOEL6R5Q6" started.
+[2022-05-08 14:23:37.918 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - -
+[2022-05-08 14:23:37.921 +07:00  DBG]  Connection id "0HMHGOEL6R5Q6" completed keep alive response.
+[2022-05-08 14:23:37.921 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - - - 200 12000 application/javascript;+charset=utf-8 3.2485ms
+[2022-05-08 14:23:37.956 +07:00  INF]  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2022-05-08 14:23:37.957 +07:00  DBG]  Connection id "0HMHGOEL6R5Q4" completed keep alive response.
+[2022-05-08 14:23:37.957 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 40.9594ms
+[2022-05-08 14:23:37.973 +07:00  INF]  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2022-05-08 14:23:37.974 +07:00  DBG]  Connection id "0HMHGOEL6R5Q5" completed keep alive response.
+[2022-05-08 14:23:37.975 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 59.2174ms
+[2022-05-08 14:23:38.291 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - -
+[2022-05-08 14:23:38.291 +07:00  DBG]  No candidates found for the request path '/swagger/v1/swagger.json'
+[2022-05-08 14:23:38.291 +07:00  DBG]  Request did not match any endpoints
+[2022-05-08 14:23:38.434 +07:00  DBG]  Connection id "0HMHGOEL6R5Q5" completed keep alive response.
+[2022-05-08 14:23:38.434 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 143.2591ms
+[2022-05-08 14:23:47.828 +07:00  INF]  Application is shutting down...
+[2022-05-08 14:23:47.832 +07:00  DBG]  Hosting stopping
+[2022-05-08 14:23:47.850 +07:00  DBG]  Connection id "0HMHGOEL6R5Q4" disconnecting.
+[2022-05-08 14:23:47.850 +07:00  DBG]  Connection id "0HMHGOEL6R5Q6" disconnecting.
+[2022-05-08 14:23:47.850 +07:00  DBG]  Connection id "0HMHGOEL6R5Q5" disconnecting.
+[2022-05-08 14:23:47.851 +07:00  DBG]  Connection id "0HMHGOEL6R5Q4" stopped.
+[2022-05-08 14:23:47.851 +07:00  DBG]  Connection id "0HMHGOEL6R5Q5" stopped.
+[2022-05-08 14:23:47.851 +07:00  DBG]  Connection id "0HMHGOEL6R5Q6" stopped.
+[2022-05-08 14:23:47.854 +07:00  DBG]  Connection id "0HMHGOEL6R5Q5" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-08 14:23:47.854 +07:00  DBG]  Connection id "0HMHGOEL6R5Q6" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-08 14:23:47.854 +07:00  DBG]  Connection id "0HMHGOEL6R5Q4" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-08 14:23:47.863 +07:00  DBG]  Hosting stopped

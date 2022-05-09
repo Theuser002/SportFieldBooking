@@ -31,6 +31,9 @@ namespace SportFieldBooking.Data
             modelBuilder.Entity<SportField>()
                 .HasIndex(e => e.Code)
                 .IsUnique();
+            modelBuilder.Entity<BookingStatus>()
+                .HasIndex(e => e.StatusName)
+                .IsUnique();
 
             modelBuilder.Entity<User>()
                 .Property(f => f.Created)

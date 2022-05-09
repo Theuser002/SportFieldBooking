@@ -39,7 +39,7 @@ namespace SportFieldBooking.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error creating user, {e}");
-                return BadRequest(e);
+                return BadRequest(e.Message);
             }
         }
 
@@ -61,7 +61,7 @@ namespace SportFieldBooking.API.Controllers
             }
             catch (Exception e)
             {
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
 
@@ -86,7 +86,7 @@ namespace SportFieldBooking.API.Controllers
             catch(Exception e)
             {
                 _logger.LogError($"[MyLog]: Error getting list of users in pages, {e}");
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
 
@@ -97,7 +97,7 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="id"> id cua user </param>
         /// <returns>Response, thanh cong hoac loi</returns>
-        [HttpDelete("Delete")]
+        [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> Delete(long id)
         {
             try
@@ -108,7 +108,7 @@ namespace SportFieldBooking.API.Controllers
             catch(Exception e)
             {
                 _logger.LogError($"[MyLog]: Error deleting user, {e}");
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
 
@@ -130,7 +130,7 @@ namespace SportFieldBooking.API.Controllers
             catch(Exception e)
             {
                 _logger.LogError($"[MyLog]: Error updating user, {e}");
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
 
@@ -154,7 +154,7 @@ namespace SportFieldBooking.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error searching for users, {e}");
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
 
@@ -179,7 +179,7 @@ namespace SportFieldBooking.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error filtering users by created date, {e}");
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
 
@@ -202,9 +202,8 @@ namespace SportFieldBooking.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error updating the balance of user with the id {id}");
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
-
     }
 }

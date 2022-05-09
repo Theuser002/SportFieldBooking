@@ -30,7 +30,21 @@ namespace SportFieldBooking.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error making new booking, {e}");
-                return BadRequest(e);
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpGet("GetList")]
+        public async Task<IActionResult> GetList(long pageNumber, int pageSize)
+        {
+            try
+            {
+                var items = await _repository.Booking.GetListAsync(pageNumber, pageSize);
+                return Ok(items);
+            }
+            catch (Exception e)
+            {
+                return NotFound(e.Message);
             }
         }
     }

@@ -2,5 +2,7 @@
 {
     public class View
     {
+        public long Id { get; set; }
+        public string StatusName { get; set; }
     }
 }

@@ -18,8 +18,8 @@
 [18]: ValueTask<TResult>.AsTask Method (https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.valuetask-1.astask?view=net-6.0)
 [19]: How to compare two DateTimes on Time only ignoring the date? (https://stackoverflow.com/questions/6069710/how-to-compare-two-datetimes-on-time-only-ignoring-the-date)
 [20]: How to compare only Date without Time in DateTime types in Linq to SQL with Entity Framework? (https://stackoverflow.com/questions/683037/how-to-compare-only-date-without-time-in-datetime-types-in-linq-to-sql-with-enti)
-
-
+[21 - Configuring OnDeleteCascade] Enabling Cascade Delete (https://docs.microsoft.com/en-us/ef/ef6/modeling/code-first/fluent/relationships#enabling-cascade-delete)
+[22 - Cascade Delete is enabled by default on EF 6] Cascade Delete in Entity Framework 6 (https://www.entityframeworktutorial.net/code-first/cascade-delete-in-code-first.aspx)
 
 
 

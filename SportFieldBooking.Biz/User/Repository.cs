@@ -6,6 +6,7 @@ using SportFieldBooking.Biz.Model.User;
 using Microsoft.EntityFrameworkCore;
 using SportFieldBooking.Helper;
 using SportFieldBooking.Helper.Pagination;
+using SportFieldBooking.Helper.Enums;
 
 
 namespace SportFieldBooking.Biz.User
@@ -77,7 +78,7 @@ namespace SportFieldBooking.Biz.User
         /// Method lay thong tin cua nguoi dung ve theo trang
         /// </summary>
         /// <param name="pageIndex"> So thu tu trang </param>
-        /// <param name="pageSize"> So record trong mot trang </param>
+        /// <param name="pageSize"> So ban ghi trong mot trang </param>
         /// <returns> Page object - mot trang chua cac thong tin cua nguoi dung kem voi mot so thong tin khac</returns>
         public async Task<Page<List>> GetListAsync(long pageIndex, int pageSize)
         {
@@ -170,14 +171,13 @@ namespace SportFieldBooking.Biz.User
                 switch (condition.ToLower())
                 {
                     
-                    case "before":
+                    case Consts.TIME_BEFORE:
                         var matchedUsers = await _dbContext.Users.Where(u => DateTime.Compare(u.Created.Date, date.Date) < 0).OrderByDescending(u => u.Created).GetPagedResult<Data.Model.User, List>(_mapper, pageIndex, pageSize);
                         return matchedUsers;
-                    case "after":
+                    case Consts.TIME_AFTER:
                         matchedUsers = await _dbContext.Users.Where(u => DateTime.Compare(u.Created.Date, date.Date) > 0).GetPagedResult<Data.Model.User, List>(_mapper, pageIndex, pageSize);
                         return matchedUsers;
-                    case "equal":
-                        Console.WriteLine("Equal");
+                    case Consts.TIME_EQUAL:
                         matchedUsers = await _dbContext.Users.Where(u => DateTime.Compare(u.Created.Date, date.Date) == 0).GetPagedResult<Data.Model.User, List>(_mapper, pageIndex, pageSize);
                         return matchedUsers;
                     default:

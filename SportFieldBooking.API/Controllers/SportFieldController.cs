@@ -21,6 +21,13 @@ namespace SportFieldBooking.API.Controllers
             _repository = repository;
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 25/05/2022
+        /// Endpoint tao moi mot san van dong
+        /// </summary>
+        /// <param name="model"> Biz model cho tao moi mot san van dong </param>
+        /// <returns> Response </returns>
         [HttpPost("CreateField")]
         public async Task<IActionResult> Create(New model)
         {
@@ -32,10 +39,18 @@ namespace SportFieldBooking.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error creating sport field, {e}");
-                return BadRequest(e);
+                return BadRequest(e.Message);
             }
         }
 
+
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 25/05/2022
+        /// Endpoint lay thong tin mot san van dong
+        /// </summary>
+        /// <param name="id"> Id cua san van dong </param>
+        /// <returns> Response </returns>
         [HttpPost("Get/{id}")]
         public async Task<IActionResult> Get(long id)
         {
@@ -46,10 +61,18 @@ namespace SportFieldBooking.API.Controllers
             }
             catch (Exception e)
             {
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 25/05/2022
+        /// Endpoint lay danh sach cac san van dong va phan trang
+        /// </summary>
+        /// <param name="pageNumber"> So thu tu trang </param>
+        /// <param name="pageSize"> So ban ghi trong mot trang </param>
+        /// <returns></returns>
         [HttpGet("GetList")]
         public async Task<IActionResult> GetList(long pageNumber, int pageSize)
         {
@@ -61,11 +84,18 @@ namespace SportFieldBooking.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error getting list of users in pages, {e}");
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
 
-        [HttpDelete("Delete")]
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 25/05/2022
+        /// Endpoint xoa di mot san van dong
+        /// </summary>
+        /// <param name="id">Id cua san van dong muon xoa</param>
+        /// <returns> Response </returns>
+        [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> Delete(long id)
         {
             try
@@ -76,10 +106,17 @@ namespace SportFieldBooking.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error deleting user, {e}");
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 26/05/2022
+        /// Enpoint thay doi thong tin (update) mot san van dong
+        /// </summary>
+        /// <param name="model"> Biz model cho viec edit thong tin san van dong </param>
+        /// <returns>  Response </returns>
         [HttpPut("UpdateSportField")]
         public async Task<IActionResult> Update(Edit model)
         {
@@ -91,10 +128,19 @@ namespace SportFieldBooking.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error updating sport field, {e}");
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 26/05/2022
+        /// Endpoint tra ve thong tin cac san van dong co ten chua mot chuoi nhat dinh
+        /// </summary>
+        /// <param name="name">chuoi dau vao</param>
+        /// <param name="pageIndex">so thu tu trang</param>
+        /// <param name="pageSize">so ban ghi trong mot trang</param>
+        /// <returns>response</returns>
         [HttpGet("SearchName")]
         public async Task<IActionResult> SearchName(string name, long pageIndex, int pageSize)
         {
@@ -106,10 +152,18 @@ namespace SportFieldBooking.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error searching for sport field with the requested name, {e}");
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 26/05/2022
+        /// Endpoint tra ve danh sach cac san van dong dang mo cua o thoi diem hien tai
+        /// </summary>
+        /// <param name="pageIndex">so thu tu trang</param>
+        /// <param name="pageSize">so ban ghi trong mot trang</param>
+        /// <returns>response</returns>
         [HttpGet("OpenNow")]
         public async Task<IActionResult> OpenNow(long pageIndex, int pageSize)
         {
@@ -121,10 +175,20 @@ namespace SportFieldBooking.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error searching for opening sport fields, {e}");
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Create: 26/05/2022
+        /// Endpoint tra ve danh sach cac san van dong mo cua vao mot khoang thoi gian nhat dinh do nguoi dung lua chon
+        /// </summary>
+        /// <param name="startTimeStr"></param>
+        /// <param name="endTimeStr"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
         [HttpGet("FilterByTime")]
         public async Task<IActionResult> FilterByTime(string startTimeStr, string endTimeStr, long pageIndex, int pageSize)
         {
@@ -138,7 +202,7 @@ namespace SportFieldBooking.API.Controllers
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error filtering sport fields by time, {e}");
-                return NotFound(e);
+                return NotFound(e.Message);
             }
         }
     }
