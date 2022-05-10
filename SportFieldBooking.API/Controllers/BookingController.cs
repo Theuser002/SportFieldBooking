@@ -60,5 +60,33 @@ namespace SportFieldBooking.API.Controllers
                 return NotFound(e.Message);
             }
         }
+
+        [HttpGet("GetUserBooking")]
+        public async Task<IActionResult> GetUserBooking(long userId, long pageIndex, int pageSize)
+        {
+            try
+            {
+                var items = await _repository.Booking.GetUserBooking(userId, pageIndex, pageSize);
+                return Ok(items);
+            }
+            catch (Exception e)
+            {
+                return NotFound(e.Message);
+            }
+        }
+
+        [HttpGet("GetSportFieldBooking")]
+        public async Task<IActionResult> GetSportFieldBooking(long sportFieldId, long pageIndex, int pageSize)
+        {
+            try
+            {
+                var items = await _repository.Booking.GetSportFieldBooking(sportFieldId, pageIndex, pageSize);
+                return Ok(items);
+            }
+            catch (Exception e)
+            {
+                return NotFound(e.Message);
+            }
+        }
     }
 }

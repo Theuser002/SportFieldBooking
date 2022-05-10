@@ -8,5 +8,7 @@ namespace SportFieldBooking.Biz.Booking
         Task<View> CreateAsync(New model);
         Task<Page<List>> GetListAsync(long pageIndex, int pageSize);
         Task DeleteAsync(long id);
+        Task<Page<List>> GetUserBooking(long userId, long pageIndex, int pageSize);
+        Task<Page<List>> GetSportFieldBooking(long sportFieldId, long pageIndex, int pageSize);
     }
 }

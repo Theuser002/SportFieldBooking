@@ -144,6 +144,34 @@ namespace SportFieldBooking.Biz.Booking
                 throw new Exception($"Threre's no booking with the id {id}");
             }
         }
+
+        public async Task<Page<List>> GetUserBooking (long userId, long pageIndex, int pageSize)
+        {
+            var bookingPage = await _dbContext.Bookings.Where(b => b.User.Id == userId).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
+            if (bookingPage != null)
+            {
+                return bookingPage;
+            }
+            else
+            {
+                throw new Exception($"The user with the id {userId} cannot be found");
+            }
+        }
+
+        public async Task<Page<List>> GetSportFieldBooking (long sportFieldId, long pageIndex, int pageSize)
+        {
+            var bookingPage = await _dbContext.Bookings.Where(b => b.SportField.Id == sportFieldId).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
+            Console.WriteLine("Get sport field booking");
+            Console.WriteLine(bookingPage.Count);
+            if (bookingPage != null)
+            {
+                return bookingPage;
+            }
+            else
+            {
+                throw new Exception($"The sport field with the id {sportFieldId} cannot be found");
+            }
+        }
     }
 
 }

@@ -3736,3 +3736,843 @@ Error Number:2601,State:1,Class:14
 [2022-05-10 11:29:06.665 +07:00  INF]  Application is shutting down...
 [2022-05-10 11:29:06.670 +07:00  DBG]  Hosting stopping
 [2022-05-10 11:29:06.692 +07:00  DBG]  Hosting stopped
+[2022-05-10 11:55:16.933 +07:00  DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+[2022-05-10 11:55:17.044 +07:00  INF]  [MyLog]: Migrating process
+[2022-05-10 11:55:18.276 +07:00  DBG]  Hosting starting
+[2022-05-10 11:55:18.315 +07:00  INF]  Now listening on: http://localhost:5290
+[2022-05-10 11:55:18.315 +07:00  DBG]  Loaded hosting startup assembly SportFieldBooking.API
+[2022-05-10 11:55:18.315 +07:00  DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-05-10 11:55:18.315 +07:00  DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-05-10 11:55:18.315 +07:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-05-10 11:55:18.315 +07:00  INF]  Hosting environment: Development
+[2022-05-10 11:55:18.315 +07:00  INF]  Content root path: D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\
+[2022-05-10 11:55:18.315 +07:00  DBG]  Hosting started
+[2022-05-10 11:55:18.786 +07:00  DBG]  Connection id "0HMHI853VAI67" received FIN.
+[2022-05-10 11:55:18.786 +07:00  DBG]  Connection id "0HMHI853VAI68" received FIN.
+[2022-05-10 11:55:18.795 +07:00  DBG]  Connection id "0HMHI853VAI68" accepted.
+[2022-05-10 11:55:18.795 +07:00  DBG]  Connection id "0HMHI853VAI67" accepted.
+[2022-05-10 11:55:18.796 +07:00  DBG]  Connection id "0HMHI853VAI69" received FIN.
+[2022-05-10 11:55:18.796 +07:00  DBG]  Connection id "0HMHI853VAI69" accepted.
+[2022-05-10 11:55:18.798 +07:00  DBG]  Connection id "0HMHI853VAI6A" accepted.
+[2022-05-10 11:55:18.798 +07:00  DBG]  Connection id "0HMHI853VAI6B" accepted.
+[2022-05-10 11:55:18.800 +07:00  DBG]  Connection id "0HMHI853VAI68" started.
+[2022-05-10 11:55:18.801 +07:00  DBG]  Connection id "0HMHI853VAI67" started.
+[2022-05-10 11:55:18.801 +07:00  DBG]  Connection id "0HMHI853VAI69" started.
+[2022-05-10 11:55:18.802 +07:00  DBG]  Connection id "0HMHI853VAI6A" started.
+[2022-05-10 11:55:18.814 +07:00  DBG]  Connection id "0HMHI853VAI6B" started.
+[2022-05-10 11:55:18.816 +07:00  DBG]  Connection id "0HMHI853VAI68" sending FIN because: "The client closed the connection."
+[2022-05-10 11:55:18.816 +07:00  DBG]  Connection id "0HMHI853VAI69" sending FIN because: "The client closed the connection."
+[2022-05-10 11:55:18.816 +07:00  DBG]  Connection id "0HMHI853VAI67" sending FIN because: "The client closed the connection."
+[2022-05-10 11:55:18.819 +07:00  DBG]  Connection id "0HMHI853VAI69" disconnecting.
+[2022-05-10 11:55:18.819 +07:00  DBG]  Connection id "0HMHI853VAI67" disconnecting.
+[2022-05-10 11:55:18.819 +07:00  DBG]  Connection id "0HMHI853VAI68" disconnecting.
+[2022-05-10 11:55:18.821 +07:00  DBG]  Connection id "0HMHI853VAI68" stopped.
+[2022-05-10 11:55:18.821 +07:00  DBG]  Connection id "0HMHI853VAI67" stopped.
+[2022-05-10 11:55:18.826 +07:00  DBG]  Connection id "0HMHI853VAI69" stopped.
+[2022-05-10 11:55:18.866 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/index.html - -
+[2022-05-10 11:55:18.901 +07:00  DBG]  Wildcard detected, all requests with hosts will be allowed.
+[2022-05-10 11:55:18.932 +07:00  DBG]  No candidates found for the request path '/swagger/index.html'
+[2022-05-10 11:55:18.933 +07:00  DBG]  Request did not match any endpoints
+[2022-05-10 11:55:19.009 +07:00  DBG]  Response markup is scheduled to include browser refresh script injection.
+[2022-05-10 11:55:19.106 +07:00  DBG]  Response markup was updated to include browser refresh script injection.
+[2022-05-10 11:55:19.107 +07:00  DBG]  Connection id "0HMHI853VAI6A" completed keep alive response.
+[2022-05-10 11:55:19.108 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/index.html - - - 200 - text/html;charset=utf-8 245.4683ms
+[2022-05-10 11:55:19.245 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - -
+[2022-05-10 11:55:19.247 +07:00  DBG]  Connection id "0HMHI853VAI6A" completed keep alive response.
+[2022-05-10 11:55:19.247 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 2.5078ms
+[2022-05-10 11:55:19.765 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - -
+[2022-05-10 11:55:19.765 +07:00  DBG]  No candidates found for the request path '/swagger/v1/swagger.json'
+[2022-05-10 11:55:19.765 +07:00  DBG]  Request did not match any endpoints
+[2022-05-10 11:55:19.903 +07:00  DBG]  Connection id "0HMHI853VAI6A" completed keep alive response.
+[2022-05-10 11:55:19.903 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.1902ms
+[2022-05-10 11:55:43.015 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/BookingStatus/GetList?pageNumber=1&pageSize=4 - -
+[2022-05-10 11:55:43.034 +07:00  DBG]  1 candidate(s) found for the request path '/api/BookingStatus/GetList'
+[2022-05-10 11:55:43.039 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingStatusController.GetList (SportFieldBooking.API)' with route pattern 'api/BookingStatus/GetList' is valid for the request path '/api/BookingStatus/GetList'
+[2022-05-10 11:55:43.040 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingStatusController.GetList (SportFieldBooking.API)'
+[2022-05-10 11:55:43.043 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 11:55:43.048 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingStatusController.GetList (SportFieldBooking.API)'
+[2022-05-10 11:55:43.074 +07:00  INF]  Route matched with {action = "GetList", controller = "BookingStatus"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetList(Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingStatusController (SportFieldBooking.API).
+[2022-05-10 11:55:43.076 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 11:55:43.076 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 11:55:43.076 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 11:55:43.076 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 11:55:43.076 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 11:55:43.077 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingStatusController (SportFieldBooking.API)
+[2022-05-10 11:55:43.238 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingStatusController (SportFieldBooking.API)
+[2022-05-10 11:55:43.247 +07:00  DBG]  Attempting to bind parameter 'pageNumber' of type 'System.Int64' ...
+[2022-05-10 11:55:43.249 +07:00  DBG]  Attempting to bind parameter 'pageNumber' of type 'System.Int64' using the name 'pageNumber' in request data ...
+[2022-05-10 11:55:43.250 +07:00  DBG]  Done attempting to bind parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-10 11:55:43.250 +07:00  DBG]  Done attempting to bind parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-10 11:55:43.250 +07:00  DBG]  Attempting to validate the bound parameter 'pageNumber' of type 'System.Int64' ...
+[2022-05-10 11:55:43.251 +07:00  DBG]  Done attempting to validate the bound parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-10 11:55:43.252 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 11:55:43.253 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-10 11:55:43.253 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 11:55:43.253 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 11:55:43.253 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 11:55:43.253 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 11:55:43.784 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 11:55:43.787 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 11:55:43.787 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 11:55:43.787 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 11:55:43.788 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 11:55:43.788 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.BookingStatus.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-10 11:55:43.802 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingStatusController.GetList (SportFieldBooking.API) in 718.7916ms
+[2022-05-10 11:55:43.803 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingStatusController.GetList (SportFieldBooking.API)'
+[2022-05-10 11:55:43.803 +07:00  DBG]  Connection id "0HMHI853VAI6A" completed keep alive response.
+[2022-05-10 11:55:43.807 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/BookingStatus/GetList?pageNumber=1&pageSize=4 - - - 200 - application/json;+charset=utf-8 792.2752ms
+[2022-05-10 11:55:58.424 +07:00  INF]  Request starting HTTP/1.1 DELETE http://localhost:5290/api/BookingStatus/Delete/1 - -
+[2022-05-10 11:55:58.427 +07:00  DBG]  1 candidate(s) found for the request path '/api/BookingStatus/Delete/1'
+[2022-05-10 11:55:58.427 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingStatusController.Delete (SportFieldBooking.API)' with route pattern 'api/BookingStatus/Delete/{id}' is valid for the request path '/api/BookingStatus/Delete/1'
+[2022-05-10 11:55:58.428 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingStatusController.Delete (SportFieldBooking.API)'
+[2022-05-10 11:55:58.428 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 11:55:58.428 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingStatusController.Delete (SportFieldBooking.API)'
+[2022-05-10 11:55:58.433 +07:00  INF]  Route matched with {action = "Delete", controller = "BookingStatus"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int64) on controller SportFieldBooking.API.Controllers.BookingStatusController (SportFieldBooking.API).
+[2022-05-10 11:55:58.433 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 11:55:58.433 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 11:55:58.433 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 11:55:58.433 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 11:55:58.433 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 11:55:58.433 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingStatusController (SportFieldBooking.API)
+[2022-05-10 11:55:58.437 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingStatusController (SportFieldBooking.API)
+[2022-05-10 11:55:58.437 +07:00  DBG]  Attempting to bind parameter 'id' of type 'System.Int64' ...
+[2022-05-10 11:55:58.438 +07:00  DBG]  Attempting to bind parameter 'id' of type 'System.Int64' using the name 'id' in request data ...
+[2022-05-10 11:55:58.438 +07:00  DBG]  Done attempting to bind parameter 'id' of type 'System.Int64'.
+[2022-05-10 11:55:58.438 +07:00  DBG]  Done attempting to bind parameter 'id' of type 'System.Int64'.
+[2022-05-10 11:55:58.438 +07:00  DBG]  Attempting to validate the bound parameter 'id' of type 'System.Int64' ...
+[2022-05-10 11:55:58.438 +07:00  DBG]  Done attempting to validate the bound parameter 'id' of type 'System.Int64'.
+[2022-05-10 11:55:58.644 +07:00  INF]  Executing StatusCodeResult, setting HTTP status code 200
+[2022-05-10 11:55:58.644 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingStatusController.Delete (SportFieldBooking.API) in 210.9481ms
+[2022-05-10 11:55:58.644 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingStatusController.Delete (SportFieldBooking.API)'
+[2022-05-10 11:55:58.644 +07:00  DBG]  Connection id "0HMHI853VAI6A" completed keep alive response.
+[2022-05-10 11:55:58.644 +07:00  INF]  Request finished HTTP/1.1 DELETE http://localhost:5290/api/BookingStatus/Delete/1 - - - 200 0 - 220.5519ms
+[2022-05-10 11:56:02.416 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/BookingStatus/GetList?pageNumber=1&pageSize=4 - -
+[2022-05-10 11:56:02.417 +07:00  DBG]  1 candidate(s) found for the request path '/api/BookingStatus/GetList'
+[2022-05-10 11:56:02.417 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingStatusController.GetList (SportFieldBooking.API)' with route pattern 'api/BookingStatus/GetList' is valid for the request path '/api/BookingStatus/GetList'
+[2022-05-10 11:56:02.417 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingStatusController.GetList (SportFieldBooking.API)'
+[2022-05-10 11:56:02.417 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 11:56:02.417 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingStatusController.GetList (SportFieldBooking.API)'
+[2022-05-10 11:56:02.417 +07:00  INF]  Route matched with {action = "GetList", controller = "BookingStatus"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetList(Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingStatusController (SportFieldBooking.API).
+[2022-05-10 11:56:02.417 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 11:56:02.417 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 11:56:02.417 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 11:56:02.417 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 11:56:02.417 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 11:56:02.417 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingStatusController (SportFieldBooking.API)
+[2022-05-10 11:56:02.424 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingStatusController (SportFieldBooking.API)
+[2022-05-10 11:56:02.425 +07:00  DBG]  Attempting to bind parameter 'pageNumber' of type 'System.Int64' ...
+[2022-05-10 11:56:02.425 +07:00  DBG]  Attempting to bind parameter 'pageNumber' of type 'System.Int64' using the name 'pageNumber' in request data ...
+[2022-05-10 11:56:02.425 +07:00  DBG]  Done attempting to bind parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-10 11:56:02.425 +07:00  DBG]  Done attempting to bind parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-10 11:56:02.425 +07:00  DBG]  Attempting to validate the bound parameter 'pageNumber' of type 'System.Int64' ...
+[2022-05-10 11:56:02.425 +07:00  DBG]  Done attempting to validate the bound parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-10 11:56:02.425 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 11:56:02.425 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-10 11:56:02.425 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 11:56:02.425 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 11:56:02.425 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 11:56:02.425 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 11:56:02.449 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 11:56:02.449 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 11:56:02.449 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 11:56:02.449 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 11:56:02.450 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 11:56:02.450 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.BookingStatus.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-10 11:56:02.450 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingStatusController.GetList (SportFieldBooking.API) in 32.674ms
+[2022-05-10 11:56:02.450 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingStatusController.GetList (SportFieldBooking.API)'
+[2022-05-10 11:56:02.450 +07:00  DBG]  Connection id "0HMHI853VAI6A" completed keep alive response.
+[2022-05-10 11:56:02.450 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/BookingStatus/GetList?pageNumber=1&pageSize=4 - - - 200 - application/json;+charset=utf-8 33.8106ms
+[2022-05-10 11:56:32.827 +07:00  INF]  Application is shutting down...
+[2022-05-10 11:56:32.831 +07:00  DBG]  Hosting stopping
+[2022-05-10 11:56:32.847 +07:00  DBG]  Connection id "0HMHI853VAI6B" disconnecting.
+[2022-05-10 11:56:32.847 +07:00  DBG]  Connection id "0HMHI853VAI6A" disconnecting.
+[2022-05-10 11:56:32.849 +07:00  DBG]  Connection id "0HMHI853VAI6B" stopped.
+[2022-05-10 11:56:32.849 +07:00  DBG]  Connection id "0HMHI853VAI6A" stopped.
+[2022-05-10 11:56:32.849 +07:00  DBG]  Connection id "0HMHI853VAI6B" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-10 11:56:32.849 +07:00  DBG]  Connection id "0HMHI853VAI6A" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-10 11:56:32.856 +07:00  DBG]  Hosting stopped
+[2022-05-10 13:32:35.144 +07:00  DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+[2022-05-10 13:32:35.475 +07:00  INF]  [MyLog]: Migrating process
+[2022-05-10 13:32:37.116 +07:00  DBG]  Hosting starting
+[2022-05-10 13:32:37.154 +07:00  INF]  Now listening on: http://localhost:5290
+[2022-05-10 13:32:37.154 +07:00  DBG]  Loaded hosting startup assembly SportFieldBooking.API
+[2022-05-10 13:32:37.154 +07:00  DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-05-10 13:32:37.154 +07:00  DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-05-10 13:32:37.154 +07:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-05-10 13:32:37.155 +07:00  INF]  Hosting environment: Development
+[2022-05-10 13:32:37.155 +07:00  INF]  Content root path: D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\
+[2022-05-10 13:32:37.155 +07:00  DBG]  Hosting started
+[2022-05-10 13:32:37.548 +07:00  DBG]  Connection id "0HMHI9RG228D9" accepted.
+[2022-05-10 13:32:37.549 +07:00  DBG]  Connection id "0HMHI9RG228D9" started.
+[2022-05-10 13:32:37.552 +07:00  DBG]  Connection id "0HMHI9RG228D9" received FIN.
+[2022-05-10 13:32:37.563 +07:00  DBG]  Connection id "0HMHI9RG228D9" sending FIN because: "The client closed the connection."
+[2022-05-10 13:32:37.565 +07:00  DBG]  Connection id "0HMHI9RG228D9" disconnecting.
+[2022-05-10 13:32:37.568 +07:00  DBG]  Connection id "0HMHI9RG228D9" stopped.
+[2022-05-10 13:32:37.707 +07:00  DBG]  Connection id "0HMHI9RG228DA" accepted.
+[2022-05-10 13:32:37.707 +07:00  DBG]  Connection id "0HMHI9RG228DB" accepted.
+[2022-05-10 13:32:37.711 +07:00  DBG]  Connection id "0HMHI9RG228DA" started.
+[2022-05-10 13:32:37.716 +07:00  DBG]  Connection id "0HMHI9RG228DB" started.
+[2022-05-10 13:32:37.793 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/index.html - -
+[2022-05-10 13:32:37.912 +07:00  DBG]  Wildcard detected, all requests with hosts will be allowed.
+[2022-05-10 13:32:37.952 +07:00  DBG]  No candidates found for the request path '/swagger/index.html'
+[2022-05-10 13:32:37.953 +07:00  DBG]  Request did not match any endpoints
+[2022-05-10 13:32:38.046 +07:00  DBG]  Response markup is scheduled to include browser refresh script injection.
+[2022-05-10 13:32:38.725 +07:00  DBG]  Response markup was updated to include browser refresh script injection.
+[2022-05-10 13:32:38.725 +07:00  DBG]  Connection id "0HMHI9RG228DB" completed keep alive response.
+[2022-05-10 13:32:38.922 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/index.html - - - 200 - text/html;charset=utf-8 1133.0954ms
+[2022-05-10 13:32:39.016 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - -
+[2022-05-10 13:32:39.018 +07:00  DBG]  Connection id "0HMHI9RG228DB" completed keep alive response.
+[2022-05-10 13:32:39.018 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 2.3478ms
+[2022-05-10 13:32:39.255 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - -
+[2022-05-10 13:32:39.256 +07:00  DBG]  No candidates found for the request path '/swagger/v1/swagger.json'
+[2022-05-10 13:32:39.256 +07:00  DBG]  Request did not match any endpoints
+[2022-05-10 13:32:39.397 +07:00  DBG]  Connection id "0HMHI9RG228DB" completed keep alive response.
+[2022-05-10 13:32:39.397 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 141.7677ms
+[2022-05-10 13:33:23.333 +07:00  INF]  Application is shutting down...
+[2022-05-10 13:33:23.338 +07:00  DBG]  Hosting stopping
+[2022-05-10 13:33:23.407 +07:00  DBG]  Connection id "0HMHI9RG228DB" disconnecting.
+[2022-05-10 13:33:23.407 +07:00  DBG]  Connection id "0HMHI9RG228DA" disconnecting.
+[2022-05-10 13:33:23.408 +07:00  DBG]  Connection id "0HMHI9RG228DB" stopped.
+[2022-05-10 13:33:23.408 +07:00  DBG]  Connection id "0HMHI9RG228DA" stopped.
+[2022-05-10 13:33:23.408 +07:00  DBG]  Connection id "0HMHI9RG228DB" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-10 13:33:23.408 +07:00  DBG]  Connection id "0HMHI9RG228DA" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-10 13:33:23.411 +07:00  DBG]  Hosting stopped
+[2022-05-10 13:56:39.426 +07:00  DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+[2022-05-10 13:56:39.719 +07:00  INF]  [MyLog]: Migrating process
+[2022-05-10 13:56:41.807 +07:00  DBG]  Hosting starting
+[2022-05-10 13:56:41.848 +07:00  INF]  Now listening on: http://localhost:5290
+[2022-05-10 13:56:41.848 +07:00  DBG]  Loaded hosting startup assembly SportFieldBooking.API
+[2022-05-10 13:56:41.848 +07:00  DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-05-10 13:56:41.848 +07:00  DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-05-10 13:56:41.849 +07:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-05-10 13:56:41.849 +07:00  INF]  Hosting environment: Development
+[2022-05-10 13:56:41.849 +07:00  INF]  Content root path: D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\
+[2022-05-10 13:56:41.849 +07:00  DBG]  Hosting started
+[2022-05-10 13:56:42.184 +07:00  DBG]  Connection id "0HMHIA8UJ77TM" received FIN.
+[2022-05-10 13:56:42.192 +07:00  DBG]  Connection id "0HMHIA8UJ77TM" accepted.
+[2022-05-10 13:56:42.192 +07:00  DBG]  Connection id "0HMHIA8UJ77TN" received FIN.
+[2022-05-10 13:56:42.193 +07:00  DBG]  Connection id "0HMHIA8UJ77TN" accepted.
+[2022-05-10 13:56:42.194 +07:00  DBG]  Connection id "0HMHIA8UJ77TN" started.
+[2022-05-10 13:56:42.195 +07:00  DBG]  Connection id "0HMHIA8UJ77TM" started.
+[2022-05-10 13:56:42.198 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" accepted.
+[2022-05-10 13:56:42.198 +07:00  DBG]  Connection id "0HMHIA8UJ77TP" accepted.
+[2022-05-10 13:56:42.204 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" started.
+[2022-05-10 13:56:42.204 +07:00  DBG]  Connection id "0HMHIA8UJ77TP" started.
+[2022-05-10 13:56:42.215 +07:00  DBG]  Connection id "0HMHIA8UJ77TM" sending FIN because: "The client closed the connection."
+[2022-05-10 13:56:42.215 +07:00  DBG]  Connection id "0HMHIA8UJ77TN" sending FIN because: "The client closed the connection."
+[2022-05-10 13:56:42.217 +07:00  DBG]  Connection id "0HMHIA8UJ77TN" disconnecting.
+[2022-05-10 13:56:42.217 +07:00  DBG]  Connection id "0HMHIA8UJ77TM" disconnecting.
+[2022-05-10 13:56:42.218 +07:00  DBG]  Connection id "0HMHIA8UJ77TN" stopped.
+[2022-05-10 13:56:42.218 +07:00  DBG]  Connection id "0HMHIA8UJ77TM" stopped.
+[2022-05-10 13:56:42.256 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/index.html - -
+[2022-05-10 13:56:42.286 +07:00  DBG]  Wildcard detected, all requests with hosts will be allowed.
+[2022-05-10 13:56:42.308 +07:00  DBG]  No candidates found for the request path '/swagger/index.html'
+[2022-05-10 13:56:42.308 +07:00  DBG]  Request did not match any endpoints
+[2022-05-10 13:56:42.370 +07:00  DBG]  Response markup is scheduled to include browser refresh script injection.
+[2022-05-10 13:56:42.457 +07:00  DBG]  Response markup was updated to include browser refresh script injection.
+[2022-05-10 13:56:42.458 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" completed keep alive response.
+[2022-05-10 13:56:42.465 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/index.html - - - 200 - text/html;charset=utf-8 207.6730ms
+[2022-05-10 13:56:42.735 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - -
+[2022-05-10 13:56:42.741 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" completed keep alive response.
+[2022-05-10 13:56:42.741 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 5.6690ms
+[2022-05-10 13:56:42.828 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - -
+[2022-05-10 13:56:42.828 +07:00  DBG]  No candidates found for the request path '/swagger/v1/swagger.json'
+[2022-05-10 13:56:42.828 +07:00  DBG]  Request did not match any endpoints
+[2022-05-10 13:56:42.988 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" completed keep alive response.
+[2022-05-10 13:56:42.988 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 160.4348ms
+[2022-05-10 13:56:59.377 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/Booking/GetUserBooking?userId=1&pageIndex=1&pageSize=10 - -
+[2022-05-10 13:56:59.386 +07:00  DBG]  1 candidate(s) found for the request path '/api/Booking/GetUserBooking'
+[2022-05-10 13:56:59.393 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingController.GetUserBooking (SportFieldBooking.API)' with route pattern 'api/Booking/GetUserBooking' is valid for the request path '/api/Booking/GetUserBooking'
+[2022-05-10 13:56:59.393 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingController.GetUserBooking (SportFieldBooking.API)'
+[2022-05-10 13:56:59.395 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 13:56:59.400 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingController.GetUserBooking (SportFieldBooking.API)'
+[2022-05-10 13:56:59.441 +07:00  INF]  Route matched with {action = "GetUserBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserBooking(Int64, Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API).
+[2022-05-10 13:56:59.442 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 13:56:59.442 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 13:56:59.442 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 13:56:59.442 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 13:56:59.442 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 13:56:59.443 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:56:59.741 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:56:59.753 +07:00  DBG]  Attempting to bind parameter 'userId' of type 'System.Int64' ...
+[2022-05-10 13:56:59.755 +07:00  DBG]  Attempting to bind parameter 'userId' of type 'System.Int64' using the name 'userId' in request data ...
+[2022-05-10 13:56:59.758 +07:00  DBG]  Done attempting to bind parameter 'userId' of type 'System.Int64'.
+[2022-05-10 13:56:59.758 +07:00  DBG]  Done attempting to bind parameter 'userId' of type 'System.Int64'.
+[2022-05-10 13:56:59.758 +07:00  DBG]  Attempting to validate the bound parameter 'userId' of type 'System.Int64' ...
+[2022-05-10 13:56:59.761 +07:00  DBG]  Done attempting to validate the bound parameter 'userId' of type 'System.Int64'.
+[2022-05-10 13:56:59.762 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 13:56:59.762 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' using the name 'pageIndex' in request data ...
+[2022-05-10 13:56:59.763 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 13:56:59.763 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 13:56:59.763 +07:00  DBG]  Attempting to validate the bound parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 13:56:59.763 +07:00  DBG]  Done attempting to validate the bound parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 13:56:59.763 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 13:56:59.763 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-10 13:56:59.763 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:56:59.763 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:56:59.763 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 13:56:59.763 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:57:00.485 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 13:57:00.487 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 13:57:00.488 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 13:57:00.488 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 13:57:00.489 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 13:57:00.489 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.Booking.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-10 13:57:00.508 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingController.GetUserBooking (SportFieldBooking.API) in 1060.7355ms
+[2022-05-10 13:57:00.508 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingController.GetUserBooking (SportFieldBooking.API)'
+[2022-05-10 13:57:00.509 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" completed keep alive response.
+[2022-05-10 13:57:00.511 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/Booking/GetUserBooking?userId=1&pageIndex=1&pageSize=10 - - - 200 - application/json;+charset=utf-8 1133.8821ms
+[2022-05-10 13:57:17.346 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/Booking/GetSportFieldBooking?sportFieldId=18&pageIndex=1&pageSize=10 - -
+[2022-05-10 13:57:17.350 +07:00  DBG]  1 candidate(s) found for the request path '/api/Booking/GetSportFieldBooking'
+[2022-05-10 13:57:17.350 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)' with route pattern 'api/Booking/GetSportFieldBooking' is valid for the request path '/api/Booking/GetSportFieldBooking'
+[2022-05-10 13:57:17.350 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 13:57:17.351 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 13:57:17.352 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 13:57:17.360 +07:00  INF]  Route matched with {action = "GetSportFieldBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSportFieldBooking(Int64, Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API).
+[2022-05-10 13:57:17.360 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 13:57:17.360 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 13:57:17.360 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 13:57:17.360 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 13:57:17.360 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 13:57:17.360 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:57:17.380 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:57:17.381 +07:00  DBG]  Attempting to bind parameter 'sportFieldId' of type 'System.Int64' ...
+[2022-05-10 13:57:17.382 +07:00  DBG]  Attempting to bind parameter 'sportFieldId' of type 'System.Int64' using the name 'sportFieldId' in request data ...
+[2022-05-10 13:57:17.382 +07:00  DBG]  Done attempting to bind parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 13:57:17.382 +07:00  DBG]  Done attempting to bind parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 13:57:17.382 +07:00  DBG]  Attempting to validate the bound parameter 'sportFieldId' of type 'System.Int64' ...
+[2022-05-10 13:57:17.382 +07:00  DBG]  Done attempting to validate the bound parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 13:57:17.382 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 13:57:17.382 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' using the name 'pageIndex' in request data ...
+[2022-05-10 13:57:17.382 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 13:57:17.382 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 13:57:17.382 +07:00  DBG]  Attempting to validate the bound parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 13:57:17.382 +07:00  DBG]  Done attempting to validate the bound parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 13:57:17.382 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 13:57:17.382 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-10 13:57:17.382 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:57:17.382 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:57:17.382 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 13:57:17.382 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:57:17.439 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 13:57:17.439 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 13:57:17.439 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 13:57:17.439 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 13:57:17.439 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 13:57:17.439 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.Booking.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-10 13:57:17.439 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API) in 78.749ms
+[2022-05-10 13:57:17.439 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 13:57:17.439 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" completed keep alive response.
+[2022-05-10 13:57:17.439 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/Booking/GetSportFieldBooking?sportFieldId=18&pageIndex=1&pageSize=10 - - - 200 - application/json;+charset=utf-8 93.1744ms
+[2022-05-10 13:57:41.818 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/Booking/GetList?pageNumber=1&pageSize=10 - -
+[2022-05-10 13:57:41.819 +07:00  DBG]  1 candidate(s) found for the request path '/api/Booking/GetList'
+[2022-05-10 13:57:41.819 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API)' with route pattern 'api/Booking/GetList' is valid for the request path '/api/Booking/GetList'
+[2022-05-10 13:57:41.819 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API)'
+[2022-05-10 13:57:41.819 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 13:57:41.819 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API)'
+[2022-05-10 13:57:41.823 +07:00  INF]  Route matched with {action = "GetList", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetList(Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API).
+[2022-05-10 13:57:41.823 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 13:57:41.823 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 13:57:41.823 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 13:57:41.823 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 13:57:41.823 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 13:57:41.823 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:57:41.832 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:57:41.832 +07:00  DBG]  Attempting to bind parameter 'pageNumber' of type 'System.Int64' ...
+[2022-05-10 13:57:41.833 +07:00  DBG]  Attempting to bind parameter 'pageNumber' of type 'System.Int64' using the name 'pageNumber' in request data ...
+[2022-05-10 13:57:41.833 +07:00  DBG]  Done attempting to bind parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-10 13:57:41.833 +07:00  DBG]  Done attempting to bind parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-10 13:57:41.833 +07:00  DBG]  Attempting to validate the bound parameter 'pageNumber' of type 'System.Int64' ...
+[2022-05-10 13:57:41.833 +07:00  DBG]  Done attempting to validate the bound parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-10 13:57:41.833 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 13:57:41.833 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-10 13:57:41.833 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:57:41.833 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:57:41.833 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 13:57:41.833 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:57:41.856 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 13:57:41.856 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 13:57:41.856 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 13:57:41.856 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 13:57:41.856 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 13:57:41.856 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.Booking.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-10 13:57:41.856 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API) in 33.391ms
+[2022-05-10 13:57:41.856 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API)'
+[2022-05-10 13:57:41.857 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" completed keep alive response.
+[2022-05-10 13:57:41.857 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/Booking/GetList?pageNumber=1&pageSize=10 - - - 200 - application/json;+charset=utf-8 38.2056ms
+[2022-05-10 13:58:10.650 +07:00  DBG]  Connection id "0HMHIA8UJ77TP" received FIN.
+[2022-05-10 13:58:10.650 +07:00  DBG]  Connection id "0HMHIA8UJ77TP" sending FIN because: "The client closed the connection."
+[2022-05-10 13:58:10.651 +07:00  DBG]  Connection id "0HMHIA8UJ77TP" disconnecting.
+[2022-05-10 13:58:10.652 +07:00  DBG]  Connection id "0HMHIA8UJ77TP" stopped.
+[2022-05-10 13:58:10.652 +07:00  INF]  Request starting HTTP/1.1 POST http://localhost:5290/api/Booking/MakeBooking application/json 194
+[2022-05-10 13:58:10.653 +07:00  DBG]  1 candidate(s) found for the request path '/api/Booking/MakeBooking'
+[2022-05-10 13:58:10.653 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingController.Create (SportFieldBooking.API)' with route pattern 'api/Booking/MakeBooking' is valid for the request path '/api/Booking/MakeBooking'
+[2022-05-10 13:58:10.653 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingController.Create (SportFieldBooking.API)'
+[2022-05-10 13:58:10.653 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 13:58:10.653 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingController.Create (SportFieldBooking.API)'
+[2022-05-10 13:58:10.656 +07:00  INF]  Route matched with {action = "Create", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(SportFieldBooking.Biz.Model.Booking.New) on controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API).
+[2022-05-10 13:58:10.656 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 13:58:10.656 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 13:58:10.656 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 13:58:10.656 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 13:58:10.656 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 13:58:10.656 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:58:10.664 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:58:10.664 +07:00  DBG]  Attempting to bind parameter 'model' of type 'SportFieldBooking.Biz.Model.Booking.New' ...
+[2022-05-10 13:58:10.665 +07:00  DBG]  Attempting to bind parameter 'model' of type 'SportFieldBooking.Biz.Model.Booking.New' using the name '' in request data ...
+[2022-05-10 13:58:10.665 +07:00  DBG]  Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+[2022-05-10 13:58:10.672 +07:00  DBG]  Connection id "0HMHIA8UJ77TO", Request id "0HMHIA8UJ77TO:00000008": started reading request body.
+[2022-05-10 13:58:10.672 +07:00  DBG]  Connection id "0HMHIA8UJ77TO", Request id "0HMHIA8UJ77TO:00000008": done reading request body.
+[2022-05-10 13:58:10.680 +07:00  DBG]  JSON input formatter succeeded, deserializing to type 'SportFieldBooking.Biz.Model.Booking.New'
+[2022-05-10 13:58:10.681 +07:00  DBG]  Done attempting to bind parameter 'model' of type 'SportFieldBooking.Biz.Model.Booking.New'.
+[2022-05-10 13:58:10.681 +07:00  DBG]  Done attempting to bind parameter 'model' of type 'SportFieldBooking.Biz.Model.Booking.New'.
+[2022-05-10 13:58:10.681 +07:00  DBG]  Attempting to validate the bound parameter 'model' of type 'SportFieldBooking.Biz.Model.Booking.New' ...
+[2022-05-10 13:58:10.689 +07:00  DBG]  Done attempting to validate the bound parameter 'model' of type 'SportFieldBooking.Biz.Model.Booking.New'.
+[2022-05-10 13:58:11.451 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 13:58:11.451 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 13:58:11.451 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 13:58:11.451 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 13:58:11.451 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 13:58:11.451 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Biz.Model.Booking.View'.
+[2022-05-10 13:58:11.452 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingController.Create (SportFieldBooking.API) in 796.1014ms
+[2022-05-10 13:58:11.453 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingController.Create (SportFieldBooking.API)'
+[2022-05-10 13:58:11.453 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" completed keep alive response.
+[2022-05-10 13:58:11.453 +07:00  INF]  Request finished HTTP/1.1 POST http://localhost:5290/api/Booking/MakeBooking application/json 194 - 200 - application/json;+charset=utf-8 800.2855ms
+[2022-05-10 13:58:14.813 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/Booking/GetList?pageNumber=1&pageSize=10 - -
+[2022-05-10 13:58:14.814 +07:00  DBG]  1 candidate(s) found for the request path '/api/Booking/GetList'
+[2022-05-10 13:58:14.814 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API)' with route pattern 'api/Booking/GetList' is valid for the request path '/api/Booking/GetList'
+[2022-05-10 13:58:14.814 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API)'
+[2022-05-10 13:58:14.814 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 13:58:14.814 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API)'
+[2022-05-10 13:58:14.814 +07:00  INF]  Route matched with {action = "GetList", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetList(Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API).
+[2022-05-10 13:58:14.814 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 13:58:14.814 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 13:58:14.814 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 13:58:14.814 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 13:58:14.814 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 13:58:14.814 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:58:14.821 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:58:14.822 +07:00  DBG]  Attempting to bind parameter 'pageNumber' of type 'System.Int64' ...
+[2022-05-10 13:58:14.822 +07:00  DBG]  Attempting to bind parameter 'pageNumber' of type 'System.Int64' using the name 'pageNumber' in request data ...
+[2022-05-10 13:58:14.822 +07:00  DBG]  Done attempting to bind parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-10 13:58:14.822 +07:00  DBG]  Done attempting to bind parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-10 13:58:14.822 +07:00  DBG]  Attempting to validate the bound parameter 'pageNumber' of type 'System.Int64' ...
+[2022-05-10 13:58:14.822 +07:00  DBG]  Done attempting to validate the bound parameter 'pageNumber' of type 'System.Int64'.
+[2022-05-10 13:58:14.822 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 13:58:14.822 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-10 13:58:14.822 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:58:14.822 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:58:14.822 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 13:58:14.822 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:58:14.834 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 13:58:14.834 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 13:58:14.834 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 13:58:14.834 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 13:58:14.834 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 13:58:14.834 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.Booking.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-10 13:58:14.834 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API) in 19.9715ms
+[2022-05-10 13:58:14.834 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingController.GetList (SportFieldBooking.API)'
+[2022-05-10 13:58:14.834 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" completed keep alive response.
+[2022-05-10 13:58:14.834 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/Booking/GetList?pageNumber=1&pageSize=10 - - - 200 - application/json;+charset=utf-8 20.8753ms
+[2022-05-10 13:58:25.791 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/Booking/GetUserBooking?userId=1&pageIndex=1&pageSize=10 - -
+[2022-05-10 13:58:25.791 +07:00  DBG]  1 candidate(s) found for the request path '/api/Booking/GetUserBooking'
+[2022-05-10 13:58:25.791 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingController.GetUserBooking (SportFieldBooking.API)' with route pattern 'api/Booking/GetUserBooking' is valid for the request path '/api/Booking/GetUserBooking'
+[2022-05-10 13:58:25.791 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingController.GetUserBooking (SportFieldBooking.API)'
+[2022-05-10 13:58:25.791 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 13:58:25.791 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingController.GetUserBooking (SportFieldBooking.API)'
+[2022-05-10 13:58:25.791 +07:00  INF]  Route matched with {action = "GetUserBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserBooking(Int64, Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API).
+[2022-05-10 13:58:25.791 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 13:58:25.792 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 13:58:25.792 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 13:58:25.792 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 13:58:25.792 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 13:58:25.792 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:58:25.800 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:58:25.800 +07:00  DBG]  Attempting to bind parameter 'userId' of type 'System.Int64' ...
+[2022-05-10 13:58:25.801 +07:00  DBG]  Attempting to bind parameter 'userId' of type 'System.Int64' using the name 'userId' in request data ...
+[2022-05-10 13:58:25.801 +07:00  DBG]  Done attempting to bind parameter 'userId' of type 'System.Int64'.
+[2022-05-10 13:58:25.801 +07:00  DBG]  Done attempting to bind parameter 'userId' of type 'System.Int64'.
+[2022-05-10 13:58:25.801 +07:00  DBG]  Attempting to validate the bound parameter 'userId' of type 'System.Int64' ...
+[2022-05-10 13:58:25.801 +07:00  DBG]  Done attempting to validate the bound parameter 'userId' of type 'System.Int64'.
+[2022-05-10 13:58:25.801 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 13:58:25.801 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' using the name 'pageIndex' in request data ...
+[2022-05-10 13:58:25.801 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 13:58:25.801 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 13:58:25.801 +07:00  DBG]  Attempting to validate the bound parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 13:58:25.801 +07:00  DBG]  Done attempting to validate the bound parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 13:58:25.801 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 13:58:25.801 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-10 13:58:25.801 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:58:25.801 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:58:25.801 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 13:58:25.801 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:58:25.816 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 13:58:25.816 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 13:58:25.816 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 13:58:25.816 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 13:58:25.816 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 13:58:25.816 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.Booking.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-10 13:58:25.816 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingController.GetUserBooking (SportFieldBooking.API) in 23.986ms
+[2022-05-10 13:58:25.816 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingController.GetUserBooking (SportFieldBooking.API)'
+[2022-05-10 13:58:25.816 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" completed keep alive response.
+[2022-05-10 13:58:25.816 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/Booking/GetUserBooking?userId=1&pageIndex=1&pageSize=10 - - - 200 - application/json;+charset=utf-8 25.5674ms
+[2022-05-10 13:58:30.090 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/Booking/GetSportFieldBooking?sportFieldId=18&pageIndex=1&pageSize=10 - -
+[2022-05-10 13:58:30.090 +07:00  DBG]  1 candidate(s) found for the request path '/api/Booking/GetSportFieldBooking'
+[2022-05-10 13:58:30.090 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)' with route pattern 'api/Booking/GetSportFieldBooking' is valid for the request path '/api/Booking/GetSportFieldBooking'
+[2022-05-10 13:58:30.090 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 13:58:30.090 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 13:58:30.090 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 13:58:30.090 +07:00  INF]  Route matched with {action = "GetSportFieldBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSportFieldBooking(Int64, Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API).
+[2022-05-10 13:58:30.090 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 13:58:30.091 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 13:58:30.091 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 13:58:30.091 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 13:58:30.091 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 13:58:30.091 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:58:30.097 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 13:58:30.097 +07:00  DBG]  Attempting to bind parameter 'sportFieldId' of type 'System.Int64' ...
+[2022-05-10 13:58:30.097 +07:00  DBG]  Attempting to bind parameter 'sportFieldId' of type 'System.Int64' using the name 'sportFieldId' in request data ...
+[2022-05-10 13:58:30.097 +07:00  DBG]  Done attempting to bind parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 13:58:30.097 +07:00  DBG]  Done attempting to bind parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 13:58:30.097 +07:00  DBG]  Attempting to validate the bound parameter 'sportFieldId' of type 'System.Int64' ...
+[2022-05-10 13:58:30.097 +07:00  DBG]  Done attempting to validate the bound parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 13:58:30.097 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 13:58:30.097 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' using the name 'pageIndex' in request data ...
+[2022-05-10 13:58:30.097 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 13:58:30.097 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 13:58:30.098 +07:00  DBG]  Attempting to validate the bound parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 13:58:30.098 +07:00  DBG]  Done attempting to validate the bound parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 13:58:30.098 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 13:58:30.098 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-10 13:58:30.098 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:58:30.098 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:58:30.098 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 13:58:30.098 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 13:58:30.110 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 13:58:30.110 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 13:58:30.110 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 13:58:30.110 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 13:58:30.110 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 13:58:30.110 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.Booking.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-10 13:58:30.110 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API) in 19.5008ms
+[2022-05-10 13:58:30.110 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 13:58:30.110 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" completed keep alive response.
+[2022-05-10 13:58:30.110 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/Booking/GetSportFieldBooking?sportFieldId=18&pageIndex=1&pageSize=10 - - - 200 - application/json;+charset=utf-8 20.8553ms
+[2022-05-10 14:00:41.601 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" disconnecting.
+[2022-05-10 14:00:41.601 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" stopped.
+[2022-05-10 14:00:41.603 +07:00  DBG]  Connection id "0HMHIA8UJ77TO" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-10 14:01:04.026 +07:00  DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+[2022-05-10 14:01:04.132 +07:00  INF]  [MyLog]: Migrating process
+[2022-05-10 14:01:05.539 +07:00  DBG]  Hosting starting
+[2022-05-10 14:01:05.604 +07:00  INF]  Now listening on: http://localhost:5290
+[2022-05-10 14:01:05.604 +07:00  DBG]  Loaded hosting startup assembly SportFieldBooking.API
+[2022-05-10 14:01:05.604 +07:00  DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-05-10 14:01:05.604 +07:00  DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-05-10 14:01:05.604 +07:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-05-10 14:01:05.604 +07:00  INF]  Hosting environment: Development
+[2022-05-10 14:01:05.604 +07:00  INF]  Content root path: D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\
+[2022-05-10 14:01:05.604 +07:00  DBG]  Hosting started
+[2022-05-10 14:01:05.662 +07:00  DBG]  Connection id "0HMHIABD3T47R" accepted.
+[2022-05-10 14:01:05.662 +07:00  DBG]  Connection id "0HMHIABD3T47R" started.
+[2022-05-10 14:01:05.664 +07:00  DBG]  Connection id "0HMHIABD3T47S" accepted.
+[2022-05-10 14:01:05.665 +07:00  DBG]  Connection id "0HMHIABD3T47S" started.
+[2022-05-10 14:01:05.695 +07:00  DBG]  Connection id "0HMHIABD3T47T" accepted.
+[2022-05-10 14:01:05.712 +07:00  DBG]  Connection id "0HMHIABD3T47U" accepted.
+[2022-05-10 14:01:05.712 +07:00  DBG]  Connection id "0HMHIABD3T47V" accepted.
+[2022-05-10 14:01:05.718 +07:00  DBG]  Connection id "0HMHIABD3T47S" received FIN.
+[2022-05-10 14:01:05.718 +07:00  DBG]  Connection id "0HMHIABD3T47R" received FIN.
+[2022-05-10 14:01:05.719 +07:00  DBG]  Connection id "0HMHIABD3T47T" started.
+[2022-05-10 14:01:05.720 +07:00  DBG]  Connection id "0HMHIABD3T47T" received FIN.
+[2022-05-10 14:01:05.720 +07:00  DBG]  Connection id "0HMHIABD3T47U" started.
+[2022-05-10 14:01:05.720 +07:00  DBG]  Connection id "0HMHIABD3T47V" started.
+[2022-05-10 14:01:05.728 +07:00  DBG]  Connection id "0HMHIABD3T47R" sending FIN because: "The client closed the connection."
+[2022-05-10 14:01:05.731 +07:00  DBG]  Connection id "0HMHIABD3T47R" disconnecting.
+[2022-05-10 14:01:05.731 +07:00  DBG]  Connection id "0HMHIABD3T47T" disconnecting.
+[2022-05-10 14:01:05.733 +07:00  DBG]  Connection id "0HMHIABD3T47T" stopped.
+[2022-05-10 14:01:05.728 +07:00  DBG]  Connection id "0HMHIABD3T47S" sending FIN because: "The client closed the connection."
+[2022-05-10 14:01:05.735 +07:00  DBG]  Connection id "0HMHIABD3T47S" disconnecting.
+[2022-05-10 14:01:05.736 +07:00  DBG]  Connection id "0HMHIABD3T47R" stopped.
+[2022-05-10 14:01:05.736 +07:00  DBG]  Connection id "0HMHIABD3T47S" stopped.
+[2022-05-10 14:01:05.736 +07:00  DBG]  Connection id "0HMHIABD3T47T" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-10 14:01:05.816 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/index.html - -
+[2022-05-10 14:01:05.853 +07:00  DBG]  Wildcard detected, all requests with hosts will be allowed.
+[2022-05-10 14:01:05.885 +07:00  DBG]  No candidates found for the request path '/swagger/index.html'
+[2022-05-10 14:01:05.886 +07:00  DBG]  Request did not match any endpoints
+[2022-05-10 14:01:06.006 +07:00  DBG]  Response markup is scheduled to include browser refresh script injection.
+[2022-05-10 14:01:06.117 +07:00  DBG]  Response markup was updated to include browser refresh script injection.
+[2022-05-10 14:01:06.117 +07:00  DBG]  Connection id "0HMHIABD3T47U" completed keep alive response.
+[2022-05-10 14:01:06.118 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/index.html - - - 200 - text/html;charset=utf-8 304.9437ms
+[2022-05-10 14:01:06.456 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - -
+[2022-05-10 14:01:06.462 +07:00  DBG]  Connection id "0HMHIABD3T47U" completed keep alive response.
+[2022-05-10 14:01:06.462 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 6.5305ms
+[2022-05-10 14:01:06.541 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - -
+[2022-05-10 14:01:06.543 +07:00  DBG]  No candidates found for the request path '/swagger/v1/swagger.json'
+[2022-05-10 14:01:06.543 +07:00  DBG]  Request did not match any endpoints
+[2022-05-10 14:01:06.698 +07:00  DBG]  Connection id "0HMHIABD3T47U" completed keep alive response.
+[2022-05-10 14:01:06.698 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 156.3230ms
+[2022-05-10 14:01:22.980 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/Booking/GetSportFieldBooking?sportFieldId=18&pageIndex=1&pageSize=10 - -
+[2022-05-10 14:01:22.988 +07:00  DBG]  1 candidate(s) found for the request path '/api/Booking/GetSportFieldBooking'
+[2022-05-10 14:01:22.994 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)' with route pattern 'api/Booking/GetSportFieldBooking' is valid for the request path '/api/Booking/GetSportFieldBooking'
+[2022-05-10 14:01:22.995 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 14:01:22.996 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 14:01:22.998 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 14:01:23.022 +07:00  INF]  Route matched with {action = "GetSportFieldBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSportFieldBooking(Int64, Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API).
+[2022-05-10 14:01:23.023 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 14:01:23.023 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 14:01:23.023 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 14:01:23.024 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 14:01:23.025 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 14:01:23.025 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 14:01:23.140 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 14:01:23.147 +07:00  DBG]  Attempting to bind parameter 'sportFieldId' of type 'System.Int64' ...
+[2022-05-10 14:01:23.149 +07:00  DBG]  Attempting to bind parameter 'sportFieldId' of type 'System.Int64' using the name 'sportFieldId' in request data ...
+[2022-05-10 14:01:23.149 +07:00  DBG]  Done attempting to bind parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 14:01:23.149 +07:00  DBG]  Done attempting to bind parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 14:01:23.149 +07:00  DBG]  Attempting to validate the bound parameter 'sportFieldId' of type 'System.Int64' ...
+[2022-05-10 14:01:23.150 +07:00  DBG]  Done attempting to validate the bound parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 14:01:23.151 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 14:01:23.151 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' using the name 'pageIndex' in request data ...
+[2022-05-10 14:01:23.151 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 14:01:23.151 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 14:01:23.151 +07:00  DBG]  Attempting to validate the bound parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 14:01:23.152 +07:00  DBG]  Done attempting to validate the bound parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 14:01:23.152 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 14:01:23.152 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-10 14:01:23.152 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 14:01:23.152 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 14:01:23.152 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 14:01:23.152 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 14:01:23.532 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 14:01:23.534 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 14:01:23.534 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 14:01:23.534 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 14:01:23.534 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 14:01:23.534 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.Booking.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-10 14:01:23.544 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API) in 512.7426ms
+[2022-05-10 14:01:23.544 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 14:01:23.545 +07:00  DBG]  Connection id "0HMHIABD3T47U" completed keep alive response.
+[2022-05-10 14:01:23.547 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/Booking/GetSportFieldBooking?sportFieldId=18&pageIndex=1&pageSize=10 - - - 200 - application/json;+charset=utf-8 567.0304ms
+[2022-05-10 14:01:37.928 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/Booking/GetSportFieldBooking?sportFieldId=18&pageIndex=1&pageSize=10 - -
+[2022-05-10 14:01:37.931 +07:00  DBG]  1 candidate(s) found for the request path '/api/Booking/GetSportFieldBooking'
+[2022-05-10 14:01:37.931 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)' with route pattern 'api/Booking/GetSportFieldBooking' is valid for the request path '/api/Booking/GetSportFieldBooking'
+[2022-05-10 14:01:37.931 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 14:01:37.931 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 14:01:37.931 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 14:01:37.932 +07:00  INF]  Route matched with {action = "GetSportFieldBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSportFieldBooking(Int64, Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API).
+[2022-05-10 14:01:37.932 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 14:01:37.932 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 14:01:37.932 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 14:01:37.932 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 14:01:37.933 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 14:01:37.933 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 14:01:37.940 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 14:01:37.941 +07:00  DBG]  Attempting to bind parameter 'sportFieldId' of type 'System.Int64' ...
+[2022-05-10 14:01:37.941 +07:00  DBG]  Attempting to bind parameter 'sportFieldId' of type 'System.Int64' using the name 'sportFieldId' in request data ...
+[2022-05-10 14:01:37.941 +07:00  DBG]  Done attempting to bind parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 14:01:37.941 +07:00  DBG]  Done attempting to bind parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 14:01:37.941 +07:00  DBG]  Attempting to validate the bound parameter 'sportFieldId' of type 'System.Int64' ...
+[2022-05-10 14:01:37.941 +07:00  DBG]  Done attempting to validate the bound parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 14:01:37.941 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 14:01:37.942 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' using the name 'pageIndex' in request data ...
+[2022-05-10 14:01:37.942 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 14:01:37.942 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 14:01:37.942 +07:00  DBG]  Attempting to validate the bound parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 14:01:37.942 +07:00  DBG]  Done attempting to validate the bound parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 14:01:37.942 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 14:01:37.942 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-10 14:01:37.942 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 14:01:37.942 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 14:01:37.942 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 14:01:37.942 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 14:01:38.000 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 14:01:38.000 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 14:01:38.000 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 14:01:38.000 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 14:01:38.000 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 14:01:38.000 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.Booking.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-10 14:01:38.000 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API) in 67.7117ms
+[2022-05-10 14:01:38.000 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 14:01:38.000 +07:00  DBG]  Connection id "0HMHIABD3T47U" completed keep alive response.
+[2022-05-10 14:01:38.001 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/Booking/GetSportFieldBooking?sportFieldId=18&pageIndex=1&pageSize=10 - - - 200 - application/json;+charset=utf-8 72.5892ms
+[2022-05-10 14:03:17.255 +07:00  DBG]  Connection id "0HMHIABD3T47V" disconnecting.
+[2022-05-10 14:03:17.255 +07:00  DBG]  Connection id "0HMHIABD3T47V" stopped.
+[2022-05-10 14:03:17.256 +07:00  DBG]  Connection id "0HMHIABD3T47V" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-10 14:03:49.735 +07:00  DBG]  Connection id "0HMHIABD3T47U" disconnecting.
+[2022-05-10 14:03:49.736 +07:00  DBG]  Connection id "0HMHIABD3T47U" stopped.
+[2022-05-10 14:03:49.737 +07:00  DBG]  Connection id "0HMHIABD3T47U" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-10 14:05:56.531 +07:00  DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+[2022-05-10 14:05:56.618 +07:00  INF]  [MyLog]: Migrating process
+[2022-05-10 14:05:57.839 +07:00  DBG]  Hosting starting
+[2022-05-10 14:05:57.887 +07:00  INF]  Now listening on: http://localhost:5290
+[2022-05-10 14:05:57.887 +07:00  DBG]  Loaded hosting startup assembly SportFieldBooking.API
+[2022-05-10 14:05:57.887 +07:00  DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-05-10 14:05:57.887 +07:00  DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-05-10 14:05:57.887 +07:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-05-10 14:05:57.887 +07:00  INF]  Hosting environment: Development
+[2022-05-10 14:05:57.887 +07:00  INF]  Content root path: D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\
+[2022-05-10 14:05:57.887 +07:00  DBG]  Hosting started
+[2022-05-10 14:05:58.165 +07:00  DBG]  Connection id "0HMHIAE49EV32" received FIN.
+[2022-05-10 14:05:58.173 +07:00  DBG]  Connection id "0HMHIAE49EV32" accepted.
+[2022-05-10 14:05:58.174 +07:00  DBG]  Connection id "0HMHIAE49EV33" received FIN.
+[2022-05-10 14:05:58.180 +07:00  DBG]  Connection id "0HMHIAE49EV34" accepted.
+[2022-05-10 14:05:58.181 +07:00  DBG]  Connection id "0HMHIAE49EV35" accepted.
+[2022-05-10 14:05:58.188 +07:00  DBG]  Connection id "0HMHIAE49EV34" started.
+[2022-05-10 14:05:58.188 +07:00  DBG]  Connection id "0HMHIAE49EV35" started.
+[2022-05-10 14:05:58.188 +07:00  DBG]  Connection id "0HMHIAE49EV32" started.
+[2022-05-10 14:05:58.230 +07:00  DBG]  Connection id "0HMHIAE49EV33" accepted.
+[2022-05-10 14:05:58.235 +07:00  DBG]  Connection id "0HMHIAE49EV32" sending FIN because: "The client closed the connection."
+[2022-05-10 14:05:58.239 +07:00  DBG]  Connection id "0HMHIAE49EV32" disconnecting.
+[2022-05-10 14:05:58.241 +07:00  DBG]  Connection id "0HMHIAE49EV32" stopped.
+[2022-05-10 14:05:58.243 +07:00  DBG]  Connection id "0HMHIAE49EV33" started.
+[2022-05-10 14:05:58.243 +07:00  DBG]  Connection id "0HMHIAE49EV33" sending FIN because: "The client closed the connection."
+[2022-05-10 14:05:58.244 +07:00  DBG]  Connection id "0HMHIAE49EV33" disconnecting.
+[2022-05-10 14:05:58.244 +07:00  DBG]  Connection id "0HMHIAE49EV33" stopped.
+[2022-05-10 14:05:58.302 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/index.html - -
+[2022-05-10 14:05:58.336 +07:00  DBG]  Wildcard detected, all requests with hosts will be allowed.
+[2022-05-10 14:05:58.371 +07:00  DBG]  No candidates found for the request path '/swagger/index.html'
+[2022-05-10 14:05:58.371 +07:00  DBG]  Request did not match any endpoints
+[2022-05-10 14:05:58.473 +07:00  DBG]  Response markup is scheduled to include browser refresh script injection.
+[2022-05-10 14:05:58.582 +07:00  DBG]  Response markup was updated to include browser refresh script injection.
+[2022-05-10 14:05:58.584 +07:00  DBG]  Connection id "0HMHIAE49EV35" completed keep alive response.
+[2022-05-10 14:05:58.586 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/index.html - - - 200 - text/html;charset=utf-8 295.5602ms
+[2022-05-10 14:05:58.685 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - -
+[2022-05-10 14:05:58.692 +07:00  DBG]  Connection id "0HMHIAE49EV35" completed keep alive response.
+[2022-05-10 14:05:58.692 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 7.3085ms
+[2022-05-10 14:05:58.971 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - -
+[2022-05-10 14:05:58.971 +07:00  DBG]  No candidates found for the request path '/swagger/v1/swagger.json'
+[2022-05-10 14:05:58.971 +07:00  DBG]  Request did not match any endpoints
+[2022-05-10 14:05:59.099 +07:00  DBG]  Connection id "0HMHIAE49EV35" completed keep alive response.
+[2022-05-10 14:05:59.099 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 128.0693ms
+[2022-05-10 14:06:11.547 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/Booking/GetSportFieldBooking?sportFieldId=18&pageIndex=1&pageSize=4 - -
+[2022-05-10 14:06:11.560 +07:00  DBG]  1 candidate(s) found for the request path '/api/Booking/GetSportFieldBooking'
+[2022-05-10 14:06:11.565 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)' with route pattern 'api/Booking/GetSportFieldBooking' is valid for the request path '/api/Booking/GetSportFieldBooking'
+[2022-05-10 14:06:11.565 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 14:06:11.567 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 14:06:11.569 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 14:06:11.593 +07:00  INF]  Route matched with {action = "GetSportFieldBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSportFieldBooking(Int64, Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API).
+[2022-05-10 14:06:11.593 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 14:06:11.593 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 14:06:11.594 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 14:06:11.594 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 14:06:11.594 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 14:06:11.594 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 14:06:11.707 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 14:06:11.714 +07:00  DBG]  Attempting to bind parameter 'sportFieldId' of type 'System.Int64' ...
+[2022-05-10 14:06:11.716 +07:00  DBG]  Attempting to bind parameter 'sportFieldId' of type 'System.Int64' using the name 'sportFieldId' in request data ...
+[2022-05-10 14:06:11.717 +07:00  DBG]  Done attempting to bind parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 14:06:11.717 +07:00  DBG]  Done attempting to bind parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 14:06:11.717 +07:00  DBG]  Attempting to validate the bound parameter 'sportFieldId' of type 'System.Int64' ...
+[2022-05-10 14:06:11.720 +07:00  DBG]  Done attempting to validate the bound parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 14:06:11.721 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 14:06:11.721 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' using the name 'pageIndex' in request data ...
+[2022-05-10 14:06:11.721 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 14:06:11.721 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 14:06:11.721 +07:00  DBG]  Attempting to validate the bound parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 14:06:11.721 +07:00  DBG]  Done attempting to validate the bound parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 14:06:11.721 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 14:06:11.721 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-10 14:06:11.722 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 14:06:11.722 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 14:06:11.722 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 14:06:11.722 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 14:06:12.225 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 14:06:12.226 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 14:06:12.226 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 14:06:12.226 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 14:06:12.227 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 14:06:12.227 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.Booking.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-10 14:06:12.237 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API) in 636.89ms
+[2022-05-10 14:06:12.238 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 14:06:12.238 +07:00  DBG]  Connection id "0HMHIAE49EV35" completed keep alive response.
+[2022-05-10 14:06:12.241 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/Booking/GetSportFieldBooking?sportFieldId=18&pageIndex=1&pageSize=4 - - - 200 - application/json;+charset=utf-8 693.5244ms
+[2022-05-10 14:06:39.548 +07:00  DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+[2022-05-10 14:06:39.625 +07:00  INF]  [MyLog]: Migrating process
+[2022-05-10 14:06:40.815 +07:00  DBG]  Hosting starting
+[2022-05-10 14:06:40.858 +07:00  INF]  Now listening on: http://localhost:5290
+[2022-05-10 14:06:40.858 +07:00  DBG]  Loaded hosting startup assembly SportFieldBooking.API
+[2022-05-10 14:06:40.859 +07:00  DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-05-10 14:06:40.859 +07:00  DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-05-10 14:06:40.859 +07:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-05-10 14:06:40.859 +07:00  INF]  Hosting environment: Development
+[2022-05-10 14:06:40.859 +07:00  INF]  Content root path: D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\
+[2022-05-10 14:06:40.859 +07:00  DBG]  Hosting started
+[2022-05-10 14:06:41.194 +07:00  DBG]  Connection id "0HMHIAEH3QI7I" received FIN.
+[2022-05-10 14:06:41.208 +07:00  DBG]  Connection id "0HMHIAEH3QI7I" accepted.
+[2022-05-10 14:06:41.211 +07:00  DBG]  Connection id "0HMHIAEH3QI7J" received FIN.
+[2022-05-10 14:06:41.211 +07:00  DBG]  Connection id "0HMHIAEH3QI7J" accepted.
+[2022-05-10 14:06:41.213 +07:00  DBG]  Connection id "0HMHIAEH3QI7I" started.
+[2022-05-10 14:06:41.218 +07:00  DBG]  Connection id "0HMHIAEH3QI7J" started.
+[2022-05-10 14:06:41.235 +07:00  DBG]  Connection id "0HMHIAEH3QI7K" accepted.
+[2022-05-10 14:06:41.235 +07:00  DBG]  Connection id "0HMHIAEH3QI7L" accepted.
+[2022-05-10 14:06:41.233 +07:00  DBG]  Connection id "0HMHIAEH3QI7I" sending FIN because: "The client closed the connection."
+[2022-05-10 14:06:41.234 +07:00  DBG]  Connection id "0HMHIAEH3QI7J" sending FIN because: "The client closed the connection."
+[2022-05-10 14:06:41.237 +07:00  DBG]  Connection id "0HMHIAEH3QI7I" disconnecting.
+[2022-05-10 14:06:41.238 +07:00  DBG]  Connection id "0HMHIAEH3QI7J" disconnecting.
+[2022-05-10 14:06:41.239 +07:00  DBG]  Connection id "0HMHIAEH3QI7K" started.
+[2022-05-10 14:06:41.241 +07:00  DBG]  Connection id "0HMHIAEH3QI7J" stopped.
+[2022-05-10 14:06:41.241 +07:00  DBG]  Connection id "0HMHIAEH3QI7I" stopped.
+[2022-05-10 14:06:41.243 +07:00  DBG]  Connection id "0HMHIAEH3QI7L" started.
+[2022-05-10 14:06:41.290 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/index.html - -
+[2022-05-10 14:06:41.320 +07:00  DBG]  Wildcard detected, all requests with hosts will be allowed.
+[2022-05-10 14:06:41.349 +07:00  DBG]  No candidates found for the request path '/swagger/index.html'
+[2022-05-10 14:06:41.350 +07:00  DBG]  Request did not match any endpoints
+[2022-05-10 14:06:41.471 +07:00  DBG]  Response markup is scheduled to include browser refresh script injection.
+[2022-05-10 14:06:41.590 +07:00  DBG]  Response markup was updated to include browser refresh script injection.
+[2022-05-10 14:06:41.590 +07:00  DBG]  Connection id "0HMHIAEH3QI7L" completed keep alive response.
+[2022-05-10 14:06:41.591 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/index.html - - - 200 - text/html;charset=utf-8 303.1866ms
+[2022-05-10 14:06:41.616 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - -
+[2022-05-10 14:06:41.618 +07:00  DBG]  Connection id "0HMHIAEH3QI7L" completed keep alive response.
+[2022-05-10 14:06:41.618 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 2.1159ms
+[2022-05-10 14:06:42.195 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - -
+[2022-05-10 14:06:42.199 +07:00  DBG]  No candidates found for the request path '/swagger/v1/swagger.json'
+[2022-05-10 14:06:42.199 +07:00  DBG]  Request did not match any endpoints
+[2022-05-10 14:06:42.311 +07:00  DBG]  Connection id "0HMHIAEH3QI7L" completed keep alive response.
+[2022-05-10 14:06:42.312 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 117.1283ms
+[2022-05-10 14:06:52.196 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/api/Booking/GetSportFieldBooking?sportFieldId=18&pageIndex=1&pageSize=10 - -
+[2022-05-10 14:06:52.206 +07:00  DBG]  1 candidate(s) found for the request path '/api/Booking/GetSportFieldBooking'
+[2022-05-10 14:06:52.211 +07:00  DBG]  Endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)' with route pattern 'api/Booking/GetSportFieldBooking' is valid for the request path '/api/Booking/GetSportFieldBooking'
+[2022-05-10 14:06:52.211 +07:00  DBG]  Request matched endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 14:06:52.213 +07:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-05-10 14:06:52.215 +07:00  INF]  Executing endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 14:06:52.240 +07:00  INF]  Route matched with {action = "GetSportFieldBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSportFieldBooking(Int64, Int64, Int32) on controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API).
+[2022-05-10 14:06:52.241 +07:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-05-10 14:06:52.241 +07:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-05-10 14:06:52.241 +07:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-05-10 14:06:52.241 +07:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-05-10 14:06:52.241 +07:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-05-10 14:06:52.242 +07:00  DBG]  Executing controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 14:06:52.355 +07:00  DBG]  Executed controller factory for controller SportFieldBooking.API.Controllers.BookingController (SportFieldBooking.API)
+[2022-05-10 14:06:52.360 +07:00  DBG]  Attempting to bind parameter 'sportFieldId' of type 'System.Int64' ...
+[2022-05-10 14:06:52.365 +07:00  DBG]  Attempting to bind parameter 'sportFieldId' of type 'System.Int64' using the name 'sportFieldId' in request data ...
+[2022-05-10 14:06:52.365 +07:00  DBG]  Done attempting to bind parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 14:06:52.366 +07:00  DBG]  Done attempting to bind parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 14:06:52.366 +07:00  DBG]  Attempting to validate the bound parameter 'sportFieldId' of type 'System.Int64' ...
+[2022-05-10 14:06:52.367 +07:00  DBG]  Done attempting to validate the bound parameter 'sportFieldId' of type 'System.Int64'.
+[2022-05-10 14:06:52.369 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 14:06:52.369 +07:00  DBG]  Attempting to bind parameter 'pageIndex' of type 'System.Int64' using the name 'pageIndex' in request data ...
+[2022-05-10 14:06:52.369 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 14:06:52.369 +07:00  DBG]  Done attempting to bind parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 14:06:52.369 +07:00  DBG]  Attempting to validate the bound parameter 'pageIndex' of type 'System.Int64' ...
+[2022-05-10 14:06:52.369 +07:00  DBG]  Done attempting to validate the bound parameter 'pageIndex' of type 'System.Int64'.
+[2022-05-10 14:06:52.369 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 14:06:52.369 +07:00  DBG]  Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+[2022-05-10 14:06:52.369 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 14:06:52.369 +07:00  DBG]  Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 14:06:52.369 +07:00  DBG]  Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+[2022-05-10 14:06:52.369 +07:00  DBG]  Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+[2022-05-10 14:06:52.796 +07:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2022-05-10 14:06:52.798 +07:00  DBG]  No information found on request to perform content negotiation.
+[2022-05-10 14:06:52.798 +07:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-05-10 14:06:52.798 +07:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-05-10 14:06:52.798 +07:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-05-10 14:06:52.798 +07:00  INF]  Executing OkObjectResult, writing value of type 'SportFieldBooking.Helper.Pagination.Page`1[[SportFieldBooking.Biz.Model.Booking.List, SportFieldBooking.Biz.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-05-10 14:06:52.808 +07:00  INF]  Executed action SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API) in 561.9787ms
+[2022-05-10 14:06:52.809 +07:00  INF]  Executed endpoint 'SportFieldBooking.API.Controllers.BookingController.GetSportFieldBooking (SportFieldBooking.API)'
+[2022-05-10 14:06:52.809 +07:00  DBG]  Connection id "0HMHIAEH3QI7L" completed keep alive response.
+[2022-05-10 14:06:52.811 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/api/Booking/GetSportFieldBooking?sportFieldId=18&pageIndex=1&pageSize=10 - - - 200 - application/json;+charset=utf-8 615.4007ms
+[2022-05-10 14:08:52.623 +07:00  DBG]  Connection id "0HMHIAEH3QI7K" disconnecting.
+[2022-05-10 14:08:52.624 +07:00  DBG]  Connection id "0HMHIAEH3QI7K" stopped.
+[2022-05-10 14:08:52.626 +07:00  DBG]  Connection id "0HMHIAEH3QI7K" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-10 14:09:03.747 +07:00  DBG]  Connection id "0HMHIAEH3QI7L" disconnecting.
+[2022-05-10 14:09:03.747 +07:00  DBG]  Connection id "0HMHIAEH3QI7L" stopped.
+[2022-05-10 14:09:03.747 +07:00  DBG]  Connection id "0HMHIAEH3QI7L" sending FIN because: "The Socket transport's send loop completed gracefully."
