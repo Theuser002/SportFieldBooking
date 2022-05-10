@@ -2,7 +2,7 @@
 {
     public class Consts
     {
-        public const string ON_GOING_STATUS = "Ongoing";
+        public const string ONGOING_STATUS = "Ongoing";
         public const string EXPIRED_STATUS = "Expired";
         public const string WAITING_STATUS = "Waiting";
 

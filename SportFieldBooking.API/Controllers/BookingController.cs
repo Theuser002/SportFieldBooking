@@ -20,11 +20,11 @@ namespace SportFieldBooking.API.Controllers
         }
 
         [HttpPost("MakeBooking")]
-        public async Task<IActionResult> Create(New model, long userId, long sportFieldId)
+        public async Task<IActionResult> Create(New model)
         {
             try
             {
-                var item = await _repository.Booking.CreateAsync(model, userId, sportFieldId);
+                var item = await _repository.Booking.CreateAsync(model);
                 return Ok(item);
             }
             catch (Exception e)
@@ -43,6 +43,19 @@ namespace SportFieldBooking.API.Controllers
                 return Ok(items);
             }
             catch (Exception e)
+            {
+                return NotFound(e.Message);
+            }
+        }
+
+        [HttpDelete("Delete")]
+        public async Task<IActionResult> Delete(long id)
+        {
+            try
+            {
+                await _repository.Booking.DeleteAsync(id);
+                return Ok();
+            }catch (Exception e)
             {
                 return NotFound(e.Message);
             }

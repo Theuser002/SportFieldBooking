@@ -26,7 +26,7 @@ namespace SportFieldBooking.Biz.Booking
             _mapper = mapper;
         }
 
-        public async Task<View> CreateAsync (New model, long userId, long sportFieldId)
+        public async Task<View> CreateAsync (New model)
         {
             #region steps
             /* Tim user trong dbContext.Users
@@ -42,68 +42,86 @@ namespace SportFieldBooking.Biz.Booking
             var startHour = DateTimeUtils.TakeHourOnly(model.StartHour);
             var endHour = DateTimeUtils.TakeHourOnly(model.EndHour);
             var bookDate = model.BookDate.Date;
+            var userId = model.UserId;
+            var sportFieldId = model.SportFieldId;
+
             // Check gio dat san hop le
-            if (startHour < endHour && DateTime.Now.Date <= bookDate)
+            if (startHour > endHour || DateTime.Now.Date > bookDate)
             {
-                // chay cung luc nhieu asynchronous task [17], [18]
-                var user = await _dbContext.Users.FindAsync(userId);
-                var sportField = await _dbContext.SportFields.FindAsync(sportFieldId);
-                //await Task.WhenAll(user.AsTask(), sportField.AsTask());
+                throw new Exception("[SportFieldBooking.Biz.Booking.Repository] Invalid booking time condition");
+            }
 
-                // Check nguoi dung va san bong hop le
-                if (user != null && sportField != null)
-                {
-                    var occupiedBookings = sportField.Bookings.Where(b => DateTime.Compare(b.BookDate, bookDate) == 0 && TimeSpan.Compare(b.StartHour.TimeOfDay, startHour.TimeOfDay) <= 0 && TimeSpan.Compare(b.EndHour.TimeOfDay, endHour.TimeOfDay) >= 0);
-                    if (occupiedBookings == null)
-                    {
-                        var bookingStatus = await _dbContext.BookingStatuses.Where(s => s.StatusName == Consts.ON_GOING_STATUS).FirstAsync();
-                        if (DateTimeUtils.TakeHourOnly(sportField.OpeningHour) <= startHour && DateTimeUtils.TakeHourOnly(sportField.ClosingHour) >= endHour)
-                        {
-                            var newBooking = _mapper.Map<Data.Model.Booking>(model);
-                            newBooking.SportField = sportField;
-                            newBooking.User = user;
-                            newBooking.BookingStatus = bookingStatus;
+            #region lazy loading explaination
+            /*
+             Khong the load entity bang findasync nhu binh thuong vi theo mac dinh ef core su dung hinh thuc lazy loading,
+            khi load mot entity vi du nhu sportField tu database ve local thi se k load cac related entities cua no (o day la Bookings)
+            (uncomment cac dong line quan den countFiedlBookings va countUserBooking va chay api MakeBooking va xem ket qua o console). Ta muon check
+            trong cac Bookings cua sportField co booking nao trung gio dang ki san khong, thi phai load duoc het cac Bookings nay ra bang
+            eager loading bang cach su dung ham Include(). Tuy nhien ham Include() tra ve Iqueryable khong su dung duoc extension method FindAsync(), vi the ta phai dunng FirsOrDefaultAsync() [23, 24] 
+             */
+            #endregion
 
-                            // Tinh tong thoi gian thue va gia thue tong cong
-                            var totalHour = (endHour - startHour).TotalHours;
-                            var totalPrice = (long)Math.Ceiling(totalHour) * sportField.PriceHourly;
-                            newBooking.TotalPrice = totalPrice;
+            var user = await _dbContext.Users.Include(u => u.Bookings).FirstOrDefaultAsync(u => u.Id == userId); 
+            var sportField = await _dbContext.SportFields.Include(f => f.Bookings).FirstOrDefaultAsync(f => f.Id == sportFieldId);
+            // Check nguoi dung va san bong hop le
+            if (user == null || sportField == null)
+            {
+                throw new Exception("[SportFieldBooking.Biz.Booking.Repository] Invalid user or sport field!");
+            }
 
-                            // Check tai khoan nguoi dung co du so du
-                            if (user.Balance >= totalPrice)
-                            {
-                                // Tru tien khoi tai khoan nguoi dung
-                                user.Balance -= totalPrice;
-                                user.Bookings.Add(newBooking);
+            #region comments
+            //var countFieldBookings = sportField.Bookings;
+            //var countUserBookings = user.Bookings;
+            //Console.WriteLine(countFieldBookings.Count);
+            //Console.WriteLine(countUserBookings.Count);
+            #endregion
 
-                                // Thuc hien cac thay doi vao database
-                                await _dbContext.SaveChangesAsync();
-                                var bookingView = _mapper.Map<View>(newBooking);
-                                return bookingView;
-                            }
-                            else
-                            {
-                                throw new Exception("[SportFieldBooking.Biz.Booking.Repository] User's balance is not sufficient!");
-                            }
-                        }
-                        else
-                        {
-                            throw new Exception("[SportFieldBooking.Biz.Booking.Repository] The field is closed at the requested time.");
-                        }
-                    }
-                    else
-                    {
-                        throw new Exception("[SportFieldBooking.Biz.Booking.Repository] The field is being rented at ur required time that day");
-                    }
-                }
-                else
-                {
-                    throw new Exception("[SportFieldBooking.Biz.Booking.Repository] Invalid user or sport field!");
-                }
+            // Co the dung FirstOrDefaultAsync hoac mot function nao tuong tu the cho nhanh hon k?
+            var occupiedBookings = sportField.Bookings.Where(b => b.BookDate.Date == bookDate.Date && (TimeSpan.Compare(b.EndHour.TimeOfDay, startHour.TimeOfDay) > 0 && TimeSpan.Compare(b.StartHour.TimeOfDay, endHour.TimeOfDay) < 0)).ToList();
+            //Console.WriteLine(occupiedBookings.Count);
+            if (occupiedBookings.Count != 0)
+            {
+                throw new Exception("[SportFieldBooking.Biz.Booking.Repository] The field is being rented at ur required time that day");
+            }
+
+            var bookingStatus = await _dbContext.BookingStatuses.Where(s => s.StatusName == Consts.ONGOING_STATUS).FirstAsync();
+            if (DateTimeUtils.TakeHourOnly(sportField.OpeningHour) > startHour || DateTimeUtils.TakeHourOnly(sportField.ClosingHour) < endHour)
+            {
+                throw new Exception("[SportFieldBooking.Biz.Booking.Repository] The field is closed at the requested time.");
+            }
+
+            var newBooking = _mapper.Map<Data.Model.Booking>(model);
+            // Tinh tong thoi gian thue va gia thue tong cong
+            var totalHour = (endHour - startHour).TotalHours;
+            var totalPrice = (long)Math.Ceiling(totalHour) * sportField.PriceHourly;
+            newBooking.TotalPrice = totalPrice;
+
+            // Check tai khoan nguoi dung co du so du
+            if (user.Balance >= totalPrice)
+            {
+                // Tru tien khoi tai khoan nguoi dung
+                user.Balance -= totalPrice;
+                // Thuc hien cac thay doi vao database
+                newBooking.SportField = sportField;
+                newBooking.User = user;
+                newBooking.BookingStatus = bookingStatus;
+                
+                _dbContext.Bookings.Add(newBooking);
+                await _dbContext.SaveChangesAsync();
+                var bookingView = _mapper.Map<View>(newBooking);
+
+                #region comments
+                //countFieldBookings = sportField.Bookings;
+                //countUserBookings = user.Bookings;
+                //Console.WriteLine(countFieldBookings.Count);
+                //Console.WriteLine(countUserBookings.Count);
+                #endregion
+
+                return bookingView;
             }
             else
             {
-                throw new Exception("[SportFieldBooking.Biz.Booking.Repository] Invalid booking time condition");
+                throw new Exception("[SportFieldBooking.Biz.Booking.Repository] User's balance is not sufficient!");
             }
         }
 
@@ -111,6 +129,20 @@ namespace SportFieldBooking.Biz.Booking
         {
             var bookingPage = await _dbContext.Bookings?.OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
             return bookingPage;
+        }
+
+        public async Task DeleteAsync (long id)
+        {
+            var booking = await _dbContext.Bookings.FindAsync(id);
+            if (booking != null)
+            {
+                _dbContext.Bookings.Remove(booking);
+                await _dbContext.SaveChangesAsync();
+            }
+            else
+            {
+                throw new Exception($"Threre's no booking with the id {id}");
+            }
         }
     }
 

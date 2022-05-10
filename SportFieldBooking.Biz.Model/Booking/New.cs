@@ -6,5 +6,7 @@
         public DateTime StartHour { get; set; }
         public DateTime EndHour { get; set; }
         public DateTime BookDate { get; set; }
+        public long UserId { get; set; }
+        public long SportFieldId { get; set; }
     }
 }
