@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Helper\SportFieldBooking.Helper.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Role\" />
+  </ItemGroup>
+
 </Project>

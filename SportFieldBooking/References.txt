@@ -22,7 +22,10 @@
 [22 - Cascade Delete is enabled by default on EF 6] Cascade Delete in Entity Framework 6 (https://www.entityframeworktutorial.net/code-first/cascade-delete-in-code-first.aspx)
 [23 - Lazy Loading] Entity Framework Core doesn't load Relational Object (https://stackoverflow.com/questions/69125933/entity-framework-core-doesnt-load-relational-object)
 [24] FindAsync and Include LINQ statements (https://stackoverflow.com/questions/40360512/findasync-and-include-linq-statements)
-
+[25] ASP.NET Core 3.1 - Simple API for Authentication, Registration and User Management (https://jasonwatmore.com/post/2019/10/14/aspnet-core-3-simple-api-for-authentication-registration-and-user-management#user-cs)
+[26 - Phân quyền, một số kiểu phân quyền] Bài toán phân quyền vấn đề muôn thuở.(https://viblo.asia/p/bai-toan-phan-quyen-van-de-muon-thuo-1VgZvw9mlAw)
+[27 - Phân quyền trong .NET Core] Role-based authorization in ASP.NET Core (https://docs.microsoft.com/en-us/aspnet/core/security/authorization/roles?view=aspnetcore-6.0)
+[28 - Phân quyền trong .NET Core] Introduction to authorization in ASP.NET Core (https://docs.microsoft.com/en-us/aspnet/core/security/authorization/introduction?view=aspnetcore-6.0)
 
 
 

@@ -19,6 +19,13 @@ namespace SportFieldBooking.API.Controllers
             _repository = repository;
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 10/05/2022
+        /// Endpoint tao moi mot booking
+        /// </summary>
+        /// <param name="model">biz model cho tao moi mot booking</param>
+        /// <returns>response</returns>
         [HttpPost("MakeBooking")]
         public async Task<IActionResult> Create(New model)
         {
@@ -34,6 +41,14 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 10/05/2022
+        /// Endpoint lay ve thong tin cac booking, co phan trang
+        /// </summary>
+        /// <param name="pageNumber">so thu tu trang</param>
+        /// <param name="pageSize">so ban ghi trong mot trang</param>
+        /// <returns>response</returns>
         [HttpGet("GetList")]
         public async Task<IActionResult> GetList(long pageNumber, int pageSize)
         {
@@ -48,6 +63,13 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 10/05/2022
+        /// Endpoint xoa di mot booking
+        /// </summary>
+        /// <param name="id">id cua booking</param>
+        /// <returns>response</returns>
         [HttpDelete("Delete")]
         public async Task<IActionResult> Delete(long id)
         {
@@ -61,6 +83,15 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 10/05/2022
+        /// Endpoint lay ve cac booking cua mot nguoi dung
+        /// </summary>
+        /// <param name="userId">id cua nguoi dung</param>
+        /// <param name="pageIndex">so thu tu trang</param>
+        /// <param name="pageSize">so ban ghi trong mot trang</param>
+        /// <returns>response</returns>
         [HttpGet("GetUserBooking")]
         public async Task<IActionResult> GetUserBooking(long userId, long pageIndex, int pageSize)
         {
@@ -75,6 +106,15 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 10/05/2022
+        /// Endpoint lay ve cac booking cua mot san van dong
+        /// </summary>
+        /// <param name="sportFieldId">id cua san van dong</param>
+        /// <param name="pageIndex">so thu tu trang</param>
+        /// <param name="pageSize">so ban ghi trong mot trang</param>
+        /// <returns>response</returns>
         [HttpGet("GetSportFieldBooking")]
         public async Task<IActionResult> GetSportFieldBooking(long sportFieldId, long pageIndex, int pageSize)
         {

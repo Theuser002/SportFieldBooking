@@ -26,6 +26,14 @@ namespace SportFieldBooking.Biz.Booking
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 10/05/2022
+        /// method tao moi mot booking
+        /// </summary>
+        /// <param name="model">biz model cho tao moi mot booking</param>
+        /// <returns>biz model cho view mot booking</returns>
+        /// <exception cref="Exception">cac truong hop loi khac nhau khi tao moi mot booking</exception>
         public async Task<View> CreateAsync (New model)
         {
             #region steps
@@ -125,12 +133,28 @@ namespace SportFieldBooking.Biz.Booking
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 10/05/2022
+        /// method lay ve thong tin cac booking, co phan trang
+        /// </summary>
+        /// <param name="pageIndex">so thu tu trang</param>
+        /// <param name="pageSize">so ban ghi trong mot trang</param>
+        /// <returns>trang tuong ung</returns>
         public async Task<Page<List>> GetListAsync (long pageIndex, int pageSize)
         {
             var bookingPage = await _dbContext.Bookings?.OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
             return bookingPage;
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 10/05/2022
+        /// method xoa di mot booking nhat dinh
+        /// </summary>
+        /// <param name="id">id cua booking muon xoa</param>
+        /// <returns></returns>
+        /// <exception cref="Exception">khi khong ton tai id cua booking muon xoa</exception>
         public async Task DeleteAsync (long id)
         {
             var booking = await _dbContext.Bookings.FindAsync(id);
@@ -145,6 +169,16 @@ namespace SportFieldBooking.Biz.Booking
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 10/05/2022
+        /// method lay ra cac booking cua rieng mot user, co phan trang
+        /// </summary>
+        /// <param name="userId">id cua user</param>
+        /// <param name="pageIndex">so thu tu trang</param>
+        /// <param name="pageSize">so ban ghi trong mot trang</param>
+        /// <returns>trang chua cac booking cua user</returns>
+        /// <exception cref="Exception">khi khong ton tai user voi id nhu vay</exception>
         public async Task<Page<List>> GetUserBooking (long userId, long pageIndex, int pageSize)
         {
             var bookingPage = await _dbContext.Bookings.Where(b => b.User.Id == userId).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
@@ -158,11 +192,19 @@ namespace SportFieldBooking.Biz.Booking
             }
         }
 
+        /// <summary>
+        /// Auth: Hung
+        /// Created: 10/05/2022
+        /// method lay ra cac booking co su dung den mot san van dong nao do, co phan trang
+        /// </summary>
+        /// <param name="sportFieldId">id cua san van dong</param>
+        /// <param name="pageIndex">so thu tu trang</param>
+        /// <param name="pageSize">so ban ghi trong mot trang</param>
+        /// <returns>trang chua cac booking cua san van dong do</returns>
+        /// <exception cref="Exception">khi khong ton tai san bong voi id nhu vay</exception>
         public async Task<Page<List>> GetSportFieldBooking (long sportFieldId, long pageIndex, int pageSize)
         {
             var bookingPage = await _dbContext.Bookings.Where(b => b.SportField.Id == sportFieldId).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
-            Console.WriteLine("Get sport field booking");
-            Console.WriteLine(bookingPage.Count);
             if (bookingPage != null)
             {
                 return bookingPage;

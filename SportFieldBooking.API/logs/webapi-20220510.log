@@ -4576,3 +4576,6 @@ Error Number:2601,State:1,Class:14
 [2022-05-10 14:09:03.747 +07:00  DBG]  Connection id "0HMHIAEH3QI7L" disconnecting.
 [2022-05-10 14:09:03.747 +07:00  DBG]  Connection id "0HMHIAEH3QI7L" stopped.
 [2022-05-10 14:09:03.747 +07:00  DBG]  Connection id "0HMHIAEH3QI7L" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-10 14:34:41.226 +07:00  INF]  Application is shutting down...
+[2022-05-10 14:34:41.228 +07:00  DBG]  Hosting stopping
+[2022-05-10 14:34:41.239 +07:00  DBG]  Hosting stopped
