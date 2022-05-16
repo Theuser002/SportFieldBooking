@@ -1,0 +1,51 @@
+[2022-05-16 08:32:33.806 +07:00  DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+[2022-05-16 08:32:34.533 +07:00  INF]  [MyLog]: Migrating process
+[2022-05-16 08:32:37.985 +07:00  DBG]  Hosting starting
+[2022-05-16 08:32:38.295 +07:00  INF]  Now listening on: http://localhost:5290
+[2022-05-16 08:32:38.295 +07:00  DBG]  Loaded hosting startup assembly SportFieldBooking.API
+[2022-05-16 08:32:38.296 +07:00  DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-05-16 08:32:38.296 +07:00  DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-05-16 08:32:38.296 +07:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-05-16 08:32:38.296 +07:00  INF]  Hosting environment: Development
+[2022-05-16 08:32:38.296 +07:00  INF]  Content root path: D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\
+[2022-05-16 08:32:38.296 +07:00  DBG]  Hosting started
+[2022-05-16 08:32:38.564 +07:00  DBG]  Connection id "0HMHMRFR628KU" received FIN.
+[2022-05-16 08:32:38.583 +07:00  DBG]  Connection id "0HMHMRFR628KU" accepted.
+[2022-05-16 08:32:38.585 +07:00  DBG]  Connection id "0HMHMRFR628KU" started.
+[2022-05-16 08:32:38.604 +07:00  DBG]  Connection id "0HMHMRFR628KU" sending FIN because: "The client closed the connection."
+[2022-05-16 08:32:38.607 +07:00  DBG]  Connection id "0HMHMRFR628KU" disconnecting.
+[2022-05-16 08:32:38.613 +07:00  DBG]  Connection id "0HMHMRFR628KU" stopped.
+[2022-05-16 08:32:38.916 +07:00  DBG]  Connection id "0HMHMRFR628KV" accepted.
+[2022-05-16 08:32:38.916 +07:00  DBG]  Connection id "0HMHMRFR628KV" started.
+[2022-05-16 08:32:38.916 +07:00  DBG]  Connection id "0HMHMRFR628L0" accepted.
+[2022-05-16 08:32:38.936 +07:00  DBG]  Connection id "0HMHMRFR628L0" started.
+[2022-05-16 08:32:38.994 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger - -
+[2022-05-16 08:32:39.060 +07:00  DBG]  Wildcard detected, all requests with hosts will be allowed.
+[2022-05-16 08:32:39.105 +07:00  DBG]  No candidates found for the request path '/swagger'
+[2022-05-16 08:32:39.106 +07:00  DBG]  Request did not match any endpoints
+[2022-05-16 08:32:39.191 +07:00  DBG]  Connection id "0HMHMRFR628KV" completed keep alive response.
+[2022-05-16 08:32:39.194 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger - - - 301 0 - 205.8471ms
+[2022-05-16 08:32:39.230 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/index.html - -
+[2022-05-16 08:32:39.232 +07:00  DBG]  No candidates found for the request path '/swagger/index.html'
+[2022-05-16 08:32:39.232 +07:00  DBG]  Request did not match any endpoints
+[2022-05-16 08:32:39.312 +07:00  DBG]  Response markup is scheduled to include browser refresh script injection.
+[2022-05-16 08:32:39.516 +07:00  DBG]  Response markup was updated to include browser refresh script injection.
+[2022-05-16 08:32:39.517 +07:00  DBG]  Connection id "0HMHMRFR628KV" completed keep alive response.
+[2022-05-16 08:32:39.517 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/index.html - - - 200 - text/html;charset=utf-8 286.8413ms
+[2022-05-16 08:32:39.629 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - -
+[2022-05-16 08:32:39.634 +07:00  DBG]  Connection id "0HMHMRFR628KV" completed keep alive response.
+[2022-05-16 08:32:39.634 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/_framework/aspnetcore-browser-refresh.js - - - 200 12000 application/javascript;+charset=utf-8 5.1060ms
+[2022-05-16 08:32:39.852 +07:00  INF]  Request starting HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - -
+[2022-05-16 08:32:39.853 +07:00  DBG]  No candidates found for the request path '/swagger/v1/swagger.json'
+[2022-05-16 08:32:39.853 +07:00  DBG]  Request did not match any endpoints
+[2022-05-16 08:32:39.981 +07:00  DBG]  Connection id "0HMHMRFR628KV" completed keep alive response.
+[2022-05-16 08:32:39.981 +07:00  INF]  Request finished HTTP/1.1 GET http://localhost:5290/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 128.7694ms
+[2022-05-16 08:32:46.267 +07:00  INF]  Application is shutting down...
+[2022-05-16 08:32:46.270 +07:00  DBG]  Hosting stopping
+[2022-05-16 08:32:46.298 +07:00  DBG]  Connection id "0HMHMRFR628KV" disconnecting.
+[2022-05-16 08:32:46.298 +07:00  DBG]  Connection id "0HMHMRFR628L0" disconnecting.
+[2022-05-16 08:32:46.300 +07:00  DBG]  Connection id "0HMHMRFR628L0" stopped.
+[2022-05-16 08:32:46.300 +07:00  DBG]  Connection id "0HMHMRFR628KV" stopped.
+[2022-05-16 08:32:46.300 +07:00  DBG]  Connection id "0HMHMRFR628KV" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-16 08:32:46.300 +07:00  DBG]  Connection id "0HMHMRFR628L0" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-05-16 08:32:46.697 +07:00  DBG]  Hosting stopped
