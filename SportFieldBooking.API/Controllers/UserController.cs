@@ -2,6 +2,13 @@
 using SportFieldBooking.Biz.Model.User;
 using Microsoft.AspNetCore.Mvc;
 using SportFieldBooking.Helper.Exceptions;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 
 namespace SportFieldBooking.API.Controllers
 {
@@ -80,7 +87,8 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var items = await _repository.User.GetListAsync(pageNumber, pageSize);
+                Console.WriteLine($"Is User.Identity authenticated: {User.Identity.IsAuthenticated}");
+                var items = await _repository.User.GetListAsync(pageNumber, pageSize, HttpContext);
                 return Ok(items);
             }
             catch(Exception e)
@@ -205,5 +213,75 @@ namespace SportFieldBooking.API.Controllers
                 return NotFound(e.Message);
             }
         }
+
+        [AllowAnonymous]
+        [HttpPost("Login")] // [31]
+        public async Task<IActionResult> Login([FromBody] LoginRequest model)
+        {
+            try
+            {
+                _logger.LogInformation($"User with email {model.Email} loggin in");
+                _logger.LogDebug("Validate model");
+                if (!ModelState.IsValid) // [33]
+                {
+                    return BadRequest();
+                }
+
+                _logger.LogDebug($"Get user by email");
+                var user = await _repository.User.GetLoginAsync(model.Email);
+
+                _logger.LogDebug($"Checking user's credentials");
+                if (!await _repository.User.CheckCredentialsAsync(user, model.Password))
+                {
+                    return Unauthorized();
+                }
+
+                var result = new LoginResponse
+                {
+                    Id = user.Id,
+                    Code = user.Code,
+                    Email = user.Email,
+                    Username = user.Username,
+                    Role = user.Role
+                };
+
+                // Khong nen add cac thuoc tinh co the thay doi duoc (vi du: email) vao claim neu khong can dung den vi nhu the thi se phai reload de tao lai jwt token sau khi thay doi thuoc tinh do (vi du: reload lai trang sau khi nguoi dung thay doi email)
+                var authClaims = new List<Claim>()
+                {
+                    new Claim("Id", $"{user.Id}"),
+                    new Claim("Code", user.Code),
+                    new Claim(ClaimTypes.Name, user.Username),
+                    new Claim("Username", $"{user.Username}"),
+                    new Claim("IsActive", $"{user.IsActive}"),
+                    new Claim("Role", $"{user.Role}"),
+                    new Claim(ClaimTypes.Role, $"{user.Role}")
+                };
+
+                _logger.LogDebug($"Generate user token(s)");
+                var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Secret"]));
+                var token = new JwtSecurityToken(
+                    issuer: _configuration["Jwt:ValidIssuer"],
+                    audience: _configuration["Jwt:ValidAudience"],
+                    expires: DateTime.Now.AddDays(_configuration.GetValue<int>("Jwt:AccessTokenExpiration")),
+                    claims: authClaims,
+                    signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
+                    );
+                result.AccessToken = new JwtSecurityTokenHandler().WriteToken(token);
+                result.tokenExpiration = token.ValidTo;
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"Error while logging in", e.Message);
+                return BadRequest(e.Message);
+            }
+        }
+
+        //[HttpPost("Logout")]
+        //public async Task<IActionResult> Logout()
+        //{
+        //    var userEmail = User.Identity.Name;
+        //}
+
     }
 }

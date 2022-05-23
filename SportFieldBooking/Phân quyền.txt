@@ -1,0 +1,6 @@
+﻿Phân quyền có 3 cách:
+(Role sẽ được gửi lên theo jwt)
+Ở tầng interface (Controller) Dùng annotation -> chỉ nên dùng khi số role là fixed, vì giả sử mỗi lần thêm role mới 
+thì sẽ phải hardcode vào annotation
+Ở tầng logic (Repository) Query ra và check (Tạo một bảng role riêng biệt) (Ocelot)
+Ở tầng APIGateway (Một project riêng cho các API Gateway) (Ocelot)

@@ -8,5 +8,6 @@ namespace SportFieldBooking.Biz.Model.User
         public string Username { get; set; } = "";
         public string Password { get; set; } = "";
         public long Balance { get; set; }
+        public int Role { get; set; }
     }
 }

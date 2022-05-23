@@ -8,8 +8,10 @@ namespace SportFieldBooking.Biz.Model.User
         public string Code { get; set; } = "";
         public string? Email { get; set; } = "";
         public string Username { get; set; } = "";
+        public string Password { get; set; } = "";
         public bool IsActive { get; set; } = true;
         public DateTime Created { get; set; }
         public long Balance { get; set; }
+        public int Role { get; set; }
     }
 }

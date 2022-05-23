@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Role\**" />
+    <EmbeddedResource Remove="Role\**" />
+    <None Remove="Role\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.4" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
@@ -14,10 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Helper\SportFieldBooking.Helper.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Role\" />
   </ItemGroup>
 
 </Project>

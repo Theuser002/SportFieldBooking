@@ -17,6 +17,7 @@ D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bi
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Humanizer.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\JetBrains.Annotations.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\LanguageExt.Core.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
@@ -128,4 +129,3 @@ D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\ob
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\obj\Debug\net6.0\SportFieldBooking.API.pdb
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\obj\Debug\net6.0\SportFieldBooking.API.genruntimeconfig.cache
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\obj\Debug\net6.0\ref\SportFieldBooking.API.dll
-D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

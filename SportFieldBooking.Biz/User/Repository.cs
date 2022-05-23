@@ -7,7 +7,10 @@ using Microsoft.EntityFrameworkCore;
 using SportFieldBooking.Helper;
 using SportFieldBooking.Helper.Pagination;
 using SportFieldBooking.Helper.Enums;
-
+using Microsoft.AspNetCore.Http;
+using Microsoft.Net.Http.Headers;
+using System.Security.Claims;
+using static SportFieldBooking.Helper.ObjectHelper;
 
 namespace SportFieldBooking.Biz.User
 {
@@ -25,6 +28,12 @@ namespace SportFieldBooking.Biz.User
             _logger = logger;
             _mapper = mapper;
         }
+
+        // Read from jwt token and return the neccessary information
+        //private CurrentUser GetCurrentUser(HttpContext httpContext)
+        //{
+            
+        //}
 
         /// <summary>
         /// Auth: Hung
@@ -80,8 +89,21 @@ namespace SportFieldBooking.Biz.User
         /// <param name="pageIndex"> So thu tu trang </param>
         /// <param name="pageSize"> So ban ghi trong mot trang </param>
         /// <returns> Page object - mot trang chua cac thong tin cua nguoi dung kem voi mot so thong tin khac</returns>
-        public async Task<Page<List>> GetListAsync(long pageIndex, int pageSize)
+        public async Task<Page<List>> GetListAsync(long pageIndex, int pageSize, HttpContext httpContext)
         {
+            var identity = httpContext.User.Identity as ClaimsIdentity;
+            if (identity != null)
+            {
+                //IEnumerable<Claim> claims = identity.Claims;
+                //claims.Dump();
+                Console.WriteLine($"Code: {identity.FindFirst("Code")?.Value}");
+                //Console.WriteLine($"identity's type: {identity.GetType()}");
+                //Console.WriteLine(identity.Claims.Count());
+            }
+            else
+            {
+                Console.WriteLine("null identity");
+            }
             var userPage = await _dbContext.Users?.OrderBy(u => u.Id).GetPagedResult<Data.Model.User, List>(_mapper, pageIndex, pageSize);
             return userPage;
         }
@@ -215,12 +237,27 @@ namespace SportFieldBooking.Biz.User
                 {
                     throw new Exception("Not enough money!");
                 }
-                
             }
             else
             {
                 throw new Exception($"There is no user with the id {id}");
             }
+        }
+
+        public async Task<CurrentUser> GetLoginAsync (string email)
+        {
+            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (user == null)
+            {
+                throw new Exception($"There's no user with the email {email}");
+            }
+            var currentUser = _mapper.Map<CurrentUser>(user);
+            return currentUser;
+        }
+
+        public async Task<Boolean> CheckCredentialsAsync(CurrentUser model, string password)
+        {
+            return String.Equals(model.Password, password);
         }
     }
 }

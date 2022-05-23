@@ -25,6 +25,13 @@ namespace SportFieldBooking.Data
             modelBuilder.Entity<User>()
                 .HasIndex(e => e.Code)
                 .IsUnique();
+            modelBuilder.Entity<User>()
+                .HasIndex(e => e.Username)
+                .IsUnique();
+            modelBuilder.Entity<User>()
+                .HasIndex(e => e.Email)
+                .IsUnique();
+
             modelBuilder.Entity<Booking>()
                 .HasIndex(e => e.Code)
                 .IsUnique();

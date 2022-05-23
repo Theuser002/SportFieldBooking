@@ -2,6 +2,10 @@
 using Serilog;
 using SportFieldBooking.Data;
 using SportFieldBooking.Helper.Exceptions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,9 +24,34 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>{
     // Fix "SchemaId already used for ... error (error can be seen in log)"
     options.CustomSchemaIds(type => type.ToString());
+
+    // Add JWT on Swagger
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Name = "Authorization",
+        Description = "Bearer authentication with JWT token",
+        Type = SecuritySchemeType.Http
+    });
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Id = "Bearer",
+                    Type = ReferenceType.SecurityScheme
+                }
+            },
+            new List<string>()
+        },
+    });
 });
 
-// Add Automapper
+// Add repository wrapprer containing all the repositories of the services
 builder.Services.AddScoped<SportFieldBooking.Biz.IRepositoryWrapper, SportFieldBooking.Biz.RepositoryWrapper>();
 
 // Add system configuration
@@ -40,6 +69,22 @@ switch (dbProvider.ToLower())
         throw new Exception($"Wrong provider's name or unsupported provider: {dbProvider}");
 }
 
+// Add JWT Validation so that we know for sure the mesage is not tampered with [35]
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateActor = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = configuration["Jwt:ValidIssuer"],
+        ValidAudience = configuration["Jwt:ValidAudience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Secret"]))
+    };
+});
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -50,26 +95,14 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapControllers();
 
 try
 {
     Console.WriteLine("TEST");
-
     logger.Information($"[MyLog]: Migrating process");
-
-    //var now = DateTime.Now.ToString("HH:mm");
-    //var time = DateTime.Parse("15:00").ToString("HH:mm");
-    //Console.WriteLine(now);
-    //Console.WriteLine(time);
-    //var nowTimeOnly = TimeOnly.Parse(now);
-    //var timeTimeOnly = TimeOnly.Parse(time);
-    //Console.WriteLine(nowTimeOnly.GetType());
-
-    //var now = DateTime.Parse(DateTime.Now.ToString("HH:mm"));
-    //var time = DateTime.Parse("17:04");
-    //Console.WriteLine(TimeSpan.Compare(now.TimeOfDay, time.TimeOfDay));
 
     using (var scope = app.Services.CreateScope())
     {
