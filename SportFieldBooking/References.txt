@@ -34,3 +34,4 @@
 [34] Different classes of claims (https://stackoverflow.com/questions/38897514/what-to-store-in-a-jwt)
 [35] .NET 6 Web API Authentication | Minimal API & Swagger (CRUD) (https://www.youtube.com/watch?v=f2IdQqpjR0c&t=1772s)
 [36] ASP.NET Core Identity Tutorial (https://www.tektutorialshub.com/asp-net-core/asp-net-core-identity-tutorial/#user-managernbsp)
+[37] Get claims from a WebAPI Controller - JWT Token (https://stackoverflow.com/questions/45315274/get-claims-from-a-webapi-controller-jwt-token)

@@ -9,7 +9,7 @@ namespace SportFieldBooking.Biz.User
     {
         Task<View> CreateAsync(New model);
         Task<View> GetAsync(long id);
-        Task<Page<List>> GetListAsync(long pageNumber, int pageSize, HttpContext httpContext);
+        Task<Page<List>> GetListAsync(HttpContext httpContext, long pageNumber, int pageSize);
         Task DeleteAsync(long id);
         Task<View> UpdateAsync(Edit model);
         Task<Page<List>> SearchUsernameAsync(string username, long pageIndex, int pageSize);

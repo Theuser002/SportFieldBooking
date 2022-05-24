@@ -88,7 +88,7 @@ namespace SportFieldBooking.API.Controllers
             try
             {
                 Console.WriteLine($"Is User.Identity authenticated: {User.Identity.IsAuthenticated}");
-                var items = await _repository.User.GetListAsync(pageNumber, pageSize, HttpContext);
+                var items = await _repository.User.GetListAsync(HttpContext, pageNumber, pageSize);
                 return Ok(items);
             }
             catch(Exception e)
@@ -277,11 +277,11 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        //[HttpPost("Logout")]
-        //public async Task<IActionResult> Logout()
-        //{
-        //    var userEmail = User.Identity.Name;
-        //}
+        [HttpPost("Logout")]
+        public async Task<IActionResult> Logout()
+        {
+            var userEmail = User.Identity;
+        }
 
     }
 }
