@@ -8,5 +8,9 @@
         public const string TIME_BEFORE = "before";
         public const string TIME_EQUAL = "equal";
         public const string TIME_AFTER = "after";
+
+        public const int ADMIN_ROLE = 0;
+        public const int USER_ROLE = 1;
+        public const int FIELD_OWNER_ROLE = 2;
     }
 }

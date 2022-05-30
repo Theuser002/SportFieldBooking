@@ -11,5 +11,6 @@ namespace SportFieldBooking.Biz.Model.User
         public bool IsActive { get; set; } = true;
         public DateTime Created { get; set; }
         public long Balance { get; set; }
+        public int Role { get; set; }  
     }
 }

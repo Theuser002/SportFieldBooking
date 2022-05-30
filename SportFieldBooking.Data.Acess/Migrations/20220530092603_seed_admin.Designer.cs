@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SportFieldBooking.Data;
 
@@ -11,9 +12,10 @@ using SportFieldBooking.Data;
 namespace SportFieldBooking.Data.Migrations
 {
     [DbContext(typeof(SQLServerDbContext))]
-    partial class SQLServerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220530092603_seed_admin")]
+    partial class seed_admin
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -194,10 +196,10 @@ namespace SportFieldBooking.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = -1L,
+                            Id = 420L,
                             Balance = 1000000000000L,
                             Code = "admin",
-                            Created = new DateTime(2022, 5, 30, 16, 27, 21, 889, DateTimeKind.Local).AddTicks(3433),
+                            Created = new DateTime(2022, 5, 30, 16, 26, 3, 406, DateTimeKind.Local).AddTicks(9852),
                             Email = "admin@gmail.com",
                             IsActive = true,
                             Password = "admin",

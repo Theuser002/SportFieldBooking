@@ -33,10 +33,11 @@ namespace SportFieldBooking.Biz.User
         /// </summary>
         /// <param name="model">Biz model cho tao moi user</param>
         /// <returns>Biz model khi view mot user</returns>
-        public async Task<View> CreateAsync(HttpContext httpContext, New model)
+        public async Task<View> CreateAsync(HttpContext httpContext, New model, int role)
         {
             // Do data tu biz model New vao data model User thong qua AutoMapper
             var newUser = _mapper.Map<Data.Model.User>(model);
+            newUser.Role = role;
 
             // Add data model user entity itemData vao database roi save changes
             _dbContext.Users?.Add(newUser);
@@ -134,7 +135,7 @@ namespace SportFieldBooking.Biz.User
                 throw new Exception($"There's no user with the id {model.Id}");
             }
         }
-        
+
         /// <summary>
         /// Auth: Hung
         /// Created: 25/04/2022

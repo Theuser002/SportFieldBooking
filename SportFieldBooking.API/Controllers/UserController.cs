@@ -2,6 +2,9 @@
 using SportFieldBooking.Biz.Model.User;
 using Microsoft.AspNetCore.Mvc;
 using SportFieldBooking.Helper.Exceptions;
+using SportFieldBooking.Helper.Enums;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace SportFieldBooking.API.Controllers
 {
@@ -20,6 +23,7 @@ namespace SportFieldBooking.API.Controllers
             _repository = repository;
         }
 
+        [AllowAnonymous]
         /// <summary>
         /// Auth: Hung
         /// Created: 18/04/2022
@@ -29,11 +33,22 @@ namespace SportFieldBooking.API.Controllers
         /// <returns> Response, tao user thanh cong thi tra ve response kem biz model cho view user, con k thi tra ve response loi </returns>
         /// <exception cref="Exception"> Khi tao user bi loi </exception>
         [HttpPost("CreateUser")]
-        public async Task<IActionResult> Create(New model)
+        public async Task<IActionResult> CreateUser(New model)
         {
             try
             {
-                var item = await _repository.User.CreateAsync(HttpContext, model);
+                var identity = HttpContext.User.Identity as ClaimsIdentity;
+                if (identity != null)
+                {
+                    IEnumerable<Claim> claims = identity.Claims;
+                    _ = int.TryParse(identity.FindFirst("Role")?.Value, out var role);
+                    if (role != 0)
+                    {
+                        return Unauthorized("Only admin can use this function");
+                    }
+                }
+
+                var item = await _repository.User.CreateAsync(HttpContext, model, Consts.USER_ROLE);
                 return Ok(item);
             }
             catch (Exception e)
@@ -43,6 +58,34 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        [AllowAnonymous]
+        [HttpPost("CreateFieldOwner")]
+        public async Task<IActionResult> CreateFieldOwner(New model)
+        {
+            try
+            {
+                var identity = HttpContext.User.Identity as ClaimsIdentity;
+                if (identity != null)
+                {
+                    IEnumerable<Claim> claims = identity.Claims;
+                    _ = int.TryParse(identity.FindFirst("Role")?.Value, out var role);
+                    if (role != 0)
+                    {
+                        return Unauthorized("Only admin can use this function");
+                    }
+                }
+
+                var item = await _repository.User.CreateAsync(HttpContext, model, Consts.FIELD_OWNER_ROLE);
+                return Ok(item);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"[MyLog]: Error creating user, {e}");
+                return BadRequest(e.Message);
+            }
+        }
+
+        [Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 19/03/2022
@@ -65,6 +108,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        [Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 20/04/2022
@@ -90,6 +134,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        [Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 25/04/2022
@@ -112,6 +157,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        [Authorize]
         /// <summary>
         /// Author: Hung
         /// Created: 25/04/2022
@@ -134,6 +180,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        [Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 25/04/2022
@@ -158,6 +205,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        [Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 25/04/2022
@@ -183,6 +231,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        [Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 30/04/2022

@@ -7,7 +7,7 @@ namespace SportFieldBooking.Biz.User
 {
     public interface IRepository
     {
-        Task<View> CreateAsync(HttpContext httpContext, New model);
+        Task<View> CreateAsync(HttpContext httpContext, New model, int role);
         Task<View> GetAsync(HttpContext httpContext, long id);
         Task<Page<List>> GetListAsync(HttpContext httpContext, long pageNumber, int pageSize);
         Task DeleteAsync(HttpContext httpContext, long id);

@@ -102,6 +102,7 @@ namespace SportFieldBooking.API.Controllers
         //    }
         //}
 
+        [AllowAnonymous]
         [HttpPost("RefreshToken")]
         public async Task<IActionResult> RefreshToken(RefreshTokenRequest model)
         {

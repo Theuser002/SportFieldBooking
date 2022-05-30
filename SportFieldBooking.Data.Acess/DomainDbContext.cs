@@ -57,6 +57,20 @@ namespace SportFieldBooking.Data
                 .Property(f => f.ClosingHour)
                 .HasColumnType("datetime2")
                 .HasPrecision(0);
+
+            // Seed user into database (use Add-Migration)
+            //modelBuilder.Entity<User>().HasData(
+            //    new User
+            //    {
+            //        Id = -1,
+            //        Code = "admin",
+            //        Email = "admin@gmail.com",
+            //        Username = "admin",
+            //        Password = "admin",
+            //        Balance = 1000000000000,
+            //        Role = 0
+            //    }
+            //);
         }
     }
 }
