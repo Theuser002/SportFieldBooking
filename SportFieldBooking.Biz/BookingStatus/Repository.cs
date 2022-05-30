@@ -5,6 +5,7 @@ using Serilog;
 using AutoMapper;
 using SportFieldBooking.Biz.Model.BookingStatus;
 using SportFieldBooking.Helper.Pagination;
+using Microsoft.AspNetCore.Http;
 
 namespace SportFieldBooking.Biz.BookingStatus
 {
@@ -30,7 +31,7 @@ namespace SportFieldBooking.Biz.BookingStatus
         /// </summary>
         /// <param name="model">biz model cho tao moi mot status</param>
         /// <returns>biz model cho view mot status</returns>
-        public async Task<View> CreateAsync(New model)
+        public async Task<View> CreateAsync(HttpContext httpContext, New model)
         {
             var newStatus = _mapper.Map<Data.Model.BookingStatus>(model);
             _dbContext.BookingStatuses.Add(newStatus);
@@ -48,7 +49,7 @@ namespace SportFieldBooking.Biz.BookingStatus
         /// <param name="id">id cua status can lay thong tin</param>
         /// <returns>biz model cho view mot status</returns>
         /// <exception cref="Exception">khi status voi id nhap vao khong ton tai</exception>
-        public async Task<View> GetAsync(long id)
+        public async Task<View> GetAsync(HttpContext httpContext, long id)
         {
             var bookingStatus = await _dbContext.BookingStatuses.FindAsync(id);
 
@@ -71,7 +72,7 @@ namespace SportFieldBooking.Biz.BookingStatus
         /// <param name="pageIndex">so thu tu trang</param>
         /// <param name="pageSize">so ban ghi trong mot trang</param>
         /// <returns></returns>
-        public async Task<Page<List>> GetListsAsync(long pageIndex, int pageSize)
+        public async Task<Page<List>> GetListsAsync(HttpContext httpContext, long pageIndex, int pageSize)
         {
             var statusPage = await _dbContext.BookingStatuses?.OrderBy(s => s.Id).GetPagedResult<Data.Model.BookingStatus, List>(_mapper, pageIndex, pageSize);
             return statusPage;
@@ -85,7 +86,7 @@ namespace SportFieldBooking.Biz.BookingStatus
         /// <param name="id">id cua status can xoa</param>
         /// <returns></returns>
         /// <exception cref="Exception">khi status voi id nhap vao khong ton tai</exception>
-        public async Task DeleteAsync (long id)
+        public async Task DeleteAsync (HttpContext httpContext, long id)
         {
             var status = await _dbContext.BookingStatuses.FindAsync(id);
             if (status != null)
@@ -107,7 +108,7 @@ namespace SportFieldBooking.Biz.BookingStatus
         /// <param name="model">biz model cho update mot status</param>
         /// <returns>biz model cho view mot status</returns>
         /// <exception cref="Exception">khi status voi id nhap vao khong ton tai</exception>
-        public async Task<View> UpdateAsync(Edit model)
+        public async Task<View> UpdateAsync(HttpContext httpContext, Edit model)
         {
             var oldStatus = await _dbContext.BookingStatuses.FindAsync(model.Id);
             if (oldStatus != null)

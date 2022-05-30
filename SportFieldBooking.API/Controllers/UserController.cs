@@ -33,7 +33,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var item = await _repository.User.CreateAsync(model);
+                var item = await _repository.User.CreateAsync(HttpContext, model);
                 return Ok(item);
             }
             catch (Exception e)
@@ -56,7 +56,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var item = await _repository.User.GetAsync(id);
+                var item = await _repository.User.GetAsync(HttpContext, id);
                 return Ok(item);
             }
             catch (Exception e)
@@ -80,7 +80,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var items = await _repository.User.GetListAsync(pageNumber, pageSize);
+                var items = await _repository.User.GetListAsync(HttpContext, pageNumber, pageSize);
                 return Ok(items);
             }
             catch(Exception e)
@@ -102,7 +102,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                await _repository.User.DeleteAsync(id);
+                await _repository.User.DeleteAsync(HttpContext, id);
                 return Ok();
             }
             catch(Exception e)
@@ -124,7 +124,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var item = await _repository.User.UpdateAsync(model);
+                var item = await _repository.User.UpdateAsync(HttpContext, model);
                 return Ok(item);
             }
             catch(Exception e)
@@ -148,7 +148,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var items = await _repository.User.SearchUsernameAsync(username, pageIndex, pageSize);
+                var items = await _repository.User.SearchUsernameAsync(HttpContext, username, pageIndex, pageSize);
                 return Ok(items);
             }
             catch (Exception e)
@@ -173,7 +173,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var items = await _repository.User.FilterCreatedDateAsync(date, condition, pageIndex, pageSize);
+                var items = await _repository.User.FilterCreatedDateAsync(HttpContext, date, condition, pageIndex, pageSize);
                 return Ok(items);
             }
             catch (Exception e)
@@ -196,7 +196,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var item = await _repository.User.UpdateBalanceAsync(id, amount);
+                var item = await _repository.User.UpdateBalanceAsync(HttpContext, id, amount);
                 return Ok(item);
             }
             catch (Exception e)

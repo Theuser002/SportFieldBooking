@@ -8,7 +8,7 @@ namespace SportFieldBooking.Data.Model
     {
         public BookingStatus()
         {
-            Bookings = new HashSet<Booking>();  
+            Bookings = new HashSet<Booking>();
         }
         [Key]
         public long Id { get; set; }

@@ -9,6 +9,7 @@ using SportFieldBooking.Helper.Pagination;
 using SportFieldBooking.Helper.DateTimeUtils;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity;
+using Microsoft.AspNetCore.Http;
 
 namespace SportFieldBooking.Biz.SportField
 {
@@ -34,7 +35,7 @@ namespace SportFieldBooking.Biz.SportField
         /// </summary>
         /// <param name="model">Biz model cho tao moi mot san van dong</param>
         /// <returns>Biz model khi view mot san van dong</returns>
-        public async Task<View> CreateAsync(New model)
+        public async Task<View> CreateAsync(HttpContext httpContext, New model)
         {
             model.OpeningHour = DateTimeUtils.TakeHourOnly(model.OpeningHour);
             model.ClosingHour = DateTimeUtils.TakeHourOnly(model.ClosingHour);
@@ -53,7 +54,7 @@ namespace SportFieldBooking.Biz.SportField
         /// <param name="id">id cua san van dong can tim</param>
         /// <returns>Biz model the khi view mot san van dong</returns>
         /// <exception cref="Exception"></exception>
-        public async Task<View> GetAsync(long id)
+        public async Task<View> GetAsync(HttpContext httpContext, long id)
         {
             var sportField = await _dbContext.SportFields.FindAsync(id);
             if (sportField != null)
@@ -76,7 +77,7 @@ namespace SportFieldBooking.Biz.SportField
         /// <param name="pageIndex">So thu tu trang</param>
         /// <param name="pageSize">So ban ghi trong mot trang</param>
         /// <returns>Trang tuong ung chua thong tin cua cac san van dong</returns>
-        public async Task<Page<List>> GetListAsync(long pageIndex, int pageSize)
+        public async Task<Page<List>> GetListAsync(HttpContext httpContext, long pageIndex, int pageSize)
         {
             var sportFieldPage = await _dbContext.SportFields?.OrderBy(u => u.Id).GetPagedResult<Data.Model.SportField, List>(_mapper, pageIndex, pageSize);
             return sportFieldPage;
@@ -91,7 +92,7 @@ namespace SportFieldBooking.Biz.SportField
         /// <param name="id">Id cua san van dong muon xoa</param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public async Task DeleteAsync(long id)
+        public async Task DeleteAsync(HttpContext httpContext, long id)
         {
             var sportField = await _dbContext.SportFields.FindAsync(id);
             if (sportField != null)
@@ -115,7 +116,7 @@ namespace SportFieldBooking.Biz.SportField
         /// <param name="model">Biz model cho viec edit thong tin san van dong</param>
         /// <returns> Biz model cho view thong tin san van dong </returns>
         /// <exception cref="Exception">Khi khong co san bong nao voi id da nhap</exception>
-        public async Task<View> UpdateAsync(Edit model)
+        public async Task<View> UpdateAsync(HttpContext httpContext, Edit model)
         {
             model.OpeningHour = DateTimeUtils.TakeHourOnly(model.OpeningHour);
             model.ClosingHour = DateTimeUtils.TakeHourOnly(model.ClosingHour);
@@ -144,7 +145,7 @@ namespace SportFieldBooking.Biz.SportField
         /// <param name="pageIndex">So thu tu trang</param>
         /// <param name="pageSize">So ban ghi trong mot trang</param>
         /// <returns></returns>
-        public async Task<Page<List>> SearchNameAsync(string name, long pageIndex, int pageSize)
+        public async Task<Page<List>> SearchNameAsync(HttpContext httpContext, string name, long pageIndex, int pageSize)
         {
             var matchedSportFields = await _dbContext.SportFields.Where(f => f.Name.Contains(name)).OrderBy(f => f.Id).GetPagedResult<Data.Model.SportField, List>(_mapper, pageIndex, pageSize);
             return matchedSportFields;
@@ -158,7 +159,7 @@ namespace SportFieldBooking.Biz.SportField
         /// <param name="pageIndex">So thu tu trang</param>
         /// <param name="pageSize">So ban ghi trong mot trang</param>
         /// <returns></returns>
-        public async Task<Page<List>> FindOpeningAsync(long pageIndex, int pageSize)
+        public async Task<Page<List>> FindOpeningAsync(HttpContext httpContext, long pageIndex, int pageSize)
         {
             var now = DateTimeUtils.TakeHourOnly(DateTime.Now);
             var matchedSportFields = await _dbContext.SportFields.Where(f => TimeSpan.Compare(f.OpeningHour.TimeOfDay, now.TimeOfDay) <= 0 && TimeSpan.Compare(f.ClosingHour.TimeOfDay, now.TimeOfDay) > 0).OrderBy(f => f.Id).GetPagedResult<Data.Model.SportField, List>(_mapper, pageIndex, pageSize);
@@ -175,7 +176,7 @@ namespace SportFieldBooking.Biz.SportField
         /// <param name="pageIndex">So thu tu trang</param>
         /// <param name="pageSize">So ban ghi trong mot trang</param>
         /// <returns>Trang tuong ung chua thong tin cua cac san van dong thoa man dieu kien thoi gian</returns>
-        public async Task<Page<List>> FilterByTime(DateTime timeStart, DateTime timeEnd, long pageIndex, int pageSize)
+        public async Task<Page<List>> FilterByTime(HttpContext httpContext, DateTime timeStart, DateTime timeEnd, long pageIndex, int pageSize)
         {
             var now = DateTimeUtils.TakeHourOnly(DateTime.Now);
             var matchedSportFields = await _dbContext.SportFields.Where(f => TimeSpan.Compare(f.OpeningHour.TimeOfDay, timeStart.TimeOfDay) <= 0 && TimeSpan.Compare(f.ClosingHour.TimeOfDay, timeEnd.TimeOfDay) > 0).OrderBy(f => f.Id).GetPagedResult<Data.Model.SportField, List>(_mapper, pageIndex, pageSize);

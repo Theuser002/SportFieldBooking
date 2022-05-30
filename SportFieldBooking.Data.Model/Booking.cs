@@ -14,7 +14,7 @@ namespace SportFieldBooking.Data.Model
         public DateTime EndHour { get; set; }
         public DateTime BookDate { get; set; }
         public long TotalPrice { get; set; } = 0;
-        public virtual User User { get; set; }  
+        public virtual User User { get; set; }
         public virtual SportField SportField { get; set; }
         public virtual BookingStatus? BookingStatus { get; set; }
     }

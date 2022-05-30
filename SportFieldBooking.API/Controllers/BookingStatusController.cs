@@ -32,7 +32,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var item = await _repository.BookingStatus.CreateAsync(model);
+                var item = await _repository.BookingStatus.CreateAsync(HttpContext, model);
                 return Ok(item);
             }
             catch (Exception e)
@@ -53,7 +53,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var item = await _repository.BookingStatus.GetAsync(id);
+                var item = await _repository.BookingStatus.GetAsync(HttpContext, id);
                 return Ok(item);
             }
             catch (Exception e)
@@ -75,7 +75,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var items = await _repository.BookingStatus.GetListsAsync(pageNumber, pageSize);
+                var items = await _repository.BookingStatus.GetListsAsync(HttpContext, pageNumber, pageSize);
                 return Ok(items);
             }
             catch (Exception e)
@@ -96,7 +96,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                await _repository.BookingStatus.DeleteAsync(id);
+                await _repository.BookingStatus.DeleteAsync(HttpContext, id);
                 return Ok();
             }
             catch (Exception e)
@@ -117,7 +117,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var item = await _repository.BookingStatus.UpdateAsync(model);
+                var item = await _repository.BookingStatus.UpdateAsync(HttpContext, model);
                 return Ok(item);
             }
             catch (Exception e)

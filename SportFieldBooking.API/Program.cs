@@ -2,35 +2,65 @@
 using Serilog;
 using SportFieldBooking.Data;
 using SportFieldBooking.Helper.Exceptions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.OpenApi.Models;
 
+#region add_configuraions
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(options => {
+    // Fix "SchemaId already used for ... error (error can be seen in log)"
+    options.CustomSchemaIds(type => type.ToString());
+
+    // Add JWT on Swagger
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Name = "Authorization",
+        Description = "Bearer authentication with JWT token",
+        Type = SecuritySchemeType.Http
+    });
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Id = "Bearer",
+                    Type = ReferenceType.SecurityScheme
+                }
+            },
+            new List<string>()
+        },
+    });
+});
+
+// Add system configuration
+IConfiguration configuration = builder.Configuration;
+
 // Add Serilog
 var logger = new LoggerConfiguration()
-    .ReadFrom.Configuration(builder.Configuration)
+    .ReadFrom.Configuration(configuration)
     .Enrich.FromLogContext()
     .CreateLogger();
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>{
-    // Fix "SchemaId already used for ... error (error can be seen in log)"
-    options.CustomSchemaIds(type => type.ToString());
-});
-
-// Add Automapper
+// Dependencies Injection
 builder.Services.AddScoped<SportFieldBooking.Biz.IRepositoryWrapper, SportFieldBooking.Biz.RepositoryWrapper>();
-
-// Add system configuration
-IConfiguration configuration = builder.Configuration;
 
 // DB Config
 string dbProvider = configuration["DatabaseOptions:Provider"];
-
+// For Entity Framework
 switch (dbProvider.ToLower())
 {
     case "sqlserver":
@@ -40,6 +70,34 @@ switch (dbProvider.ToLower())
         throw new Exception($"Wrong provider's name or unsupported provider: {dbProvider}");
 }
 
+// Adding Authentication
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+// Adding Jwt Bearer
+.AddJwtBearer(options =>
+{
+    options.SaveToken = true;
+    options.RequireHttpsMetadata = false;
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ClockSkew = TimeSpan.Zero,
+
+        ValidAudience = configuration["JWT:ValidAudience"],
+        ValidIssuer = configuration["JWT:ValidIssuer"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
+    };
+});
+
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -48,28 +106,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseAuthorization();
-
+app.UseAuthentication();
 app.MapControllers();
 
+#endregion
+
+# region main
 try
 {
     Console.WriteLine("TEST");
-
     logger.Information($"[MyLog]: Migrating process");
-
-    //var now = DateTime.Now.ToString("HH:mm");
-    //var time = DateTime.Parse("15:00").ToString("HH:mm");
-    //Console.WriteLine(now);
-    //Console.WriteLine(time);
-    //var nowTimeOnly = TimeOnly.Parse(now);
-    //var timeTimeOnly = TimeOnly.Parse(time);
-    //Console.WriteLine(nowTimeOnly.GetType());
-
-    //var now = DateTime.Parse(DateTime.Now.ToString("HH:mm"));
-    //var time = DateTime.Parse("17:04");
-    //Console.WriteLine(TimeSpan.Compare(now.TimeOfDay, time.TimeOfDay));
 
     using (var scope = app.Services.CreateScope())
     {
@@ -86,3 +133,4 @@ catch (Exception e)
 }
 
 app.Run();
+#endregion

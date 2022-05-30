@@ -12,5 +12,6 @@ namespace SportFieldBooking.Biz
         public SportField.IRepository SportField { get; }
         public Booking.IRepository Booking { get; }
         public BookingStatus.IRepository BookingStatus { get; }
+        public JwtAuth.IRepository JwtAuth { get; }
     }
 }

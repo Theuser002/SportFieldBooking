@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using SportFieldBooking.Helper;
 using SportFieldBooking.Helper.Pagination;
 using SportFieldBooking.Helper.Enums;
-
+using Microsoft.AspNetCore.Http;
 
 namespace SportFieldBooking.Biz.User
 {
@@ -33,7 +33,7 @@ namespace SportFieldBooking.Biz.User
         /// </summary>
         /// <param name="model">Biz model cho tao moi user</param>
         /// <returns>Biz model khi view mot user</returns>
-        public async Task<View> CreateAsync(New model)
+        public async Task<View> CreateAsync(HttpContext httpContext, New model)
         {
             // Do data tu biz model New vao data model User thong qua AutoMapper
             var newUser = _mapper.Map<Data.Model.User>(model);
@@ -57,7 +57,7 @@ namespace SportFieldBooking.Biz.User
         /// <param name="id">id cua user trong database</param>
         /// <returns>Biz model cho view mot user</returns>
         /// <exception cref="Exception">Khi user voi id da nhap khong ton tai, xu ly o controller</exception>
-        public async Task<View> GetAsync(long id)
+        public async Task<View> GetAsync(HttpContext httpContext, long id)
         {
             var user = await _dbContext.Users.FindAsync(id);    
             if (user != null)
@@ -80,7 +80,7 @@ namespace SportFieldBooking.Biz.User
         /// <param name="pageIndex"> So thu tu trang </param>
         /// <param name="pageSize"> So ban ghi trong mot trang </param>
         /// <returns> Page object - mot trang chua cac thong tin cua nguoi dung kem voi mot so thong tin khac</returns>
-        public async Task<Page<List>> GetListAsync(long pageIndex, int pageSize)
+        public async Task<Page<List>> GetListAsync(HttpContext httpContext, long pageIndex, int pageSize)
         {
             var userPage = await _dbContext.Users?.OrderBy(u => u.Id).GetPagedResult<Data.Model.User, List>(_mapper, pageIndex, pageSize);
             return userPage;
@@ -94,7 +94,7 @@ namespace SportFieldBooking.Biz.User
         /// <param name="id"> id cua nguoi dung </param>
         /// <returns></returns>
         /// <exception cref="Exception"> Khi user co id da nhap khong ton tai, xu ly o controller </exception>
-        public async Task DeleteAsync(long id)
+        public async Task DeleteAsync(HttpContext httpContext, long id)
         {
             var user = await _dbContext.Users.FindAsync(id);
             if (user != null)
@@ -118,7 +118,7 @@ namespace SportFieldBooking.Biz.User
         /// <param name="model"></param>
         /// <returns></returns>
         /// <exception cref="Exception"> Khi user co id da nhap khong ton tai, xu ly o controller </exception>
-        public async Task<View> UpdateAsync(Edit model)
+        public async Task<View> UpdateAsync(HttpContext httpContext, Edit model)
         {
             var oldUser = await _dbContext.Users.FindAsync(model.Id);
             if(oldUser != null)
@@ -144,7 +144,7 @@ namespace SportFieldBooking.Biz.User
         /// <param name="pageIndex"></param>
         /// <param name="pageSize"></param>
         /// <returns> Nhung nguoi dung co username thoa man dieu kien </returns>
-        public async Task<Page<List>> SearchUsernameAsync(string username, long pageIndex, int pageSize)
+        public async Task<Page<List>> SearchUsernameAsync(HttpContext httpContext, string username, long pageIndex, int pageSize)
         {
             var matchedUsers = await _dbContext.Users.Where(u => u.Username.Contains(username)).OrderBy(u => u.Id).GetPagedResult<Data.Model.User, List>(_mapper, pageIndex, pageSize);
             return matchedUsers;
@@ -161,7 +161,7 @@ namespace SportFieldBooking.Biz.User
         /// <param name="pageSize"> so ban ghi trong mot trang </param>
         /// <returns> Cac nguoi dung duoc loc ra </returns>
         /// <exception cref="Exception"> Dieu kien loc khong hop le hoac thoi gian nhap sai format </exception>
-        public async Task<Page<List>> FilterCreatedDateAsync(string dateStr, string condition, long pageIndex, int pageSize)
+        public async Task<Page<List>> FilterCreatedDateAsync(HttpContext httpContext, string dateStr, string condition, long pageIndex, int pageSize)
         {
             // dateStr format: yyyy-mm-dd
             DateTime date;
@@ -200,7 +200,7 @@ namespace SportFieldBooking.Biz.User
         /// <param name="amount"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public async Task<View> UpdateBalanceAsync(long id, long amount)
+        public async Task<View> UpdateBalanceAsync(HttpContext httpContext, long id, long amount)
         {
             var user = await _dbContext.Users.FindAsync(id);
             if (user != null)
@@ -222,5 +222,6 @@ namespace SportFieldBooking.Biz.User
                 throw new Exception($"There is no user with the id {id}");
             }
         }
+
     }
 }

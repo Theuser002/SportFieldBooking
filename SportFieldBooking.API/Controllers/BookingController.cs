@@ -1,6 +1,7 @@
 ﻿using SportFieldBooking.Biz;
 using Microsoft.AspNetCore.Mvc;
 using SportFieldBooking.Biz.Model.Booking;
+using Microsoft.AspNetCore.Http;
 
 namespace SportFieldBooking.API.Controllers
 {
@@ -31,7 +32,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var item = await _repository.Booking.CreateAsync(model);
+                var item = await _repository.Booking.CreateAsync(HttpContext, model);
                 return Ok(item);
             }
             catch (Exception e)
@@ -54,7 +55,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var items = await _repository.Booking.GetListAsync(pageNumber, pageSize);
+                var items = await _repository.Booking.GetListAsync(HttpContext, pageNumber, pageSize);
                 return Ok(items);
             }
             catch (Exception e)
@@ -75,7 +76,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                await _repository.Booking.DeleteAsync(id);
+                await _repository.Booking.DeleteAsync(HttpContext, id);
                 return Ok();
             }catch (Exception e)
             {
@@ -97,7 +98,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var items = await _repository.Booking.GetUserBooking(userId, pageIndex, pageSize);
+                var items = await _repository.Booking.GetUserBooking(HttpContext, userId, pageIndex, pageSize);
                 return Ok(items);
             }
             catch (Exception e)
@@ -120,7 +121,7 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
-                var items = await _repository.Booking.GetSportFieldBooking(sportFieldId, pageIndex, pageSize);
+                var items = await _repository.Booking.GetSportFieldBooking(HttpContext, sportFieldId, pageIndex, pageSize);
                 return Ok(items);
             }
             catch (Exception e)

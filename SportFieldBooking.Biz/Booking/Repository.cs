@@ -8,6 +8,7 @@ using SportFieldBooking.Helper.DateTimeUtils;
 using SportFieldBooking.Helper.Enums;
 using Microsoft.EntityFrameworkCore;
 using SportFieldBooking.Helper.Pagination;
+using Microsoft.AspNetCore.Http;
 
 namespace SportFieldBooking.Biz.Booking
 {
@@ -34,7 +35,7 @@ namespace SportFieldBooking.Biz.Booking
         /// <param name="model">biz model cho tao moi mot booking</param>
         /// <returns>biz model cho view mot booking</returns>
         /// <exception cref="Exception">cac truong hop loi khac nhau khi tao moi mot booking</exception>
-        public async Task<View> CreateAsync (New model)
+        public async Task<View> CreateAsync (HttpContext httpContext, New model)
         {
             #region steps
             /* Tim user trong dbContext.Users
@@ -141,7 +142,7 @@ namespace SportFieldBooking.Biz.Booking
         /// <param name="pageIndex">so thu tu trang</param>
         /// <param name="pageSize">so ban ghi trong mot trang</param>
         /// <returns>trang tuong ung</returns>
-        public async Task<Page<List>> GetListAsync (long pageIndex, int pageSize)
+        public async Task<Page<List>> GetListAsync (HttpContext httpContext, long pageIndex, int pageSize)
         {
             var bookingPage = await _dbContext.Bookings?.OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
             return bookingPage;
@@ -155,7 +156,7 @@ namespace SportFieldBooking.Biz.Booking
         /// <param name="id">id cua booking muon xoa</param>
         /// <returns></returns>
         /// <exception cref="Exception">khi khong ton tai id cua booking muon xoa</exception>
-        public async Task DeleteAsync (long id)
+        public async Task DeleteAsync (HttpContext httpContext, long id)
         {
             var booking = await _dbContext.Bookings.FindAsync(id);
             if (booking != null)
@@ -179,7 +180,7 @@ namespace SportFieldBooking.Biz.Booking
         /// <param name="pageSize">so ban ghi trong mot trang</param>
         /// <returns>trang chua cac booking cua user</returns>
         /// <exception cref="Exception">khi khong ton tai user voi id nhu vay</exception>
-        public async Task<Page<List>> GetUserBooking (long userId, long pageIndex, int pageSize)
+        public async Task<Page<List>> GetUserBooking (HttpContext httpContext, long userId, long pageIndex, int pageSize)
         {
             var bookingPage = await _dbContext.Bookings.Where(b => b.User.Id == userId).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
             if (bookingPage != null)
@@ -202,7 +203,7 @@ namespace SportFieldBooking.Biz.Booking
         /// <param name="pageSize">so ban ghi trong mot trang</param>
         /// <returns>trang chua cac booking cua san van dong do</returns>
         /// <exception cref="Exception">khi khong ton tai san bong voi id nhu vay</exception>
-        public async Task<Page<List>> GetSportFieldBooking (long sportFieldId, long pageIndex, int pageSize)
+        public async Task<Page<List>> GetSportFieldBooking (HttpContext httpContext, long sportFieldId, long pageIndex, int pageSize)
         {
             var bookingPage = await _dbContext.Bookings.Where(b => b.SportField.Id == sportFieldId).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
             if (bookingPage != null)

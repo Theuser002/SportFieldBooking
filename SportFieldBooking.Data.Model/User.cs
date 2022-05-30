@@ -26,6 +26,9 @@ namespace SportFieldBooking.Data.Model
         public bool IsActive { get; set; } = true;
         public DateTime Created { get; set; }
         public long Balance { get; set; } = 0;
+        public int Role { get; set; } = 1; //0:Admin 1:User 2:Field owner // Only setable by the system
+        public string? RefreshToken { get; set; }
+        public DateTime? refreshTokenExpiryTime { get; set; }
         public virtual ICollection<Booking>? Bookings { get; set; }
     }
 }
