@@ -32,22 +32,11 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="model"> Biz model chua cac thong tin dau vao can thiet cho tao moi user </param>
         /// <returns> Response, tao user thanh cong thi tra ve response kem biz model cho view user, con k thi tra ve response loi </returns>
         /// <exception cref="Exception"> Khi tao user bi loi </exception>
-        [HttpPost("CreateUser")]
-        public async Task<IActionResult> CreateUser(New model)
+        [HttpPost("RegisterUser")]
+        public async Task<IActionResult> RegisterUser(New model)
         {
             try
             {
-                var identity = HttpContext.User.Identity as ClaimsIdentity;
-                if (identity != null)
-                {
-                    IEnumerable<Claim> claims = identity.Claims;
-                    _ = int.TryParse(identity.FindFirst("Role")?.Value, out var role);
-                    if (role != 0)
-                    {
-                        return Unauthorized("Only admin can use this function");
-                    }
-                }
-
                 var item = await _repository.User.CreateAsync(HttpContext, model, Consts.USER_ROLE);
                 return Ok(item);
             }
@@ -58,24 +47,19 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [AllowAnonymous]
-        [HttpPost("CreateFieldOwner")]
-        public async Task<IActionResult> CreateFieldOwner(New model)
+        [Authorize]
+        [HttpPost("CreateAdmin")]
+        public async Task<IActionResult> CreateAdmin(New model)
         {
             try
             {
-                var identity = HttpContext.User.Identity as ClaimsIdentity;
-                if (identity != null)
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
                 {
-                    IEnumerable<Claim> claims = identity.Claims;
-                    _ = int.TryParse(identity.FindFirst("Role")?.Value, out var role);
-                    if (role != 0)
-                    {
-                        return Unauthorized("Only admin can use this function");
-                    }
+                    return Unauthorized("Only admin can use this function");
                 }
 
-                var item = await _repository.User.CreateAsync(HttpContext, model, Consts.FIELD_OWNER_ROLE);
+                var item = await _repository.User.CreateAsync(HttpContext, model, Consts.ADMIN_ROLE);
                 return Ok(item);
             }
             catch (Exception e)
@@ -94,11 +78,33 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="id"> Id cua user can lay </param>
         /// <returns> Response, thanh cong hoac loi </returns>
         /// <exception cref="Exception"> Khi lay thong tin user bi loi </exception>
-        [HttpGet("Get/{id}")]
+        [HttpGet("GetInfo/{id}")]
         public async Task<IActionResult> Get(long id)
         {
             try
             {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
+                var item = await _repository.User.GetAsync(HttpContext, id);
+                return Ok(item);
+            }
+            catch (Exception e)
+            {
+                return NotFound(e.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpGet("GetSelfInfo")]
+        public async Task<IActionResult> GetSelfInfo()
+        {
+            try
+            {
+                var id = await _repository.JwtAuth.GetCurrentUserIdAsync(HttpContext);
                 var item = await _repository.User.GetAsync(HttpContext, id);
                 return Ok(item);
             }
@@ -124,6 +130,12 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
                 var items = await _repository.User.GetListAsync(HttpContext, pageNumber, pageSize);
                 return Ok(items);
             }
@@ -147,12 +159,35 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
                 await _repository.User.DeleteAsync(HttpContext, id);
                 return Ok();
             }
             catch(Exception e)
             {
                 _logger.LogError($"[MyLog]: Error deleting user, {e}");
+                return NotFound(e.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpDelete("SelfDelete")]
+        public async Task<IActionResult> SelfDelete()
+        {
+            try
+            {
+                var id = await _repository.JwtAuth.GetCurrentUserIdAsync(HttpContext);
+                await _repository.User.DeleteAsync(HttpContext, id);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"[MyLog]: User {HttpContext.User.Identity.Name} unable to delete own account");
                 return NotFound(e.Message);
             }
         }
@@ -166,14 +201,38 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="model"> Biz model chua cac thong tin dau vao can thiet cho update mot user </param>
         /// <returns> Response, thanh cong hoac loi </returns>
         [HttpPut("UpdateUser")]
-        public async Task<IActionResult> Update(Edit model)
+        public async Task<IActionResult> Update(Edit model, long id)
         {
             try
             {
-                var item = await _repository.User.UpdateAsync(HttpContext, model);
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
+                var item = await _repository.User.UpdateAsync(HttpContext, model, id);
                 return Ok(item);
             }
             catch(Exception e)
+            {
+                _logger.LogError($"[MyLog]: Error updating user, {e}");
+                return NotFound(e.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpPut("SelfUpdate")]
+        public async Task<IActionResult> SelfUpdate(Edit model)
+        {
+            try
+            {
+                var id = await _repository.JwtAuth.GetCurrentUserIdAsync(HttpContext);
+
+                var item = await _repository.User.UpdateAsync(HttpContext, model, id);
+                return Ok(item);
+            }
+            catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error updating user, {e}");
                 return NotFound(e.Message);
@@ -195,6 +254,12 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
                 var items = await _repository.User.SearchUsernameAsync(HttpContext, username, pageIndex, pageSize);
                 return Ok(items);
             }
@@ -221,6 +286,12 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
                 var items = await _repository.User.FilterCreatedDateAsync(HttpContext, date, condition, pageIndex, pageSize);
                 return Ok(items);
             }
@@ -240,17 +311,45 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="id"></param>
         /// <param name="amount"></param>
         /// <returns></returns>
-        [HttpPut("UpdateBalance")]
-        public async Task<IActionResult> UpdateBalance (long id, long amount)
+        [HttpPut("AddBalance")]
+        public async Task<IActionResult> AddBalance (long id, long amount)
         {
             try
             {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
                 var item = await _repository.User.UpdateBalanceAsync(HttpContext, id, amount);
                 return Ok(item);
             }
             catch (Exception e)
             {
                 _logger.LogError($"[MyLog]: Error updating the balance of user with the id {id}");
+                return NotFound(e.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpPut("SelfAddBalance")]
+        public async Task<IActionResult> SelfAddBalance(long amount)
+        {
+            try
+            {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+                var id = await _repository.JwtAuth.GetCurrentUserIdAsync(HttpContext);
+                var item = await _repository.User.UpdateBalanceAsync(HttpContext, id, amount);
+                return Ok(item);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"[MyLog]: Error updating the balance of user with the id {await _repository.JwtAuth.GetCurrentUserIdAsync(HttpContext)}");
                 return NotFound(e.Message);
             }
         }

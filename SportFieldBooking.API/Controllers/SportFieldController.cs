@@ -2,6 +2,7 @@
 using SportFieldBooking.Biz.Model.SportField;
 using Microsoft.AspNetCore.Mvc;
 using SportFieldBooking.Helper.Exceptions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SportFieldBooking.API.Controllers
 {
@@ -28,11 +29,18 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="model"> Biz model cho tao moi mot san van dong </param>
         /// <returns> Response </returns>
+        [Authorize]
         [HttpPost("CreateField")]
         public async Task<IActionResult> Create(New model)
         {
             try
             {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
                 var newSportField = await _repository.SportField.CreateAsync(HttpContext, model);
                 return Ok(newSportField);
             }
@@ -51,6 +59,7 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="id"> Id cua san van dong </param>
         /// <returns> Response </returns>
+        [Authorize]
         [HttpPost("Get/{id}")]
         public async Task<IActionResult> Get(long id)
         {
@@ -95,11 +104,18 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="id">Id cua san van dong muon xoa</param>
         /// <returns> Response </returns>
+        [Authorize]
         [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> Delete(long id)
         {
             try
             {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
                 await _repository.SportField.DeleteAsync(HttpContext, id);
                 return Ok();
             }
@@ -117,11 +133,18 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="model"> Biz model cho viec edit thong tin san van dong </param>
         /// <returns>  Response </returns>
+        [Authorize]
         [HttpPut("UpdateSportField")]
         public async Task<IActionResult> Update(Edit model)
         {
             try
             {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
                 var item = await _repository.SportField.UpdateAsync(HttpContext, model);
                 return Ok(item);
             }
@@ -141,6 +164,7 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="pageIndex">so thu tu trang</param>
         /// <param name="pageSize">so ban ghi trong mot trang</param>
         /// <returns>response</returns>
+        [Authorize]
         [HttpGet("SearchName")]
         public async Task<IActionResult> SearchName(string name, long pageIndex, int pageSize)
         {
@@ -164,6 +188,7 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="pageIndex">so thu tu trang</param>
         /// <param name="pageSize">so ban ghi trong mot trang</param>
         /// <returns>response</returns>
+        [Authorize]
         [HttpGet("OpenNow")]
         public async Task<IActionResult> OpenNow(long pageIndex, int pageSize)
         {
@@ -189,6 +214,7 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="pageIndex"></param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpGet("FilterByTime")]
         public async Task<IActionResult> FilterByTime(string startTimeStr, string endTimeStr, long pageIndex, int pageSize)
         {

@@ -12,5 +12,7 @@
         public const int ADMIN_ROLE = 0;
         public const int USER_ROLE = 1;
         public const int FIELD_OWNER_ROLE = 2;
+
+        public const double REFUND_PERCENTAGE = 0.2;
     }
 }

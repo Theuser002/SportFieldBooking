@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SportFieldBooking.Biz.Model.Booking;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SportFieldBooking.API.Controllers
 {
@@ -27,17 +28,41 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="model">biz model cho tao moi mot booking</param>
         /// <returns>response</returns>
-        [HttpPost("MakeBooking")]
-        public async Task<IActionResult> Create(New model)
+        [Authorize]
+        [HttpPost("AdminCreate")]
+        public async Task<IActionResult> Create(New model, long userId)
         {
             try
             {
-                var item = await _repository.Booking.CreateAsync(HttpContext, model);
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+                var item = await _repository.Booking.CreateAsync(HttpContext, model, userId);
+                return Ok(item);
+                
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"[MyLog]: Error making new booking by admin, {e}");
+                return BadRequest(e.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpPost("UserCreate")]
+        public async Task<IActionResult> SelfCreate(New model)
+        {
+            try
+            {
+                var userId = await _repository.JwtAuth.GetCurrentUserIdAsync(HttpContext);
+                var item = await _repository.Booking.CreateAsync(HttpContext, model, userId);
                 return Ok(item);
             }
             catch (Exception e)
             {
-                _logger.LogError($"[MyLog]: Error making new booking, {e}");
+                _logger.LogError($"[MyLog]: Error making new booking from user, {e}");
                 return BadRequest(e.Message);
             }
         }
@@ -50,13 +75,26 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="pageNumber">so thu tu trang</param>
         /// <param name="pageSize">so ban ghi trong mot trang</param>
         /// <returns>response</returns>
+        [Authorize]
         [HttpGet("GetList")]
         public async Task<IActionResult> GetList(long pageNumber, int pageSize)
         {
             try
             {
-                var items = await _repository.Booking.GetListAsync(HttpContext, pageNumber, pageSize);
-                return Ok(items);
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                // Neu la admin thi lay tat ca nhung booking ton tai trong he thong
+                if (role == 0)
+                {
+                    var items = await _repository.Booking.GetListAsync(HttpContext, pageNumber, pageSize);
+                    return Ok(items);
+                }
+                // Neu la user thi lay tat ca nhung booking cua user do
+                else
+                {
+                    var userId = await _repository.JwtAuth.GetCurrentUserIdAsync(HttpContext);
+                    var items = await _repository.Booking.GetUserBooking(HttpContext, userId, pageNumber, pageSize);
+                    return Ok(items);
+                }
             }
             catch (Exception e)
             {
@@ -71,12 +109,22 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="id">id cua booking</param>
         /// <returns>response</returns>
+        [Authorize]
         [HttpDelete("Delete")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete(long bookingId)
         {
             try
             {
-                await _repository.Booking.DeleteAsync(HttpContext, id);
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role == 0)
+                {
+                    await _repository.Booking.AdminDeleteAsync(HttpContext, bookingId);
+                }
+                else
+                {
+                    var userId = await _repository.JwtAuth.GetCurrentUserIdAsync(HttpContext);
+                    await _repository.Booking.UserDeleteAsync(HttpContext, userId, bookingId);
+                }
                 return Ok();
             }catch (Exception e)
             {
@@ -84,6 +132,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        [Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 10/05/2022
@@ -98,6 +147,12 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
                 var items = await _repository.Booking.GetUserBooking(HttpContext, userId, pageIndex, pageSize);
                 return Ok(items);
             }
@@ -107,6 +162,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
+        [Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 10/05/2022
@@ -121,6 +177,12 @@ namespace SportFieldBooking.API.Controllers
         {
             try
             {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
                 var items = await _repository.Booking.GetSportFieldBooking(HttpContext, sportFieldId, pageIndex, pageSize);
                 return Ok(items);
             }
@@ -129,5 +191,28 @@ namespace SportFieldBooking.API.Controllers
                 return NotFound(e.Message);
             }
         }
+
+        //[Authorize]
+        [HttpPatch("DeactivateExpiredBookings")]
+        public async Task<IActionResult> DeactivateExpiredBookings()
+        {
+            try
+            {
+                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+                if (role != 0)
+                {
+                    return Unauthorized("Only admin can use this function");
+                }
+
+                await _repository.Booking.DeactivateExpiredBooking(HttpContext);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("Error deactivating expired bookings");
+                return BadRequest(e.Message);
+            }
+        }
+
     }
 }

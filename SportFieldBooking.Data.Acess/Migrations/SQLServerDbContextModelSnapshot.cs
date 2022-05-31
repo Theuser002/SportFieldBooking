@@ -68,7 +68,7 @@ namespace SportFieldBooking.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Bookings");
+                    b.ToTable("Bookings", (string)null);
                 });
 
             modelBuilder.Entity("SportFieldBooking.Data.Model.BookingStatus", b =>
@@ -88,7 +88,7 @@ namespace SportFieldBooking.Data.Migrations
                     b.HasIndex("StatusName")
                         .IsUnique();
 
-                    b.ToTable("BookingStatuses");
+                    b.ToTable("BookingStatuses", (string)null);
                 });
 
             modelBuilder.Entity("SportFieldBooking.Data.Model.SportField", b =>
@@ -128,7 +128,7 @@ namespace SportFieldBooking.Data.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("SportFields");
+                    b.ToTable("SportFields", (string)null);
                 });
 
             modelBuilder.Entity("SportFieldBooking.Data.Model.User", b =>
@@ -189,7 +189,7 @@ namespace SportFieldBooking.Data.Migrations
                     b.HasIndex("Username")
                         .IsUnique();
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
 
                     b.HasData(
                         new

@@ -14,5 +14,7 @@ namespace SportFieldBooking.Biz.Model.Booking
         public DateTime EndHour { get; set; }
         public DateTime BookDate { get; set; }
         public long TotalPrice { get; set; }
+        public long UserId { get; set; }
+        public long SportFieldId { get; set; }
     }
 }

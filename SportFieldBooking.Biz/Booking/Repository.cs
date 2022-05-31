@@ -35,7 +35,7 @@ namespace SportFieldBooking.Biz.Booking
         /// <param name="model">biz model cho tao moi mot booking</param>
         /// <returns>biz model cho view mot booking</returns>
         /// <exception cref="Exception">cac truong hop loi khac nhau khi tao moi mot booking</exception>
-        public async Task<View> CreateAsync (HttpContext httpContext, New model)
+        public async Task<View> CreateAsync (HttpContext httpContext, New model, long userId)
         {
             #region steps
             /* Tim user trong dbContext.Users
@@ -51,11 +51,10 @@ namespace SportFieldBooking.Biz.Booking
             var startHour = DateTimeUtils.TakeHourOnly(model.StartHour);
             var endHour = DateTimeUtils.TakeHourOnly(model.EndHour);
             var bookDate = model.BookDate.Date;
-            var userId = model.UserId;
             var sportFieldId = model.SportFieldId;
 
             // Check gio dat san hop le
-            if (startHour > endHour || DateTime.Now.Date > bookDate)
+            if (startHour > endHour || DateTime.Now.Date > bookDate || (DateTime.Now.Date == bookDate && TimeSpan.Compare(startHour.TimeOfDay, DateTime.Now.TimeOfDay) < 0))
             {
                 throw new Exception("[SportFieldBooking.Biz.Booking.Repository] Invalid booking time condition");
             }
@@ -93,6 +92,7 @@ namespace SportFieldBooking.Biz.Booking
                 throw new Exception("[SportFieldBooking.Biz.Booking.Repository] The field is being rented at ur required time that day");
             }
 
+            // Dat status cho booking moi tao la ONGOING
             var bookingStatus = await _dbContext.BookingStatuses.Where(s => s.StatusName == Consts.ONGOING_STATUS).FirstAsync();
             if (DateTimeUtils.TakeHourOnly(sportField.OpeningHour) > startHour || DateTimeUtils.TakeHourOnly(sportField.ClosingHour) < endHour)
             {
@@ -144,7 +144,7 @@ namespace SportFieldBooking.Biz.Booking
         /// <returns>trang tuong ung</returns>
         public async Task<Page<List>> GetListAsync (HttpContext httpContext, long pageIndex, int pageSize)
         {
-            var bookingPage = await _dbContext.Bookings?.OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
+            var bookingPage = await _dbContext.Bookings?.Include(b => b.User).Include(b => b.SportField).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
             return bookingPage;
         }
 
@@ -156,9 +156,9 @@ namespace SportFieldBooking.Biz.Booking
         /// <param name="id">id cua booking muon xoa</param>
         /// <returns></returns>
         /// <exception cref="Exception">khi khong ton tai id cua booking muon xoa</exception>
-        public async Task DeleteAsync (HttpContext httpContext, long id)
+        public async Task AdminDeleteAsync (HttpContext httpContext, long bookingId)
         {
-            var booking = await _dbContext.Bookings.FindAsync(id);
+            var booking = await _dbContext.Bookings.FindAsync(bookingId);
             if (booking != null)
             {
                 _dbContext.Bookings.Remove(booking);
@@ -166,7 +166,27 @@ namespace SportFieldBooking.Biz.Booking
             }
             else
             {
-                throw new Exception($"Threre's no booking with the id {id}");
+                throw new Exception($"Threre's no booking with the id {bookingId}");
+            }
+        }
+
+        public async Task UserDeleteAsync (HttpContext httpContext, long userId, long bookingId)
+        {
+            var booking = await _dbContext.Bookings.Include(b => b.BookingStatus).FirstOrDefaultAsync(b => b.Id == bookingId && b.User.Id == userId);
+            if (booking != null)
+            {
+                // Hoan lai tien neu booking van chua het han
+                if (booking.BookingStatus.StatusName == Consts.ONGOING_STATUS)
+                {
+                    var total_price = booking.TotalPrice;
+                    booking.User.Balance += (long)Math.Floor(total_price * Consts.REFUND_PERCENTAGE);
+                }
+                _dbContext.Bookings.Remove(booking);
+                await _dbContext.SaveChangesAsync();
+            }
+            else
+            {
+                throw new Exception($"User {userId} has no booking with the id {bookingId}");
             }
         }
 
@@ -182,7 +202,7 @@ namespace SportFieldBooking.Biz.Booking
         /// <exception cref="Exception">khi khong ton tai user voi id nhu vay</exception>
         public async Task<Page<List>> GetUserBooking (HttpContext httpContext, long userId, long pageIndex, int pageSize)
         {
-            var bookingPage = await _dbContext.Bookings.Where(b => b.User.Id == userId).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
+            var bookingPage = await _dbContext.Bookings.Where(b => b.User.Id == userId).Include(b => b.User).Include(b => b.SportField).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
             if (bookingPage != null)
             {
                 return bookingPage;
@@ -205,7 +225,7 @@ namespace SportFieldBooking.Biz.Booking
         /// <exception cref="Exception">khi khong ton tai san bong voi id nhu vay</exception>
         public async Task<Page<List>> GetSportFieldBooking (HttpContext httpContext, long sportFieldId, long pageIndex, int pageSize)
         {
-            var bookingPage = await _dbContext.Bookings.Where(b => b.SportField.Id == sportFieldId).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
+            var bookingPage = await _dbContext.Bookings.Where(b => b.SportField.Id == sportFieldId).Include(b => b.SportField).Include(b => b.User).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
             if (bookingPage != null)
             {
                 return bookingPage;
@@ -213,6 +233,26 @@ namespace SportFieldBooking.Biz.Booking
             else
             {
                 throw new Exception($"The sport field with the id {sportFieldId} cannot be found");
+            }
+        }
+
+        public async Task DeactivateExpiredBooking (HttpContext httpContext)
+        {
+            try
+            {
+                var outdatedBookings = await _dbContext.Bookings.Where(b => (DateTime.Compare(b.BookDate.Date, DateTime.Now.Date) < 0 || (DateTime.Compare(b.BookDate.Date, DateTime.Now.Date) == 0 && TimeSpan.Compare(b.EndHour.TimeOfDay, DateTime.Now.TimeOfDay) < 0))).ToListAsync();
+                var nowDate = DateTime.Now.Date;
+                var expiredStatus = await _dbContext.BookingStatuses.FirstOrDefaultAsync(s => s.StatusName == Consts.EXPIRED_STATUS);
+                Console.WriteLine(nowDate);
+                foreach (var booking in outdatedBookings)
+                {
+                    booking.BookingStatus = expiredStatus;   
+                }
+                await _dbContext.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                throw new Exception($"Error deactivating expired bookings");
             }
         }
     }

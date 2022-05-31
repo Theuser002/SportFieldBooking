@@ -119,9 +119,9 @@ namespace SportFieldBooking.Biz.User
         /// <param name="model"></param>
         /// <returns></returns>
         /// <exception cref="Exception"> Khi user co id da nhap khong ton tai, xu ly o controller </exception>
-        public async Task<View> UpdateAsync(HttpContext httpContext, Edit model)
+        public async Task<View> UpdateAsync(HttpContext httpContext, Edit model, long id)
         {
-            var oldUser = await _dbContext.Users.FindAsync(model.Id);
+            var oldUser = await _dbContext.Users.FindAsync(id);
             if(oldUser != null)
             {
                 var updatedUser = _mapper.Map(model, oldUser);
@@ -132,7 +132,7 @@ namespace SportFieldBooking.Biz.User
             }
             else
             {
-                throw new Exception($"There's no user with the id {model.Id}");
+                throw new Exception($"There's no user with the id {id}");
             }
         }
 
@@ -223,6 +223,5 @@ namespace SportFieldBooking.Biz.User
                 throw new Exception($"There is no user with the id {id}");
             }
         }
-
     }
 }

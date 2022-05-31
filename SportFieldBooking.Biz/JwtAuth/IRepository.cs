@@ -9,5 +9,8 @@ namespace SportFieldBooking.Biz.JwtAuth
         Task<Boolean> CheckCredentialsAsync(HttpContext httpContext, CurrentUserInfo model, string password);
         Task SaveRefreshTokenAsync(string username, string? refreshToken, DateTime? refreshTokenExpiryTime);
         Task<UserWithToken> GetUserWithTokenAsync(string username);
+        string GetClaimValueFromToken(HttpContext httpContext, string claimName);
+        public int GetRoleFromToken(HttpContext httpContext);
+        Task<long> GetCurrentUserIdAsync(HttpContext httpContext);
     }
 }

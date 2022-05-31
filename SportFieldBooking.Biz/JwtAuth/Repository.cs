@@ -5,6 +5,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using SportFieldBooking.Biz.Model.JwtAuth;
+using System.Security.Claims;
 
 namespace SportFieldBooking.Biz.JwtAuth
 {
@@ -62,6 +63,43 @@ namespace SportFieldBooking.Biz.JwtAuth
             }
             var userWithToken = _mapper.Map<UserWithToken>(user);
             return userWithToken;
+        }
+
+        public string GetClaimValueFromToken (HttpContext httpContext, string claimName)
+        {
+            var identity = httpContext.User.Identity as ClaimsIdentity;
+            if (identity != null)
+            {
+                IEnumerable<Claim> claims = identity.Claims;
+                var res = identity.FindFirst($"{claimName}")?.Value;
+                if (res == null)
+                {
+                    throw new Exception($"No claim with {claimName} received from issuer");
+                }
+                return res;
+            }
+            throw new Exception($"Undefined User Identity");
+        }
+
+        public int GetRoleFromToken (HttpContext httpContext)
+        {
+            _ = int.TryParse(GetClaimValueFromToken(httpContext, "Role"), out var role);
+            if (role == null)
+            {
+                throw new Exception("Error getting role from token");
+            }
+            return role;
+        }
+
+        public async Task<long> GetCurrentUserIdAsync(HttpContext httpContext)
+        {
+            var username = httpContext.User.Identity.Name;
+            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == username);
+            if (user == null)
+            {
+                throw new Exception($"Error getting user with username {username}");
+            }
+            return user.Id;
         }
     }
 }

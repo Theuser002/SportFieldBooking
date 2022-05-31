@@ -118,7 +118,7 @@ try
 {
     Console.WriteLine("TEST");
     logger.Information($"[MyLog]: Migrating process");
-
+    Console.WriteLine(DateTime.Now.Date);
     using (var scope = app.Services.CreateScope())
     {
         using (var context = scope.ServiceProvider.GetRequiredService<DomainDbContext>())

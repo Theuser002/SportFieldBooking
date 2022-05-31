@@ -58,6 +58,8 @@ namespace SportFieldBooking.Data
                 .HasColumnType("datetime2")
                 .HasPrecision(0);
 
+
+
             // Seed user into database (use Add-Migration)
             //modelBuilder.Entity<User>().HasData(
             //    new User
