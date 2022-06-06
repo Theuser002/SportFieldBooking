@@ -1,0 +1,441 @@
+﻿++Solution 'SportFieldBooking' ‎(7 of 7 projects)
+i:{00000000-0000-0000-0000-000000000000}:SportFieldBooking.sln
+++SportFieldBooking.API
+i:{00000000-0000-0000-0000-000000000000}:SportFieldBooking.API
+++Connected Services 
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:>1221
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:>1220
+++Dependencies
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:>1218
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:>473
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:>406
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:>833
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:>918
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:>1219
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:>825
+++Properties
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\properties\
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking\properties\
+++Controllers
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\controllers\
+++AuthenticateController.cs
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\controllers\authenticatecontroller.cs
+++BookingController.cs
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\controllers\bookingcontroller.cs
+++BookingStatusController.cs
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\controllers\bookingstatuscontroller.cs
+++SportFieldController.cs
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\controllers\sportfieldcontroller.cs
+++UserController.cs
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\controllers\usercontroller.cs
+++logs
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\
+++webapi-20220418.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220418.log
+++webapi-20220419.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220419.log
+++webapi-20220420.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220420.log
+++webapi-20220425.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220425.log
+++webapi-20220426.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220426.log
+++webapi-20220429.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220429.log
+++webapi-20220430.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220430.log
+++webapi-20220502.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220502.log
+++webapi-20220503.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220503.log
+++webapi-20220508.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220508.log
+++webapi-20220509.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220509.log
+++webapi-20220510.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220510.log
+++webapi-20220528.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220528.log
+++webapi-20220530.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220530.log
+++appsettings.json
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\appsettings.json
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking\appsettings.json
+++appsettings.Development.json
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\appsettings.development.json
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking\appsettings.development.json
+++Program.cs
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\program.cs
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking\program.cs
+++No service dependencies discovered
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:>1223
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:>1222
+++Analyzers
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:analyzers
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:analyzers
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:analyzers
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:analyzers
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:analyzers
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:analyzers
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:analyzers
+++Frameworks
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:frameworks
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:frameworks
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:frameworks
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:frameworks
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:frameworks
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:frameworks
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:frameworks
+++Packages
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:packages
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:packages
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:packages
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:packages
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:packages
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:packages
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:packages
+++Projects
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:projects
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:projects
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:projects
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:projects
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:projects
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:projects
+++launchSettings.json
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\properties\launchsettings.json
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking\properties\launchsettings.json
+++Microsoft.AspNetCore.Analyzers
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.SourceGenerator.Tooling.Internal
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
+++Microsoft.CodeAnalysis.Analyzers
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\users\oa\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.Analyzers
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\users\oa\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\users\oa\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:c:\users\oa\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:c:\users\oa\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:c:\users\oa\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:c:\users\oa\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:c:\users\oa\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:c:\users\oa\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.5\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:c:\users\oa\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.5\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.5\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.5\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.5\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.5\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.5\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.5\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\microsoft.aspnetcore.app
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\microsoft.netcore.app
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\microsoft.netcore.app
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\microsoft.netcore.app
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\microsoft.netcore.app
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.model\microsoft.netcore.app
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking\microsoft.netcore.app
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\microsoft.netcore.app
+++Core.Api (0.4.0)
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:>1318
+++EntityFramework (6.4.4)
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:>1321
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:>1341
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:>1281
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:>1251
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:>1358
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:>1305
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:>1242
+++Microsoft.AspNetCore.Authentication.JwtBearer (6.0.5)
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:>1319
+++Microsoft.EntityFrameworkCore (6.0.4)
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:>1315
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:>1339
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:>1273
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:>1247
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:>1355
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:>1303
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:>1238
+++Microsoft.EntityFrameworkCore.Tools (6.0.4)
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:>1320
+++Serilog.AspNetCore (5.0.0)
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:>1317
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:>1340
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:>1276
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:>1249
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:>1356
+++Swashbuckle.AspNetCore (6.2.3)
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:>1316
+++SportFieldBooking.Biz
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\bin\debug\net6.0\sportfieldbooking.biz.dll
+i:{00000000-0000-0000-0000-000000000000}:SportFieldBooking.Biz
+++SportFieldBooking.Biz.Model
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\bin\debug\net6.0\sportfieldbooking.biz.model.dll
+i:{00000000-0000-0000-0000-000000000000}:SportFieldBooking.Biz.Model
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\bin\debug\net6.0\sportfieldbooking.biz.model.dll
+++SportFieldBooking.Data
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\bin\debug\net6.0\sportfieldbooking.data.dll
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\bin\debug\net6.0\sportfieldbooking.data.dll
+i:{00000000-0000-0000-0000-000000000000}:SportFieldBooking.Data
+++SportFieldBooking.Data.Model
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.model\bin\debug\net6.0\sportfieldbooking.data.model.dll
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.model\bin\debug\net6.0\sportfieldbooking.data.model.dll
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.model\bin\debug\net6.0\sportfieldbooking.data.model.dll
+i:{00000000-0000-0000-0000-000000000000}:SportFieldBooking.Data.Model
+++SportFieldBooking.Helper
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\bin\debug\net6.0\sportfieldbooking.helper.dll
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\bin\debug\net6.0\sportfieldbooking.helper.dll
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\bin\debug\net6.0\sportfieldbooking.helper.dll
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\bin\debug\net6.0\sportfieldbooking.helper.dll
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\bin\debug\net6.0\sportfieldbooking.helper.dll
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\bin\debug\net6.0\sportfieldbooking.helper.dll
+i:{00000000-0000-0000-0000-000000000000}:SportFieldBooking.Helper
+++Booking
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\booking\
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\booking\
+++List.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\booking\list.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\sportfield\list.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\user\list.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\bookingstatus\list.cs
+++New.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\booking\new.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\sportfield\new.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\user\new.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\bookingstatus\new.cs
+++View.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\booking\view.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\sportfield\view.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\user\view.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\bookingstatus\view.cs
+++BookingStatus
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\bookingstatus\
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\bookingstatus\
+++JwtAuth
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\jwtauth\
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\jwtauth\
+++SportField
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\sportfield\
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\sportfield\
+++Edit.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\sportfield\edit.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\user\edit.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\bookingstatus\edit.cs
+++User
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\user\
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\user\
+++CurrentUserInfo.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\jwtauth\currentuserinfo.cs
+++LoginRequest.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\jwtauth\loginrequest.cs
+++LoginResponse.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\jwtauth\loginresponse.cs
+++RefreshTokenRequest.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\jwtauth\refreshtokenrequest.cs
+++RegisterRequest.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\jwtauth\registerrequest.cs
+++RegisterResponse.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\jwtauth\registerresponse.cs
+++UserWithToken.cs
+i:{9a346467-495d-4d56-9b19-43f9d848f313}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz.model\jwtauth\userwithtoken.cs
+++IRepository.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\bookingstatus\irepository.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\jwtauth\irepository.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\sportfield\irepository.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\user\irepository.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\booking\irepository.cs
+++Repository.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\bookingstatus\repository.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\jwtauth\repository.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\sportfield\repository.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\user\repository.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\booking\repository.cs
+++AutoMapperProfile.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\automapperprofile.cs
+++IRepositoryWrapper.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\irepositorywrapper.cs
+++RepositoryWrapper.cs
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.biz\repositorywrapper.cs
+++AutoMapper (11.0.1)
+i:{35972685-c1ea-4c20-8b6f-aef626cb0254}:>1277
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:>1240
+++Migrations
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\
+++DomainDbContext.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\domaindbcontext.cs
+++SQLServerDbContext.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\sqlserverdbcontext.cs
+++20220426030959_Initial.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220426030959_initial.cs
+++20220426051820_Migration2.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220426051820_migration2.cs
+++20220426073331_Hung.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220426073331_hung.cs
+++20220426074930_Hung1.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220426074930_hung1.cs
+++20220429071029_Hung3.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220429071029_hung3.cs
+++20220429071340_Hung4.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220429071340_hung4.cs
+++20220430150133_AddBalance.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220430150133_addbalance.cs
+++20220430150226_InitBalance.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220430150226_initbalance.cs
+++20220502031946_MakeBooking.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220502031946_makebooking.cs
+++20220502032723_Price.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220502032723_price.cs
+++20220503153026_status_null.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220503153026_status_null.cs
+++20220509014002_Hungnt.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220509014002_hungnt.cs
+++20220528102304_add_role.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220528102304_add_role.cs
+++20220528103609_add_refresh_token_to_user.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220528103609_add_refresh_token_to_user.cs
+++20220528112124_add_unique_constraints_on_Users.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220528112124_add_unique_constraints_on_users.cs
+++20220530021403_refresh_token_expiry_time.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220530021403_refresh_token_expiry_time.cs
+++20220530092603_seed_admin.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220530092603_seed_admin.cs
+++20220530092722_Change_admin.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220530092722_change_admin.cs
+++20220530160001_add_user_for_sport_field.cs
+++SQLServerDbContextModelSnapshot.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\sqlserverdbcontextmodelsnapshot.cs
+++Microsoft.EntityFrameworkCore.SqlServer (6.0.4)
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:>1248
+++Microsoft.Extensions.Configuration (6.0.1)
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:>1250
+++20220426030959_Initial.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220426030959_initial.designer.cs
+++20220426051820_Migration2.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220426051820_migration2.designer.cs
+++20220426073331_Hung.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220426073331_hung.designer.cs
+++20220426074930_Hung1.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220426074930_hung1.designer.cs
+++20220429071029_Hung3.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220429071029_hung3.designer.cs
+++20220429071340_Hung4.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220429071340_hung4.designer.cs
+++20220430150133_AddBalance.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220430150133_addbalance.designer.cs
+++20220430150226_InitBalance.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220430150226_initbalance.designer.cs
+++20220502031946_MakeBooking.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220502031946_makebooking.designer.cs
+++20220502032723_Price.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220502032723_price.designer.cs
+++20220503153026_status_null.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220503153026_status_null.designer.cs
+++20220509014002_Hungnt.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220509014002_hungnt.designer.cs
+++20220528102304_add_role.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220528102304_add_role.designer.cs
+++20220528103609_add_refresh_token_to_user.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220528103609_add_refresh_token_to_user.designer.cs
+++20220528112124_add_unique_constraints_on_Users.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220528112124_add_unique_constraints_on_users.designer.cs
+++20220530021403_refresh_token_expiry_time.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220530021403_refresh_token_expiry_time.designer.cs
+++20220530092603_seed_admin.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220530092603_seed_admin.designer.cs
+++20220530092722_Change_admin.Designer.cs
+i:{a34dfe1c-9556-471f-b7bc-aaa47dc69407}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.acess\migrations\20220530092722_change_admin.designer.cs
+++20220530160001_add_user_for_sport_field.Designer.cs
+++Booking.cs
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.model\booking.cs
+++BookingStatus.cs
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.model\bookingstatus.cs
+++SportField.cs
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.model\sportfield.cs
+++User.cs
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.data.model\user.cs
+++FluentValidation.AspNetCore (10.4.0)
+i:{f1f1d791-08e6-448c-a2b0-ffb84d409ed3}:>1357
+++SportFieldBooking
+i:{00000000-0000-0000-0000-000000000000}:SportFieldBooking
+++.editorconfig
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:d:\#study\programming\dotnet\practice\sportfieldbooking\.editorconfig
+++References.txt
+i:{13c4389b-0282-427f-915b-4d4d3eec0e50}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking\references.txt
+++DateTimeUtils
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\datetimeutils\
+++Enums
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\enums\
+++Consts.cs
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\enums\consts.cs
+++Exceptions
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\exceptions\
+++Pagination
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\pagination\
+++Page.cs
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\pagination\page.cs
+++PagingExtensions.cs
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\pagination\pagingextensions.cs
+++DateTimeUtils.cs
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\datetimeutils\datetimeutils.cs
+++DatabaseNotFoundExceptions.cs
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\exceptions\databasenotfoundexceptions.cs
+++InvalidPageException.cs
+i:{8aaa3d08-8ec9-4268-9f7c-dd91f7bf8f06}:d:\#study\programming\dotnet\practice\sportfieldbooking\helper\exceptions\invalidpageexception.cs
+++Repository.cs~RF3c0131d.TMP
+++webapi-20220531.log
+i:{b2be470a-bf97-4afc-b6fa-1742e893b8e2}:d:\#study\programming\dotnet\practice\sportfieldbooking\sportfieldbooking.api\logs\webapi-20220531.log
+++SelfEdit.cs
+++lbxe0jxh.xhl~
+++w0nzne3h.zze~
