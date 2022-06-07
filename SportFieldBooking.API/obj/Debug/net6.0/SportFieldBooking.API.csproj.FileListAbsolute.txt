@@ -129,3 +129,4 @@ D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\ob
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\obj\Debug\net6.0\SportFieldBooking.API.pdb
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\obj\Debug\net6.0\SportFieldBooking.API.genruntimeconfig.cache
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\obj\Debug\net6.0\ref\SportFieldBooking.API.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Quartz.dll

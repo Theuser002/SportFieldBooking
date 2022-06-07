@@ -15,5 +15,6 @@ namespace SportFieldBooking.Biz.User
         Task<Page<List>> SearchUsernameAsync(HttpContext httpContext, string username, long pageIndex, int pageSize);
         Task<Page<List>> FilterCreatedDateAsync(HttpContext httpContext, string date, string condition, long pageIndex, int pageSize);
         Task<View> UpdateBalanceAsync(HttpContext httpContext, long id, long amount);
+        Task<List<List>> GetAllAsync();
     }
 }

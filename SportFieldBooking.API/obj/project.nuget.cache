@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MUpFRhadXgPEFh+5HJu8XIId7f1VN4hKJibFJxM/8ztflQKhAyFBowpMxqwBZSSkty4Hsorkyv+VePMwdvgCFg==",
+  "dgSpecHash": "8ysiJvNzu2Fl1CrFYW9pZkxeI7dkUVK483H7ZzqtarlvyhT3TDQrJVJ7f92VVxwD0KFOEUHWqonlap077K7NMA==",
   "success": true,
   "projectFilePath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\SportFieldBooking.API\\SportFieldBooking.API.csproj",
   "expectedPackageFiles": [
@@ -119,6 +119,7 @@
     "C:\\Users\\OA\\.nuget\\packages\\other-eshop.core.application\\0.4.0\\other-eshop.core.application.0.4.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\other-eshop.core.domain\\0.4.0\\other-eshop.core.domain.0.4.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\other-eshop.core.infrastructure\\0.4.0\\other-eshop.core.infrastructure.0.4.0.nupkg.sha512",
+    "C:\\Users\\OA\\.nuget\\packages\\quartz\\3.4.0\\quartz.3.4.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

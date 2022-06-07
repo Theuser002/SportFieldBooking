@@ -125,7 +125,5 @@ namespace SportFieldBooking.Biz.BookingStatus
                 throw new Exception($"There's no status with the id {model.Id}");
             }
         }
-
-        
     }
 }

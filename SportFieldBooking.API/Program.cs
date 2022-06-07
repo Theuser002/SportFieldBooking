@@ -1,7 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Quartz;
+using Quartz.Impl;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 using SportFieldBooking.Data;
 using SportFieldBooking.Helper.Exceptions;
+using SportFieldBooking.Helper.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -126,6 +129,8 @@ try
             context.Database.Migrate();
         }
     }
+
+    DeactivateBookingsScheduler.StartAsync().GetAwaiter().GetResult();
 }
 catch (Exception e)
 {

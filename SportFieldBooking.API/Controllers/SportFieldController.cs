@@ -82,6 +82,7 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="pageNumber"> So thu tu trang </param>
         /// <param name="pageSize"> So ban ghi trong mot trang </param>
         /// <returns></returns>
+        [Authorize]
         [HttpGet("GetList")]
         public async Task<IActionResult> GetList(long pageNumber, int pageSize)
         {

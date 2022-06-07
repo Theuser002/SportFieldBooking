@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportFieldBooking", "SportF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportFieldBooking.Helper", "Helper\SportFieldBooking.Helper.csproj", "{8AAA3D08-8EC9-4268-9F7C-DD91F7BF8F06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.WebApi", "Gateway.WebApi\Gateway.WebApi.csproj", "{DB7EF162-6C79-48F4-BA11-5CB88447EFCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayAdmin.API", "GatewayAdmin.API\GatewayAdmin.API.csproj", "{F5FB24A1-9F5A-4053-89F8-294D858F8F11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{8AAA3D08-8EC9-4268-9F7C-DD91F7BF8F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AAA3D08-8EC9-4268-9F7C-DD91F7BF8F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AAA3D08-8EC9-4268-9F7C-DD91F7BF8F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB7EF162-6C79-48F4-BA11-5CB88447EFCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB7EF162-6C79-48F4-BA11-5CB88447EFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB7EF162-6C79-48F4-BA11-5CB88447EFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB7EF162-6C79-48F4-BA11-5CB88447EFCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5FB24A1-9F5A-4053-89F8-294D858F8F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FB24A1-9F5A-4053-89F8-294D858F8F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5FB24A1-9F5A-4053-89F8-294D858F8F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5FB24A1-9F5A-4053-89F8-294D858F8F11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

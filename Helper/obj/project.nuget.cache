@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8NNDqKcoScpTf6SIOn0zaVgfMAkjEWw71wc667uymj0ezT4quZwidWjIjmxhPDWFGcNgTqr+nB9mUXyFmtQPVQ==",
+  "dgSpecHash": "MHAKqibpf52AjN039tlZb0BBZhpfJsaIOsyxXG42iI4zXBUPfvPbFwDbrQ4h74FO5ErLsv4I6nLiZwd6ujL+dw==",
   "success": true,
   "projectFilePath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\OA\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\OA\\.nuget\\packages\\quartz\\3.4.0\\quartz.3.4.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\OA\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

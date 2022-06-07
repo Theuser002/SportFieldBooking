@@ -1,0 +1,67 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/AdminGateway/{everything}",
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT", "PATCH" ]
+    },
+    //{
+    //  "DownstreamPathTemplate": "/api/Booking",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5290
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/AdminGateway/Booking",
+    //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PATCH" ]
+    //},
+    //{
+    //  "DownstreamPathTemplate": "/api/BookingStatus",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5290
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/AdminGateway/BookingStatus",
+    //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
+    //},
+    //{
+    //  "DownstreamPathTemplate": "/api/SportField",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5290
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/AdminGateway/SportField",
+    //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT"  ]
+    //},
+    //{
+    //  "DownstreamPathTemplate": "/api/User",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5290
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/AdminGateway/User",
+    //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
+    //}
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5041"
+  }
+}

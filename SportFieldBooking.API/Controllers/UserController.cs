@@ -353,5 +353,20 @@ namespace SportFieldBooking.API.Controllers
                 return NotFound(e.Message);
             }
         }
+
+        [AllowAnonymous]
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAll()
+        {
+            try
+            {
+                var users = await _repository.User.GetAllAsync();
+                return Ok(users);
+            }
+            catch(Exception e)
+            {
+                return NotFound(e.Message);
+            }
+        }
     }
 }

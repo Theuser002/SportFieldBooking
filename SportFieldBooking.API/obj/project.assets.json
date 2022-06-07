@@ -1688,6 +1688,20 @@
           "lib/net5.0/Core.Infrastructure.dll": {}
         }
       },
+      "Quartz/3.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
+          "System.Configuration.ConfigurationManager": "4.7.0",
+          "System.Diagnostics.DiagnosticSource": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Quartz.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Quartz.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -3591,7 +3605,8 @@
         "dependencies": {
           "AutoMapper": "11.0.1",
           "EntityFramework": "6.4.4",
-          "Microsoft.EntityFrameworkCore": "6.0.4"
+          "Microsoft.EntityFrameworkCore": "6.0.4",
+          "Quartz": "3.4.0"
         },
         "compile": {
           "bin/placeholder/SportFieldBooking.Helper.dll": {}
@@ -5695,6 +5710,24 @@
         "lib/net5.0/Core.Infrastructure.dll",
         "other-eshop.core.infrastructure.0.4.0.nupkg.sha512",
         "other-eshop.core.infrastructure.nuspec"
+      ]
+    },
+    "Quartz/3.4.0": {
+      "sha512": "N8350OAlQhd8zKg0ARFikGjh3bfAW/CF/KVxu2fTIlAALB/oC1eg54n/QAPYR5ryHuYyDr5G8/Qa4k+D/7OFRQ==",
+      "type": "package",
+      "path": "quartz/3.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Quartz.dll",
+        "lib/net462/Quartz.xml",
+        "lib/net472/Quartz.dll",
+        "lib/net472/Quartz.xml",
+        "lib/netstandard2.0/Quartz.dll",
+        "lib/netstandard2.0/Quartz.xml",
+        "quartz-logo-small.png",
+        "quartz.3.4.0.nupkg.sha512",
+        "quartz.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -10679,6 +10712,7 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.5",
       "Microsoft.EntityFrameworkCore >= 6.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.4",
+      "Quartz >= 3.4.0",
       "Serilog.AspNetCore >= 5.0.0",
       "SportFieldBooking.Biz >= 1.0.0",
       "SportFieldBooking.Biz.Model >= 1.0.0",
@@ -10764,6 +10798,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.4, )"
+          },
+          "Quartz": {
+            "target": "Package",
+            "version": "[3.4.0, )"
           },
           "Serilog.AspNetCore": {
             "target": "Package",

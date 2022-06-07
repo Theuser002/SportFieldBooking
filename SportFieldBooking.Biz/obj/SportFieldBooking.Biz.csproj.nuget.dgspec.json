@@ -51,6 +51,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.4, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.4.0, )"
             }
           },
           "imports": [

@@ -223,5 +223,20 @@ namespace SportFieldBooking.Biz.User
                 throw new Exception($"There is no user with the id {id}");
             }
         }
+
+        public async Task<List<List>> GetAllAsync()
+        {
+            var users = await _dbContext.Users.OrderBy(u => u.Id).ToListAsync();
+            if (users != null)
+            {
+                var userList = _mapper.Map<List<List>>(users);
+                return userList;
+            }
+            else
+            {
+                throw new Exception($"There's some error in getting the list of all users");
+            }
+        }
+
     }
 }
