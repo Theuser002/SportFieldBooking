@@ -144,7 +144,7 @@ namespace SportFieldBooking.Biz.Booking
         /// <returns>trang tuong ung</returns>
         public async Task<Page<List>> GetListAsync (HttpContext httpContext, long pageIndex, int pageSize)
         {
-            var bookingPage = await _dbContext.Bookings?.Include(b => b.User).Include(b => b.SportField).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
+            var bookingPage = await _dbContext.Bookings?.Include(b => b.User).Include(b => b.SportField).OrderBy(b => b.Id).Include(b => b.BookingStatus).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
             return bookingPage;
         }
 
@@ -202,7 +202,7 @@ namespace SportFieldBooking.Biz.Booking
         /// <exception cref="Exception">khi khong ton tai user voi id nhu vay</exception>
         public async Task<Page<List>> GetUserBooking (HttpContext httpContext, long userId, long pageIndex, int pageSize)
         {
-            var bookingPage = await _dbContext.Bookings.Where(b => b.User.Id == userId).Include(b => b.User).Include(b => b.SportField).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
+            var bookingPage = await _dbContext.Bookings.Where(b => b.User.Id == userId).Include(b => b.User).Include(b => b.SportField).Include(b => b.BookingStatus).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
             if (bookingPage != null)
             {
                 return bookingPage;
@@ -225,7 +225,7 @@ namespace SportFieldBooking.Biz.Booking
         /// <exception cref="Exception">khi khong ton tai san bong voi id nhu vay</exception>
         public async Task<Page<List>> GetSportFieldBooking (HttpContext httpContext, long sportFieldId, long pageIndex, int pageSize)
         {
-            var bookingPage = await _dbContext.Bookings.Where(b => b.SportField.Id == sportFieldId).Include(b => b.SportField).Include(b => b.User).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
+            var bookingPage = await _dbContext.Bookings.Where(b => b.SportField.Id == sportFieldId).Include(b => b.SportField).Include(b => b.User).Include(b => b.BookingStatus).OrderBy(b => b.Id).GetPagedResult<Data.Model.Booking, List>(_mapper, pageIndex, pageSize);
             if (bookingPage != null)
             {
                 return bookingPage;
@@ -236,14 +236,14 @@ namespace SportFieldBooking.Biz.Booking
             }
         }
 
-        public async Task DeactivateExpiredBooking (HttpContext httpContext)
+        public async Task DeactivateExpiredBookings ()
         {
             try
             {
+                Console.WriteLine("Deactivating expired bookings...");
                 var outdatedBookings = await _dbContext.Bookings.Where(b => (DateTime.Compare(b.BookDate.Date, DateTime.Now.Date) < 0 || (DateTime.Compare(b.BookDate.Date, DateTime.Now.Date) == 0 && TimeSpan.Compare(b.EndHour.TimeOfDay, DateTime.Now.TimeOfDay) < 0))).ToListAsync();
                 var nowDate = DateTime.Now.Date;
                 var expiredStatus = await _dbContext.BookingStatuses.FirstOrDefaultAsync(s => s.StatusName == Consts.EXPIRED_STATUS);
-                Console.WriteLine(nowDate);
                 foreach (var booking in outdatedBookings)
                 {
                     booking.BookingStatus = expiredStatus;   
@@ -255,6 +255,8 @@ namespace SportFieldBooking.Biz.Booking
                 throw new Exception($"Error deactivating expired bookings");
             }
         }
+
+
     }
 
 }

@@ -417,9 +417,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Gateway.WebApi\\Gateway.WebApi.csproj",
-      "projectName": "Gateway.WebApi",
-      "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Gateway.WebApi\\Gateway.WebApi.csproj",
+      "projectUniqueName": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Gateway.WebApi\\GatewayUser.API.csproj",
+      "projectName": "GatewayUser.API",
+      "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Gateway.WebApi\\GatewayUser.API.csproj",
       "packagesPath": "C:\\Users\\OA\\.nuget\\packages\\",
       "outputPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Gateway.WebApi\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,20 +1,23 @@
-﻿using Quartz;
-using Quartz.Impl;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Serilog;
 using SportFieldBooking.Data;
 using SportFieldBooking.Helper.Exceptions;
 using SportFieldBooking.Helper.Tasks;
+using SportFieldBooking.API.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.DependencyInjection;
+using Quartz;
+using Quartz.Impl;
 
 #region add_configuraions
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options => {
@@ -31,6 +34,7 @@ builder.Services.AddSwaggerGen(options => {
         Description = "Bearer authentication with JWT token",
         Type = SecuritySchemeType.Http
     });
+
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
@@ -47,7 +51,7 @@ builder.Services.AddSwaggerGen(options => {
     });
 });
 
-// Add system configuration
+// Instantiate system configuration
 IConfiguration configuration = builder.Configuration;
 
 // Add Serilog
@@ -101,6 +105,22 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization();
 
+// Adding Quartz
+builder.Services.AddQuartz(q =>
+{
+    q.UseMicrosoftDependencyInjectionJobFactory();
+
+    var jobKey = new JobKey("deactivateBookingJob");
+    q.AddJob<DeactivateBookingsJob>(jobKey, j => j.WithDescription("Deactivate bookings job..."));
+    q.AddTrigger(t => t.WithIdentity("deactivateBookingSimpleTrigger").ForJob(jobKey).StartNow().WithSimpleSchedule(x => x.WithInterval(TimeSpan.FromSeconds(1)).RepeatForever()).WithDescription("Deactivate bookings trigger..."));
+});
+
+builder.Services.AddQuartzHostedService(
+    q => q.WaitForJobsToComplete = true
+);
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -120,8 +140,9 @@ app.MapControllers();
 try
 {
     Console.WriteLine("TEST");
-    logger.Information($"[MyLog]: Migrating process");
+    Console.WriteLine(DateTime.Now);
     Console.WriteLine(DateTime.Now.Date);
+    logger.Information($"[MyLog]: Migration process");
     using (var scope = app.Services.CreateScope())
     {
         using (var context = scope.ServiceProvider.GetRequiredService<DomainDbContext>())
@@ -130,11 +151,30 @@ try
         }
     }
 
-    DeactivateBookingsScheduler.StartAsync().GetAwaiter().GetResult();
+    //SimpleTaskScheduler.StartAsync().GetAwaiter().GetResult();
+    //DeactivateBookingsScheduler.StartAsync().GetAwaiter().GetResult();
+
+    //StdSchedulerFactory factory = new StdSchedulerFactory();
+
+    //IScheduler scheduler = await factory.GetScheduler();
+    //await scheduler.Start();
+
+    //IJobDetail job = JobBuilder.Create<DeactivateBookingsJob>()
+    //    .WithIdentity("deactivateBookingJob", "group1")
+    //    .Build();
+
+    //ITrigger trigger = TriggerBuilder.Create()
+    //    .WithIdentity("myTrigger", "group1")
+    //    .StartNow()
+    //    .WithSimpleSchedule(x => x.WithIntervalInSeconds(1).RepeatForever())
+    //    .Build();
+
+    //await scheduler.ScheduleJob(job, trigger);
+
 }
 catch (Exception e)
 {
-    logger.Error($"[MyLog]: Error in migrating process", e);
+    logger.Error($"[MyLog]: Error in migration process", e);
     throw;
 }
 

@@ -12,6 +12,6 @@ namespace SportFieldBooking.Biz.Booking
         Task UserDeleteAsync(HttpContext httpContext, long userId, long bookingId);
         Task<Page<List>> GetUserBooking(HttpContext httpContext, long userId, long pageIndex, int pageSize);
         Task<Page<List>> GetSportFieldBooking(HttpContext httpContext, long sportFieldId, long pageIndex, int pageSize);
-        Task DeactivateExpiredBooking(HttpContext httpContext);
+        Task DeactivateExpiredBookings();
     }
 }

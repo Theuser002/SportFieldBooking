@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "fbIxXEIsADQDeWZ/fPNP1ML2SCvuKI+sYXGYjQN92EY=",
-  "Source": "Gateway.WebApi",
-  "BasePath": "_content/Gateway.WebApi",
+  "Hash": "5GyodDQNbYEHFH7EB9dptqmil0L7x4c40ANXTdSf/rI=",
+  "Source": "GatewayUser.API",
+  "BasePath": "_content/GatewayUser.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

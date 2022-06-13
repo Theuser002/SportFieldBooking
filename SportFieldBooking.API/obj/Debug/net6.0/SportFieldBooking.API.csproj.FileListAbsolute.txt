@@ -130,3 +130,9 @@ D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\ob
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\obj\Debug\net6.0\SportFieldBooking.API.genruntimeconfig.cache
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\obj\Debug\net6.0\ref\SportFieldBooking.API.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Quartz.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Quartz.Extensions.DependencyInjection.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Microsoft.Extensions.Hosting.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Quartz.AspNetCore.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.API\bin\Debug\net6.0\Quartz.Extensions.Hosting.dll

@@ -21,7 +21,7 @@ namespace SportFieldBooking.Biz
         private JwtAuth.Repository _jwtAuth = null;
 
         // Nếu Repository object đang là null thì khởi tạo Repository object và inject các dependencies cần thiết
-        public User.IRepository User => _user?? (_user = new User.Repository(_dbContext, _configuration, _logger, _mapper));
+        public User.IRepository User => _user ?? (_user = new User.Repository(_dbContext, _configuration, _logger, _mapper));
         public SportField.IRepository SportField => _sportField ?? (_sportField = new SportField.Repository(_dbContext, _configuration, _logger, _mapper));
         public Booking.IRepository Booking => _booking ?? (_booking = new Booking.Repository(_dbContext, _configuration, _logger, _mapper));
         public BookingStatus.IRepository BookingStatus => _bookingStatus ?? (_bookingStatus = new BookingStatus.Repository(_dbContext, _configuration, _logger, _mapper));
@@ -32,7 +32,7 @@ namespace SportFieldBooking.Biz
         {
             _dbContext = context;     
             _configuration = configuration;
-            _logger = logger;   
+            _logger = logger;  
             _mapper = Mapper();   
         }
 

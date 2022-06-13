@@ -123,6 +123,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.4, )"
+            },
+            "Quartz.AspNetCore": {
+              "target": "Package",
+              "version": "[3.4.0, )"
             }
           },
           "imports": [

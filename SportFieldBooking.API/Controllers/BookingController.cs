@@ -193,26 +193,26 @@ namespace SportFieldBooking.API.Controllers
         }
 
         //[Authorize]
-        [HttpPatch("DeactivateExpiredBookings")]
-        public async Task<IActionResult> DeactivateExpiredBookings()
-        {
-            try
-            {
-                var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
-                if (role != 0)
-                {
-                    return Unauthorized("Only admin can use this function");
-                }
+        //[HttpPatch("DeactivateExpiredBookings")]
+        //public async Task<IActionResult> DeactivateExpiredBookings()
+        //{
+        //    try
+        //    {
+        //        var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
+        //        if (role != 0)
+        //        {
+        //            return Unauthorized("Only admin can use this function");
+        //        }
 
-                await _repository.Booking.DeactivateExpiredBooking(HttpContext);
-                return Ok();
-            }
-            catch (Exception e)
-            {
-                _logger.LogError("Error deactivating expired bookings");
-                return BadRequest(e.Message);
-            }
-        }
+        //        await _repository.Booking.DeactivateExpiredBooking();
+        //        return Ok();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        _logger.LogError("Error deactivating expired bookings");
+        //        return BadRequest(e.Message);
+        //    }
+        //}
 
     }
 }

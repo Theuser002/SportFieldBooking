@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SportFieldBooking.Helper.Tasks
 {
-    public class DeactivateBookingsTask : IJob
+    public class SimpleTask : IJob
     {
         public Task Execute(IJobExecutionContext context)
         {
