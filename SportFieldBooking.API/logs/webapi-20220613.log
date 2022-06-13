@@ -10866,6 +10866,7 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 [2022-06-13 11:33:25.903 +07:00  DBG]  Shutdown of threadpool complete.
 [2022-06-13 11:33:25.905 +07:00  INF]  Scheduler QuartzScheduler_$_NON_CLUSTERED Shutdown complete.
 [2022-06-13 11:33:25.906 +07:00  DBG]  Hosting stopped
+<<<<<<< HEAD
 [2022-06-13 11:52:49.174 +07:00  DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
 [2022-06-13 11:52:49.489 +07:00  INF]  [MyLog]: Migration process
 [2022-06-13 11:52:51.937 +07:00  DBG]  Hosting starting
@@ -11389,3 +11390,5 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 [2022-06-13 11:54:35.682 +07:00  DBG]  Batch acquisition of 1 triggers
 [2022-06-13 11:54:35.682 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
 [2022-06-13 11:54:35.687 +07:00  DBG]  Trigger instruction : NoInstruction
+=======
+>>>>>>> authentication1
