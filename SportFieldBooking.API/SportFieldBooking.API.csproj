@@ -32,8 +32,4 @@
     <ProjectReference Include="..\SportFieldBooking.Data.Model\SportFieldBooking.Data.Model.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="logs\" />
-  </ItemGroup>
-
 </Project>
