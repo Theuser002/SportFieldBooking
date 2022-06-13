@@ -1,0 +1,17 @@
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\bin\Debug\net6.0\SportFieldBooking.Data.Model.deps.json
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\bin\Debug\net6.0\SportFieldBooking.Data.Model.runtimeconfig.json
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\bin\Debug\net6.0\SportFieldBooking.Data.Model.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\bin\Debug\net6.0\SportFieldBooking.Data.Model.pdb
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\bin\Debug\net6.0\SportFieldBooking.Helper.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\bin\Debug\net6.0\SportFieldBooking.Helper.pdb
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\obj\Debug\net6.0\SportFieldBooking.Data.Model.csproj.AssemblyReference.cache
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\obj\Debug\net6.0\SportFieldBooking.Data.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\obj\Debug\net6.0\SportFieldBooking.Data.Model.AssemblyInfoInputs.cache
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\obj\Debug\net6.0\SportFieldBooking.Data.Model.AssemblyInfo.cs
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\obj\Debug\net6.0\SportFieldBooking.Data.Model.csproj.CoreCompileInputs.cache
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\obj\Debug\net6.0\SportFieldBooking.Data.Model.csproj.CopyComplete
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\obj\Debug\net6.0\SportFieldBooking.Data.Model.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\obj\Debug\net6.0\refint\SportFieldBooking.Data.Model.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\obj\Debug\net6.0\SportFieldBooking.Data.Model.pdb
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\obj\Debug\net6.0\SportFieldBooking.Data.Model.genruntimeconfig.cache
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking.Data.Model\obj\Debug\net6.0\ref\SportFieldBooking.Data.Model.dll

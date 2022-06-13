@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="JwtAuth\Repository.cs~RF3c0131d.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.4" />
+    <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Helper\SportFieldBooking.Helper.csproj" />
+    <ProjectReference Include="..\SportFieldBooking.Biz.Model\SportFieldBooking.Biz.Model.csproj" />
+    <ProjectReference Include="..\SportFieldBooking.Data.Acess\SportFieldBooking.Data.csproj" />
+    <ProjectReference Include="..\SportFieldBooking.Data.Model\SportFieldBooking.Data.Model.csproj" />
+  </ItemGroup>
+
+</Project>

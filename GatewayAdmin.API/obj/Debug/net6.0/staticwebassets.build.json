@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ghbjtKSe7bcM8P5DxPOJi//Zb//krQ1i/7jEl9jyDUU=",
+  "Source": "GatewayAdmin.API",
+  "BasePath": "_content/GatewayAdmin.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
