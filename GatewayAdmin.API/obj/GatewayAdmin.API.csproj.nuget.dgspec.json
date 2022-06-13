@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj": {}
+    "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\GatewayAdmin.API\\GatewayAdmin.API.csproj": {}
   },
   "projects": {
-    "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj": {
+    "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\GatewayAdmin.API\\GatewayAdmin.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj",
-        "projectName": "SportFieldBooking.Helper",
-        "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj",
+        "projectUniqueName": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\GatewayAdmin.API\\GatewayAdmin.API.csproj",
+        "projectName": "GatewayAdmin.API",
+        "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\GatewayAdmin.API\\GatewayAdmin.API.csproj",
         "packagesPath": "C:\\Users\\OA\\.nuget\\packages\\",
-        "outputPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\obj\\",
+        "outputPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\GatewayAdmin.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\OA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,17 +40,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "AutoMapper": {
+            "Ocelot": {
               "target": "Package",
-              "version": "[11.0.1, )"
+              "version": "[18.0.0, )"
             },
-            "EntityFramework": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.4, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -64,6 +60,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

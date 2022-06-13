@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj": {}
+    "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Gateway.WebApi\\GatewayUser.API.csproj": {}
   },
   "projects": {
-    "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj": {
+    "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Gateway.WebApi\\GatewayUser.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj",
-        "projectName": "SportFieldBooking.Helper",
-        "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\SportFieldBooking.Helper.csproj",
+        "projectUniqueName": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Gateway.WebApi\\GatewayUser.API.csproj",
+        "projectName": "GatewayUser.API",
+        "projectPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Gateway.WebApi\\GatewayUser.API.csproj",
         "packagesPath": "C:\\Users\\OA\\.nuget\\packages\\",
-        "outputPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Helper\\obj\\",
+        "outputPath": "D:\\#Study\\Programming\\DotNET\\Practice\\SportFieldBooking\\Gateway.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\OA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,17 +40,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "AutoMapper": {
+            "Ocelot": {
               "target": "Package",
-              "version": "[11.0.1, )"
-            },
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[6.4.4, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[18.0.0, )"
             }
           },
           "imports": [
@@ -64,6 +56,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
