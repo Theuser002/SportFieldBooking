@@ -10,7 +10,8 @@
         }
       ],
       "UpstreamPathTemplate": "/UserGateway/{everything}",
-      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PATCH" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT", "PATCH" ],
+      "SwaggerKey":  "AllServices"
       },
       //  "DownstreamPathTemplate": "/api/Booking",
       //  "DownstreamScheme": "http",

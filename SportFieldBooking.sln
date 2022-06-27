@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportFieldBooking", "SportF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportFieldBooking.Helper", "Helper\SportFieldBooking.Helper.csproj", "{8AAA3D08-8EC9-4268-9F7C-DD91F7BF8F06}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GatewayUser.API", "Gateway.WebApi\GatewayUser.API.csproj", "{DB7EF162-6C79-48F4-BA11-5CB88447EFCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GatewayUserOld.API", "Gateway.WebApi\GatewayUserOld.API.csproj", "{DB7EF162-6C79-48F4-BA11-5CB88447EFCA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GatewayAdmin.API", "GatewayAdmin.API\GatewayAdmin.API.csproj", "{F5FB24A1-9F5A-4053-89F8-294D858F8F11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayUser.API", "GatewayUser.API\GatewayUser.API.csproj", "{10CB270A-4ABB-428B-86FC-21C9C19BD9B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{F5FB24A1-9F5A-4053-89F8-294D858F8F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5FB24A1-9F5A-4053-89F8-294D858F8F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5FB24A1-9F5A-4053-89F8-294D858F8F11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10CB270A-4ABB-428B-86FC-21C9C19BD9B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10CB270A-4ABB-428B-86FC-21C9C19BD9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10CB270A-4ABB-428B-86FC-21C9C19BD9B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10CB270A-4ABB-428B-86FC-21C9C19BD9B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

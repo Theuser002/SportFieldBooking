@@ -91,6 +91,16 @@
       ]
     },
     {
+      "Key": "Authenticate",
+      "Config": [
+        {
+          "Name": "Admin API - All Services",
+          "Version": "v1",
+          "Url": "http://localhost:5290/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
       "Key": "Booking",
       "Config": [
         {

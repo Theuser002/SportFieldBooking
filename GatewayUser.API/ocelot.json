@@ -1,0 +1,34 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/{everything}",
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT", "PATCH" ],
+      "SwaggerKey": "AllServices"
+    }
+  ],
+  
+  "SwaggerEndPoints": [
+    {
+      "Key": "AllServices",
+      "Config": [
+        {
+          "Name": "User API - All Services",
+          "Version": "v1",
+          "Url": "http://localhost:5290/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5041"
+  }
+}
