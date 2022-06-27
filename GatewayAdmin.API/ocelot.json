@@ -1,17 +1,31 @@
 {
   "Routes": [
-    //{
-    //  "DownstreamPathTemplate": "/api/{everyt/{everything}ng}",
-    //  "DownstreamScheme": "http",
-    //  "DownstreamHostAndPorts": [
-    //    {
-    //      "Host": "localhost",
-    //      "Port": 5290
-    //    }
-    //  ],
-    //  "UpstreamPathTemplate": "/AdminGateway/{everything}",
-    //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT", "PATCH" ]
-    //},
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/AdminGateway/{everything}",
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT", "PATCH" ],
+      "SwaggerKey": "AllServices"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Authenticate/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/AdminGateway/Authenticate/{everything}",
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PATCH" ],
+      "SwaggerKey": "Authenticate"
+    },
     {
       "DownstreamPathTemplate": "/api/Booking/{everything}",
       "DownstreamScheme": "http",
@@ -22,7 +36,8 @@
         }
       ],
       "UpstreamPathTemplate": "/AdminGateway/Booking/{everything}",
-      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PATCH" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PATCH" ],
+      "SwaggerKey": "Booking"
     },
     {
       "DownstreamPathTemplate": "/api/BookingStatus/{everything}",
@@ -34,7 +49,8 @@
         }
       ],
       "UpstreamPathTemplate": "/AdminGateway/BookingStatus/{everything}",
-      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ],
+      "SwaggerKey": "BookingStatus"
     },
     {
       "DownstreamPathTemplate": "/api/SportField/{everything}",
@@ -46,7 +62,8 @@
         }
       ],
       "UpstreamPathTemplate": "/AdminGateway/SportField/{everything}",
-      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ],
+      "SwaggerKey": "SportField"
     },
     {
       "DownstreamPathTemplate": "/api/User/{everything}",
@@ -58,7 +75,70 @@
         }
       ],
       "UpstreamPathTemplate": "/AdminGateway/User/{everything}",
-      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ],
+      "SwaggerKey": "User"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "AllServices",
+      "Config": [
+        {
+          "Name": "Admin API - All Services",
+          "Version": "v1",
+          "Url": "http://localhost:5290/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Authenticate",
+      "Config": [
+        {
+          "Name": "Admin API - All Services",
+          "Version": "v1",
+          "Url": "http://localhost:5290/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Booking",
+      "Config": [
+        {
+          "Name": "Admin API - Booking",
+          "Version": "v1",
+          "Url": "http://localhost:5290/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "BookingStatus",
+      "Config": [
+        {
+          "Name": "Admin API - Booking Status",
+          "Version": "v1",
+          "Url": "http://localhost:5290/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "SportField",
+      "Config": [
+        {
+          "Name": "Admin API - Sport Field",
+          "Version": "v1",
+          "Url": "http://localhost:5290/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "User",
+      "Config": [
+        {
+          "Name": "Admin API - User",
+          "Version": "v1",
+          "Url": "http://localhost:5290/swagger/v1/swagger.json"
+        }
+      ]
     }
   ],
   "GlobalConfiguration": {

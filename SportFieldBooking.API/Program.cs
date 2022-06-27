@@ -12,14 +12,25 @@ using Microsoft.Extensions.DependencyInjection;
 using Quartz;
 using Quartz.Impl;
 
-#region add_configuraions
+#region ConfigureProject
+//------------------------------ Before app is built ------------------------------
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllers();
+// Instantiate system configuration
+#region InstantiateSystemConfiguration
+IConfiguration configuration = builder.Configuration;
+#endregion
 
+// Add Controllers
+#region AddControllers
+builder.Services.AddControllers();
+#endregion
+
+// Add Swaggers
+#region AddSwaggers
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddMvc();
 builder.Services.AddSwaggerGen(options => {
     // Fix "SchemaId already used for ... error (error can be seen in log)"
     options.CustomSchemaIds(type => type.ToString());
@@ -49,23 +60,28 @@ builder.Services.AddSwaggerGen(options => {
             new List<string>()
         },
     });
-});
 
-// Instantiate system configuration
-IConfiguration configuration = builder.Configuration;
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "SportFieldBookingAPI", Version = "v1" });
+});
+#endregion
 
 // Add Serilog
+#region AddSerilog
 var logger = new LoggerConfiguration()
     .ReadFrom.Configuration(configuration)
     .Enrich.FromLogContext()
     .CreateLogger();
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
+#endregion
 
 // Dependencies Injection
+#region DI
 builder.Services.AddScoped<SportFieldBooking.Biz.IRepositoryWrapper, SportFieldBooking.Biz.RepositoryWrapper>();
+#endregion
 
 // DB Config
+#region DBConfig
 string dbProvider = configuration["DatabaseOptions:Provider"];
 // For Entity Framework
 switch (dbProvider.ToLower())
@@ -76,16 +92,17 @@ switch (dbProvider.ToLower())
     default:
         throw new Exception($"Wrong provider's name or unsupported provider: {dbProvider}");
 }
+#endregion
 
-// Adding Authentication
+// Add Auth
+#region AddAuth(JWT)
+// Add Authentication
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-// Adding Jwt Bearer
-.AddJwtBearer(options =>
+}).AddJwtBearer(options =>
 {
     options.SaveToken = true;
     options.RequireHttpsMetadata = false;
@@ -102,10 +119,12 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
     };
 });
-
+// Add Authorization
 builder.Services.AddAuthorization();
+#endregion
 
-// Adding Quartz
+// Add Quartz
+#region AddQuartz
 builder.Services.AddQuartz(q =>
 {
     q.UseMicrosoftDependencyInjectionJobFactory();
@@ -118,21 +137,35 @@ builder.Services.AddQuartz(q =>
 builder.Services.AddQuartzHostedService(
     q => q.WaitForJobsToComplete = true
 );
+#endregion
 
+
+//------------------------------ After app is built ------------------------------
 
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+#region useSwagger
+#region comments
+//if (app.Environment.IsDevelopment())
+//{
+//app.UseSwagger();
+//app.UseSwaggerUI();
+//}
+#endregion
+app.UseSwagger();
+app.UseSwaggerUI(options =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    options.SwaggerEndpoint("v1/swagger.json", "SportFieldBookingAPI v1");
+});
+app.MapControllers();
+#endregion
 
+#region UseAuth
 app.UseAuthentication();
 app.UseAuthorization();
-app.MapControllers();
+#endregion
 
 #endregion
 
@@ -150,26 +183,6 @@ try
             context.Database.Migrate();
         }
     }
-
-    //SimpleTaskScheduler.StartAsync().GetAwaiter().GetResult();
-    //DeactivateBookingsScheduler.StartAsync().GetAwaiter().GetResult();
-
-    //StdSchedulerFactory factory = new StdSchedulerFactory();
-
-    //IScheduler scheduler = await factory.GetScheduler();
-    //await scheduler.Start();
-
-    //IJobDetail job = JobBuilder.Create<DeactivateBookingsJob>()
-    //    .WithIdentity("deactivateBookingJob", "group1")
-    //    .Build();
-
-    //ITrigger trigger = TriggerBuilder.Create()
-    //    .WithIdentity("myTrigger", "group1")
-    //    .StartNow()
-    //    .WithSimpleSchedule(x => x.WithIntervalInSeconds(1).RepeatForever())
-    //    .Build();
-
-    //await scheduler.ScheduleJob(job, trigger);
 
 }
 catch (Exception e)
