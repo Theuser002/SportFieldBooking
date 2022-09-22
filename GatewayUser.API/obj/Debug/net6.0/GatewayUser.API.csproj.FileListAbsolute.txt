@@ -56,3 +56,4 @@ D:\#Study\Programming\DotNET\Practice\SportFieldBooking\GatewayUser.API\obj\Debu
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\GatewayUser.API\obj\Debug\net6.0\GatewayUser.API.genruntimeconfig.cache
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\GatewayUser.API\obj\Debug\net6.0\ref\GatewayUser.API.dll
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\GatewayUser.API\bin\Debug\net6.0\ocelot.json
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\GatewayUser.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

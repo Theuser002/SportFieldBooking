@@ -27,7 +27,7 @@ namespace SportFieldBooking.API.Controllers
             _repository = repository;
         }
         
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest model)
         {
@@ -102,7 +102,7 @@ namespace SportFieldBooking.API.Controllers
         //    }
         //}
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpPost("RefreshToken")]
         public async Task<IActionResult> RefreshToken(RefreshTokenRequest model)
         {

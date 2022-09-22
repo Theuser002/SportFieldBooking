@@ -30,39 +30,46 @@ builder.Services.AddControllers();
 #region AddSwaggers
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddMvc();
-builder.Services.AddSwaggerGen(options => {
-    // Fix "SchemaId already used for ... error (error can be seen in log)"
-    options.CustomSchemaIds(type => type.ToString());
+//builder.Services.AddMvc();
 
-    // Add JWT on Swagger
-    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+#region Uncomment this
+builder.Services.AddSwaggerGen(
+    options =>
     {
-        Scheme = "Bearer",
-        BearerFormat = "JWT",
-        In = ParameterLocation.Header,
-        Name = "Authorization",
-        Description = "Bearer authentication with JWT token",
-        Type = SecuritySchemeType.Http
-    });
+        // Fix "SchemaId already used for ... error (error can be seen in log)"
+        options.CustomSchemaIds(type => type.ToString());
 
-    options.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
+        // Add JWT on Swagger
+        options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
         {
-            new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference
-                {
-                    Id = "Bearer",
-                    Type = ReferenceType.SecurityScheme
-                }
-            },
-            new List<string>()
-        },
-    });
+            Scheme = "Bearer",
+            BearerFormat = "JWT",
+            In = ParameterLocation.Header,
+            Name = "Authorization",
+            Description = "Bearer authentication with JWT token",
+            Type = SecuritySchemeType.Http
+        });
 
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "SportFieldBookingAPI", Version = "v1" });
-});
+        options.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
+            {
+                new OpenApiSecurityScheme
+                {
+                    Reference = new OpenApiReference
+                    {
+                        Id = "Bearer",
+                        Type = ReferenceType.SecurityScheme
+                    }
+                },
+                new List<string>()
+            },
+        });
+
+        options.SwaggerDoc("v1", new OpenApiInfo { Title = "SportFieldBookingAPI", Version = "v1" });
+    }
+);
+#endregion
+
 #endregion
 
 // Add Serilog
@@ -94,66 +101,71 @@ switch (dbProvider.ToLower())
 }
 #endregion
 
+#region Uncomment this
 // Add Auth
 #region AddAuth(JWT)
 // Add Authentication
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(options =>
-{
-    options.SaveToken = true;
-    options.RequireHttpsMetadata = false;
-    options.TokenValidationParameters = new TokenValidationParameters()
-    {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        ClockSkew = TimeSpan.Zero,
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+//}).AddJwtBearer(
+//    options =>
+//    {
+//        options.SaveToken = true;
+//        options.RequireHttpsMetadata = false;
+//        options.TokenValidationParameters = new TokenValidationParameters()
+//        {
+//            ValidateIssuer = true,
+//            ValidateAudience = true,
+//            ValidateLifetime = true,
+//            ValidateIssuerSigningKey = true,
+//            ClockSkew = TimeSpan.Zero,
 
-        ValidAudience = configuration["JWT:ValidAudience"],
-        ValidIssuer = configuration["JWT:ValidIssuer"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
-    };
-});
-// Add Authorization
+//            ValidAudience = configuration["JWT:ValidAudience"],
+//            ValidIssuer = configuration["JWT:ValidIssuer"],
+//            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
+//        };
+//    }
+//);
+//Add Authorization
 builder.Services.AddAuthorization();
 #endregion
-
-// Add Quartz
-#region AddQuartz
-builder.Services.AddQuartz(q =>
-{
-    q.UseMicrosoftDependencyInjectionJobFactory();
-
-    var jobKey = new JobKey("deactivateBookingJob");
-    q.AddJob<DeactivateBookingsJob>(jobKey, j => j.WithDescription("Deactivate bookings job..."));
-    q.AddTrigger(t => t.WithIdentity("deactivateBookingSimpleTrigger").ForJob(jobKey).StartNow().WithSimpleSchedule(x => x.WithInterval(TimeSpan.FromSeconds(1)).RepeatForever()).WithDescription("Deactivate bookings trigger..."));
-});
-
-builder.Services.AddQuartzHostedService(
-    q => q.WaitForJobsToComplete = true
-);
 #endregion
 
+// Add Quartz - Cron job scheduler to automatically change status of expired bookings
+#region AddQuartz - Uncomment this
+//builder.Services.AddQuartz(q =>
+//{
+//    q.UseMicrosoftDependencyInjectionJobFactory();
+
+//    var jobKey = new JobKey("deactivateBookingJob");
+//    q.AddJob<DeactivateBookingsJob>(jobKey, j => j.WithDescription("Deactivate bookings job..."));
+//    q.AddTrigger(t => t.WithIdentity("deactivateBookingSimpleTrigger").ForJob(jobKey).StartNow().WithSimpleSchedule(x => x.WithInterval(TimeSpan.FromSeconds(10)).RepeatForever()).WithDescription("Deactivate bookings trigger..."));
+//});
+
+//builder.Services.AddQuartzHostedService(
+//    q => q.WaitForJobsToComplete = true
+//);
+#endregion
+
+//------------------------------ App is being built ------------------------------
+var app = builder.Build();
 
 //------------------------------ After app is built ------------------------------
 
-
-var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 #region useSwagger
-#region comments
-//if (app.Environment.IsDevelopment())
-//{
-//app.UseSwagger();
-//app.UseSwaggerUI();
-//}
+#region Comment this
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 #endregion
+
+#region uncomment this
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
@@ -162,7 +174,9 @@ app.UseSwaggerUI(options =>
 app.MapControllers();
 #endregion
 
-#region UseAuth
+#endregion
+
+#region UseAuth - Uncomment this
 app.UseAuthentication();
 app.UseAuthorization();
 #endregion

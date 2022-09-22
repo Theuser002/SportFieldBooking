@@ -240,7 +240,7 @@ namespace SportFieldBooking.Biz.Booking
         {
             try
             {
-                Console.WriteLine("Deactivating expired bookings...");
+                //Console.WriteLine("Deactivating expired bookings...");
                 var outdatedBookings = await _dbContext.Bookings.Where(b => (DateTime.Compare(b.BookDate.Date, DateTime.Now.Date) < 0 || (DateTime.Compare(b.BookDate.Date, DateTime.Now.Date) == 0 && TimeSpan.Compare(b.EndHour.TimeOfDay, DateTime.Now.TimeOfDay) < 0))).ToListAsync();
                 var nowDate = DateTime.Now.Date;
                 var expiredStatus = await _dbContext.BookingStatuses.FirstOrDefaultAsync(s => s.StatusName == Consts.EXPIRED_STATUS);

@@ -28,7 +28,7 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="model">biz model cho tao moi mot status</param>
         /// <returns>response</returns>
-        [Authorize]
+        //[Authorize]
         [HttpPost("CreateStatus")]
         public async Task<IActionResult> Create(New model)
         {
@@ -56,7 +56,7 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="id">id cua status can lay</param>
         /// <returns>response</returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet("Get/{id}")]
         public async Task<IActionResult> Get(long id)
         {
@@ -85,7 +85,7 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="pageNumber">so thu tu trang</param>
         /// <param name="pageSize">so ban ghi trong mot trang</param>
         /// <returns></returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet("GetList")]
         public async Task<IActionResult> GetList(long pageNumber, int pageSize)
         {
@@ -113,7 +113,7 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="id">id cua status muon xoa</param>
         /// <returns>response</returns>
-        [Authorize]
+        //[Authorize]
         [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> Delete (long id)
         {
@@ -141,7 +141,7 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="model">biz model cho update mot status</param>
         /// <returns>response</returns>
-        [Authorize]
+        //[Authorize]
         [HttpPut("UpdateStatus")]
         public async Task<IActionResult> Update(Edit model)
         {

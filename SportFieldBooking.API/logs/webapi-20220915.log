@@ -1,0 +1,126 @@
+[2022-09-15 13:43:59.851 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:44:01.310 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:44:04.263 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:44:05.369 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:44:05.371 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:44:05.373 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:44:14.235 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:44:14.254 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:44:14.320 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:44:24.168 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:44:24.168 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:44:24.172 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:44:34.167 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:44:34.167 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:44:34.169 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:44:44.169 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:44:44.169 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:44:44.171 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:44:54.168 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:44:54.168 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:44:54.170 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:45:04.178 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:45:04.178 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:45:04.182 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:45:14.160 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:45:14.160 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:45:14.165 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:45:24.173 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:45:24.173 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:45:24.177 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:45:34.176 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:45:34.176 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:45:34.179 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:45:44.158 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:45:44.158 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:45:44.162 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:45:54.172 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:45:54.172 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:45:54.178 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:46:04.172 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:46:04.172 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:46:04.176 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:46:14.168 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:46:14.168 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:46:14.172 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:46:24.162 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:46:24.163 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:46:24.164 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:46:34.167 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:46:34.167 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:46:34.168 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:46:44.164 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:46:44.164 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:46:44.166 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:46:54.160 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:46:54.160 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:46:54.162 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:47:04.174 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:47:04.174 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:47:04.175 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:47:14.172 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:47:14.172 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:47:14.176 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:47:24.176 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:47:24.176 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:47:24.180 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:47:34.166 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:47:34.166 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:47:34.168 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:47:44.168 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:47:44.168 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:47:44.170 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:47:54.164 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:47:54.164 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:47:54.166 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:48:04.159 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:48:04.160 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:48:04.162 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:48:14.167 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:48:14.167 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:48:14.169 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:48:24.170 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:48:24.170 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:48:24.175 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:48:34.169 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:48:34.170 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:48:34.175 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:48:44.171 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:48:44.171 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:48:44.175 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:48:54.166 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:48:54.166 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:48:54.173 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:49:04.160 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:49:04.160 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:49:04.162 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:49:14.168 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:49:14.168 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:49:14.174 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:49:24.170 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:49:24.170 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:49:24.176 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:49:34.173 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:49:34.173 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:49:34.181 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:49:44.167 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:49:44.167 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:49:44.173 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:49:54.177 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:49:54.177 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:49:54.184 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:50:04.172 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:50:04.172 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:50:04.180 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:50:14.168 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:50:14.168 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:50:14.174 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:50:24.168 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:50:24.168 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:50:24.174 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:50:34.176 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:50:34.176 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:50:34.182 +07:00  DBG]  Trigger instruction : NoInstruction
+[2022-09-15 13:50:44.174 +07:00  DBG]  Batch acquisition of 1 triggers
+[2022-09-15 13:50:44.174 +07:00  DBG]  Calling Execute on job DEFAULT.deactivateBookingJob
+[2022-09-15 13:50:44.179 +07:00  DBG]  Trigger instruction : NoInstruction

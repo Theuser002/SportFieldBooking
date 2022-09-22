@@ -23,7 +23,7 @@ namespace SportFieldBooking.API.Controllers
             _repository = repository;
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         /// <summary>
         /// Auth: Hung
         /// Created: 18/04/2022
@@ -47,7 +47,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPost("CreateAdmin")]
         public async Task<IActionResult> CreateAdmin(New model)
         {
@@ -69,7 +69,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 19/03/2022
@@ -98,7 +98,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet("GetSelfInfo")]
         public async Task<IActionResult> GetSelfInfo()
         {
@@ -114,7 +114,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 20/04/2022
@@ -146,7 +146,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 25/04/2022
@@ -175,7 +175,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpDelete("SelfDelete")]
         public async Task<IActionResult> SelfDelete()
         {
@@ -192,7 +192,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         /// <summary>
         /// Author: Hung
         /// Created: 25/04/2022
@@ -221,7 +221,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPut("SelfUpdate")]
         public async Task<IActionResult> SelfUpdate(Edit model)
         {
@@ -239,7 +239,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 25/04/2022
@@ -270,7 +270,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 25/04/2022
@@ -302,7 +302,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 30/04/2022
@@ -332,7 +332,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPut("SelfAddBalance")]
         public async Task<IActionResult> SelfAddBalance(long amount)
         {
@@ -354,7 +354,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAll()
         {
