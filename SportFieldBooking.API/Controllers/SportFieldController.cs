@@ -29,7 +29,7 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="model"> Biz model cho tao moi mot san van dong </param>
         /// <returns> Response </returns>
-        [Authorize]
+        //[Authorize]
         [HttpPost("CreateField")]
         public async Task<IActionResult> Create(New model)
         {
@@ -59,8 +59,8 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="id"> Id cua san van dong </param>
         /// <returns> Response </returns>
-        [Authorize]
-        [HttpPost("Get/{id}")]
+        //[Authorize]
+        [HttpGet("Get/{id}")]
         public async Task<IActionResult> Get(long id)
         {
             try
@@ -82,7 +82,7 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="pageNumber"> So thu tu trang </param>
         /// <param name="pageSize"> So ban ghi trong mot trang </param>
         /// <returns></returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet("GetList")]
         public async Task<IActionResult> GetList(long pageNumber, int pageSize)
         {
@@ -105,7 +105,7 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="id">Id cua san van dong muon xoa</param>
         /// <returns> Response </returns>
-        [Authorize]
+        //[Authorize]
         [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> Delete(long id)
         {
@@ -134,7 +134,7 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="model"> Biz model cho viec edit thong tin san van dong </param>
         /// <returns>  Response </returns>
-        [Authorize]
+        //[Authorize]
         [HttpPut("UpdateSportField")]
         public async Task<IActionResult> Update(Edit model)
         {
@@ -165,7 +165,7 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="pageIndex">so thu tu trang</param>
         /// <param name="pageSize">so ban ghi trong mot trang</param>
         /// <returns>response</returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet("SearchName")]
         public async Task<IActionResult> SearchName(string name, long pageIndex, int pageSize)
         {
@@ -189,7 +189,7 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="pageIndex">so thu tu trang</param>
         /// <param name="pageSize">so ban ghi trong mot trang</param>
         /// <returns>response</returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet("OpenNow")]
         public async Task<IActionResult> OpenNow(long pageIndex, int pageSize)
         {
@@ -215,7 +215,7 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="pageIndex"></param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet("FilterByTime")]
         public async Task<IActionResult> FilterByTime(string startTimeStr, string endTimeStr, long pageIndex, int pageSize)
         {

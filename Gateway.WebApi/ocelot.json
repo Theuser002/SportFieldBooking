@@ -1,65 +1,76 @@
 {
   "Routes": [
     {
-        "DownstreamPathTemplate": "/api/{everything}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "localhost",
-            "Port": 5290
-          }
-        ],
-        "UpstreamPathTemplate": "/UserGateway/{everything}",
-        "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PATCH" ]
-      },
-      //  "DownstreamPathTemplate": "/api/Booking",
-      //  "DownstreamScheme": "http",
-      //  "DownstreamHostAndPorts": [
-      //    {
-      //      "Host": "localhost",
-      //      "Port": 5290
-      //    }
-      //  ],
-      //  "UpstreamPathTemplate": "/UserGateway/Booking",
-      //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PATCH" ]
-      //},
-      //{
-      //  "DownstreamPathTemplate": "/api/BookingStatus",
-      //  "DownstreamScheme": "http",
-      //  "DownstreamHostAndPorts": [
-      //    {
-      //      "Host": "localhost",
-      //      "Port": 5290
-      //    }
-      //  ],
-      //  "UpstreamPathTemplate": "/UserGateway/BookingStatus",
-      //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
-      //},
-      //{
-      //  "DownstreamPathTemplate": "/api/SportField",
-      //  "DownstreamScheme": "http",
-      //  "DownstreamHostAndPorts": [
-      //    {
-      //      "Host": "localhost",
-      //      "Port": 5290
-      //    }
-      //  ],
-      //  "UpstreamPathTemplate": "/UserGateway/SportField",
-      //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
-      //},
-      //{
-      //  "DownstreamPathTemplate": "/api/User",
-      //  "DownstreamScheme": "http",
-      //  "DownstreamHostAndPorts": [
-      //    {
-      //      "Host": "localhost",
-      //      "Port": 5290
-      //    }
-      //  ],
-      //  "UpstreamPathTemplate": "/UserGateway/User",
-      //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
-      //}
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/{everything}",
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT", "PATCH" ],
+      "SwaggerKey": "AllServices"
+    },
+    //  "DownstreamPathTemplate": "/api/Booking",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5290
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/UserGateway/Booking",
+    //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PATCH" ]
+    //},
+    //{
+    //  "DownstreamPathTemplate": "/api/BookingStatus",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5290
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/UserGateway/BookingStatus",
+    //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
+    //},
+    //{
+    //  "DownstreamPathTemplate": "/api/SportField",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5290
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/UserGateway/SportField",
+    //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
+    //},
+    //{
+    //  "DownstreamPathTemplate": "/api/User",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5290
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/UserGateway/User",
+    //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
+    //}
   ],
+
+  "SwaggerEndpoints": [
+    {
+      "Key": "AllServices",
+      "Config": "User API - All Services",
+      "Version": "v1",
+      "Url": "http://localhost:5290/swagger/v1/swagger.json"
+    }
+  ],
+
   "GlobalConfiguration": {
     "BaseUrl": "https://localhost:5282"
   }

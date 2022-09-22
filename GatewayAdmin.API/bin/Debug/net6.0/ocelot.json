@@ -1,19 +1,9 @@
+//API gateway chi co kha nang filter authentication con authorization van phai tien hanh trong endpoint
+
 {
   "Routes": [
-    //{
-    //  "DownstreamPathTemplate": "/api/{everyt/{everything}ng}",
-    //  "DownstreamScheme": "http",
-    //  "DownstreamHostAndPorts": [
-    //    {
-    //      "Host": "localhost",
-    //      "Port": 5290
-    //    }
-    //  ],
-    //  "UpstreamPathTemplate": "/AdminGateway/{everything}",
-    //  "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT", "PATCH" ]
-    //},
     {
-      "DownstreamPathTemplate": "/api/Booking/{everything}",
+      "DownstreamPathTemplate": "/api/Authenticate/Login",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -21,11 +11,13 @@
           "Port": 5290
         }
       ],
-      "UpstreamPathTemplate": "/AdminGateway/Booking/{everything}",
-      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PATCH" ]
+      "UpstreamPathTemplate": "/AdminGateway/Authenticate/Login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "SwaggerKey": "AdminServices"
     },
+
     {
-      "DownstreamPathTemplate": "/api/BookingStatus/{everything}",
+      "DownstreamPathTemplate": "/api/Authenticate/RefreshToken",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -33,11 +25,13 @@
           "Port": 5290
         }
       ],
-      "UpstreamPathTemplate": "/AdminGateway/BookingStatus/{everything}",
-      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
+      "UpstreamPathTemplate": "/AdminGateway/Authenticate/RefreshToken",
+      "UpstreamHttpMethod": [ "POST" ],
+      "SwaggerKey": "AdminServices"
     },
+
     {
-      "DownstreamPathTemplate": "/api/SportField/{everything}",
+      "DownstreamPathTemplate": "/api/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -45,20 +39,25 @@
           "Port": 5290
         }
       ],
-      "UpstreamPathTemplate": "/AdminGateway/SportField/{everything}",
-      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
-    },
+      "UpstreamPathTemplate": "/AdminGateway/{everything}",
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT", "PATCH" ],
+      "SwaggerKey": "AdminServices",
+      "AuthenticationOptions": { // Yeu cau phai co authenitcation token (o day minh dung JWT) moi cho chay APIs
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    }
+  ],
+  "SwaggerEndPoints": [
     {
-      "DownstreamPathTemplate": "/api/User/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
+      "Key": "AdminServices",
+      "Config": [
         {
-          "Host": "localhost",
-          "Port": 5290
+          "Name": "Admin API - All Services",
+          "Version": "v1",
+          "Url": "http://localhost:5290/swagger/v1/swagger.json"
         }
-      ],
-      "UpstreamPathTemplate": "/AdminGateway/User/{everything}",
-      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT" ]
+      ]
     }
   ],
   "GlobalConfiguration": {

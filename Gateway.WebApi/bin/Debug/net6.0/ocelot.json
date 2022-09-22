@@ -1,16 +1,17 @@
 {
   "Routes": [
     {
-        "DownstreamPathTemplate": "/api/{everything}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "localhost",
-            "Port": 5290
-          }
-        ],
-        "UpstreamPathTemplate": "/UserGateway/{everything}",
-        "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PATCH" ]
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/{everything}",
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE", "PUT", "PATCH" ],
+      "SwaggerKey":  "AllServices"
       },
       //  "DownstreamPathTemplate": "/api/Booking",
       //  "DownstreamScheme": "http",

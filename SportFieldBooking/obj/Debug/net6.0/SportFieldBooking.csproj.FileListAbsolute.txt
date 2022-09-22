@@ -46,3 +46,7 @@ D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking\obj\De
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking\obj\Debug\net6.0\SportFieldBooking.pdb
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking\obj\Debug\net6.0\SportFieldBooking.genruntimeconfig.cache
 D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking\obj\Debug\net6.0\ref\SportFieldBooking.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking\bin\Debug\net6.0\Quartz.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking\bin\Debug\net6.0\Quartz.AspNetCore.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking\bin\Debug\net6.0\Quartz.Extensions.DependencyInjection.dll
+D:\#Study\Programming\DotNET\Practice\SportFieldBooking\SportFieldBooking\bin\Debug\net6.0\Quartz.Extensions.Hosting.dll

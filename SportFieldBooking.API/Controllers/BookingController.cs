@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace SportFieldBooking.API.Controllers
 {
-    [ApiController]
+    //[ApiController]
     [Route("api/[controller]")]
     public class BookingController : ControllerBase
     {
@@ -28,7 +28,7 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="model">biz model cho tao moi mot booking</param>
         /// <returns>response</returns>
-        [Authorize]
+        //[Authorize]
         [HttpPost("AdminCreate")]
         public async Task<IActionResult> Create(New model, long userId)
         {
@@ -50,7 +50,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPost("UserCreate")]
         public async Task<IActionResult> SelfCreate(New model)
         {
@@ -75,7 +75,7 @@ namespace SportFieldBooking.API.Controllers
         /// <param name="pageNumber">so thu tu trang</param>
         /// <param name="pageSize">so ban ghi trong mot trang</param>
         /// <returns>response</returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet("GetList")]
         public async Task<IActionResult> GetList(long pageNumber, int pageSize)
         {
@@ -109,7 +109,7 @@ namespace SportFieldBooking.API.Controllers
         /// </summary>
         /// <param name="id">id cua booking</param>
         /// <returns>response</returns>
-        [Authorize]
+        //[Authorize]
         [HttpDelete("Delete")]
         public async Task<IActionResult> Delete(long bookingId)
         {
@@ -132,7 +132,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 10/05/2022
@@ -162,7 +162,7 @@ namespace SportFieldBooking.API.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         /// <summary>
         /// Auth: Hung
         /// Created: 10/05/2022
@@ -191,28 +191,5 @@ namespace SportFieldBooking.API.Controllers
                 return NotFound(e.Message);
             }
         }
-
-        //[Authorize]
-        //[HttpPatch("DeactivateExpiredBookings")]
-        //public async Task<IActionResult> DeactivateExpiredBookings()
-        //{
-        //    try
-        //    {
-        //        var role = _repository.JwtAuth.GetRoleFromToken(HttpContext);
-        //        if (role != 0)
-        //        {
-        //            return Unauthorized("Only admin can use this function");
-        //        }
-
-        //        await _repository.Booking.DeactivateExpiredBooking();
-        //        return Ok();
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        _logger.LogError("Error deactivating expired bookings");
-        //        return BadRequest(e.Message);
-        //    }
-        //}
-
     }
 }

@@ -1,0 +1,244 @@
+//API gateway chi co kha nang filter authentication con authorization van phai tien hanh trong endpoint
+
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Authenticate/Login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/Authenticate/Login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "SwaggerKey": "UserServices"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Authenticate/RefreshToken",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/Authenticate/RefreshToken",
+      "UpstreamHttpMethod": [ "POST" ],
+      "SwaggerKey": "UserServices"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Booking/UserCreate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/Booking/UserCreate",
+      "UpstreamHttpMethod": [ "POST" ],
+      "SwaggerKey": "UserServices",
+      "AuthenticationOptions": { // Yeu cau phai co authenitcation token (o day minh dung JWT) moi cho chay APIs
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Booking/GetList",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/Booking/GetList",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "UserServices",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Booking/Delete",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/Booking/Delete",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "SwaggerKey": "UserServices",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/SportField/Get/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/SportField/Get/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "UserServices",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/SportField/GetList",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/SportField/GetList",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "UserServices",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/SportField/SearchName",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/SportField/SearchName",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "UserServices",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/SportField/OpenNow",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/SportField/OpenNow",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "UserServices",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/SportField/FilterByTime",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/SportField/FilterByTime",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "UserServices",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/User/RegisterUser",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/User/RegisterUser",
+      "UpstreamHttpMethod": [ "POST" ],
+      "SwaggerKey": "UserServices",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/User/SelfAddBalance",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/User/SelfAddBalance",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "SwaggerKey": "UserServices",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/User/GetAll",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5290
+        }
+      ],
+      "UpstreamPathTemplate": "/UserGateway/User/GetAll",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "UserServices"
+    }
+  ],
+
+  "SwaggerEndPoints": [
+    {
+      "Key": "UserServices",
+      "Config": [
+        {
+          "Name": "User API - All Services",
+          "Version": "v1",
+          "Url": "http://localhost:5290/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5038"
+  }
+}
